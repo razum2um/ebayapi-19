@@ -243,7 +243,7 @@ module Ebay
         min, max = options[:min], options[:max]
         simple_type = @simple_types.find_name(type)
 
-        case max
+        case max.to_s
         when "1"
           if simple_type
             TextNode.new(name, options)

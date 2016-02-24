@@ -5,13 +5,13 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  object_node :sale_record, 'SaleRecord', :class => SellingManagerSoldOrder
-    #  array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+    #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult
     class GetSellingManagerSoldListings < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellingManagerSoldListingsResponse'
       object_node :sale_record, 'SaleRecord', :class => SellingManagerSoldOrder
-      array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+      object_node :pagination_result, 'PaginationResult', :class => PaginationResult
     end
   end
 end

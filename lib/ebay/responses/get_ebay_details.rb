@@ -43,16 +43,16 @@ module Ebay # :nodoc:
     #  object_node :region_of_origin_details, 'RegionOfOriginDetails', :class => RegionOfOriginDetails
     #  object_node :shipping_package_details, 'ShippingPackageDetails', :class => ShippingPackageDetails
     #  object_node :shipping_carrier_details, 'ShippingCarrierDetails', :class => ShippingCarrierDetails
-    #  array_node :return_policy_details, 'ReturnPolicyDetails', :class => ReturnPolicyDetails, :default_value => []
+    #  object_node :return_policy_details, 'ReturnPolicyDetails', :class => ReturnPolicyDetails
     #  object_node :listing_start_price_details, 'ListingStartPriceDetails', :class => ListingStartPriceDetails
     #  object_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => SiteBuyerRequirementDetails
     #  object_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails
-    #  array_node :variation_details, 'VariationDetails', :class => VariationDetails, :default_value => []
+    #  object_node :variation_details, 'VariationDetails', :class => VariationDetails
     #  object_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails
     #  date_time_node :update_time, 'UpdateTime'
     #  object_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails
     #  object_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails
-    #  array_node :product_details, 'ProductDetails', :class => ProductDetails, :default_value => []
+    #  object_node :product_details, 'ProductDetails', :class => ProductDetails
     class GeteBayDetails < Abstract
       include XML::Mapping
       include Initializer
@@ -73,16 +73,16 @@ module Ebay # :nodoc:
       object_node :region_of_origin_details, 'RegionOfOriginDetails', :class => RegionOfOriginDetails
       object_node :shipping_package_details, 'ShippingPackageDetails', :class => ShippingPackageDetails
       object_node :shipping_carrier_details, 'ShippingCarrierDetails', :class => ShippingCarrierDetails
-      array_node :return_policy_details, 'ReturnPolicyDetails', :class => ReturnPolicyDetails, :default_value => []
+      object_node :return_policy_details, 'ReturnPolicyDetails', :class => ReturnPolicyDetails
       object_node :listing_start_price_details, 'ListingStartPriceDetails', :class => ListingStartPriceDetails
       object_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => SiteBuyerRequirementDetails
       object_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails
-      array_node :variation_details, 'VariationDetails', :class => VariationDetails, :default_value => []
+      object_node :variation_details, 'VariationDetails', :class => VariationDetails
       object_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails
       date_time_node :update_time, 'UpdateTime'
       object_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails
       object_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails
-      array_node :product_details, 'ProductDetails', :class => ProductDetails, :default_value => []
+      object_node :product_details, 'ProductDetails', :class => ProductDetails
     end
   end
 end

@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :ebay_auth_token, 'eBayAuthToken'
     #  text_node :hard_expiration_warning, 'HardExpirationWarning'
-    #  array_node :credentials, 'Credentials', :class => UserIdPassword, :default_value => []
+    #  object_node :credentials, 'Credentials', :class => UserIdPassword
     #  text_node :notification_signature, 'NotificationSignature'
     class CustomSecurityHeader
       include XML::Mapping
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       root_element_name 'CustomSecurityHeader'
       text_node :ebay_auth_token, 'eBayAuthToken'
       text_node :hard_expiration_warning, 'HardExpirationWarning'
-      array_node :credentials, 'Credentials', :class => UserIdPassword, :default_value => []
+      object_node :credentials, 'Credentials', :class => UserIdPassword
       text_node :notification_signature, 'NotificationSignature'
     end
   end

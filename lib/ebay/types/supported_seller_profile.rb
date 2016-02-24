@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :profile_type, 'ProfileType'
     #  text_node :profile_name, 'ProfileName'
     #  text_node :short_summary, 'ShortSummary'
-    #  array_node :category_groups, 'CategoryGroup', :class => CategoryGroup, :default_value => []
+    #  object_node :category_group, 'CategoryGroup', :class => CategoryGroup
     class SupportedSellerProfile
       include XML::Mapping
       include Initializer
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       text_node :profile_type, 'ProfileType'
       text_node :profile_name, 'ProfileName'
       text_node :short_summary, 'ShortSummary'
-      array_node :category_groups, 'CategoryGroup', :class => CategoryGroup, :default_value => []
+      object_node :category_group, 'CategoryGroup', :class => CategoryGroup
     end
   end
 end

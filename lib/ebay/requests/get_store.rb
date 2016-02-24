@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  boolean_node :category_structure_only, 'CategoryStructureOnly', 'true', 'false'
     #  numeric_node :root_category_id, 'RootCategoryID'
     #  numeric_node :level_limit, 'LevelLimit'
-    #  value_array_node :user_ids, 'UserID', :default_value => []
+    #  text_node :user_id, 'UserID'
     class GetStore < Abstract
       include XML::Mapping
       include Initializer
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       boolean_node :category_structure_only, 'CategoryStructureOnly', 'true', 'false'
       numeric_node :root_category_id, 'RootCategoryID'
       numeric_node :level_limit, 'LevelLimit'
-      value_array_node :user_ids, 'UserID', :default_value => []
+      text_node :user_id, 'UserID'
     end
   end
 end

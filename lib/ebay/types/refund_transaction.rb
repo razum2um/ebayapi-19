@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :order_id, 'OrderID'
     #  text_node :item_id, 'ItemID'
     #  text_node :transaction_id, 'TransactionID'
-    #  array_node :refund_lines, 'RefundLineArray', :class => RefundLineArray, :default_value => []
+    #  object_node :refund_lines, 'RefundLineArray', :class => RefundLineArray
     class RefundTransaction
       include XML::Mapping
       include Initializer
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       text_node :order_id, 'OrderID'
       text_node :item_id, 'ItemID'
       text_node :transaction_id, 'TransactionID'
-      array_node :refund_lines, 'RefundLineArray', :class => RefundLineArray, :default_value => []
+      object_node :refund_lines, 'RefundLineArray', :class => RefundLineArray
     end
   end
 end

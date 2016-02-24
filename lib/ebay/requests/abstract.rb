@@ -9,12 +9,12 @@ module Ebay # :nodoc:
     #  text_node :message_id, 'MessageID'
     #  text_node :version, 'Version'
     #  text_node :end_user_ip, 'EndUserIP'
-    #  array_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :default_value => []
-    #  value_array_node :error_handlings, 'ErrorHandling', :default_value => []
-    #  value_array_node :invocation_ids, 'InvocationID', :default_value => []
+    #  object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials
+    #  text_node :error_handling, 'ErrorHandling'
+    #  text_node :invocation_id, 'InvocationID'
     #  text_node :output_selector, 'OutputSelector'
-    #  value_array_node :warning_levels, 'WarningLevel', :default_value => []
-    #  array_node :bot_blocks, 'BotBlock', :class => BotBlockRequest, :default_value => []
+    #  text_node :warning_level, 'WarningLevel'
+    #  object_node :bot_block, 'BotBlock', :class => BotBlockRequest
     class Abstract < Base
       include XML::Mapping
       include Initializer
@@ -24,12 +24,12 @@ module Ebay # :nodoc:
       text_node :message_id, 'MessageID'
       text_node :version, 'Version'
       text_node :end_user_ip, 'EndUserIP'
-      array_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :default_value => []
-      value_array_node :error_handlings, 'ErrorHandling', :default_value => []
-      value_array_node :invocation_ids, 'InvocationID', :default_value => []
+      object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials
+      text_node :error_handling, 'ErrorHandling'
+      text_node :invocation_id, 'InvocationID'
       text_node :output_selector, 'OutputSelector'
-      value_array_node :warning_levels, 'WarningLevel', :default_value => []
-      array_node :bot_blocks, 'BotBlock', :class => BotBlockRequest, :default_value => []
+      text_node :warning_level, 'WarningLevel'
+      object_node :bot_block, 'BotBlock', :class => BotBlockRequest
       # eBay specifies the detail level as a collection.  The usual case is to use
       # only a single detail level, so it is more appropriate to add an accessor for 
       # the normal case.

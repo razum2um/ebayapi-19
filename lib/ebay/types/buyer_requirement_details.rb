@@ -9,11 +9,11 @@ module Ebay # :nodoc:
     #  boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
     #  boolean_node :zero_feedback_score, 'ZeroFeedbackScore', 'true', 'false'
     #  numeric_node :minimum_feedback_score, 'MinimumFeedbackScore'
-    #  array_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirements, :default_value => []
+    #  object_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirements
     #  boolean_node :linked_paypal_account, 'LinkedPayPalAccount', 'true', 'false'
-    #  array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirements, :default_value => []
-    #  array_node :maximum_unpaid_item_strikes_infos, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfo, :default_value => []
-    #  array_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolations, :default_value => []
+    #  object_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirements
+    #  object_node :maximum_unpaid_item_strikes_info, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfo
+    #  object_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolations
     class BuyerRequirementDetails
       include XML::Mapping
       include Initializer
@@ -21,11 +21,11 @@ module Ebay # :nodoc:
       boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
       boolean_node :zero_feedback_score, 'ZeroFeedbackScore', 'true', 'false'
       numeric_node :minimum_feedback_score, 'MinimumFeedbackScore'
-      array_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirements, :default_value => []
+      object_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirements
       boolean_node :linked_paypal_account, 'LinkedPayPalAccount', 'true', 'false'
-      array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirements, :default_value => []
-      array_node :maximum_unpaid_item_strikes_infos, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfo, :default_value => []
-      array_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolations, :default_value => []
+      object_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirements
+      object_node :maximum_unpaid_item_strikes_info, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfo
+      object_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolations
     end
   end
 end

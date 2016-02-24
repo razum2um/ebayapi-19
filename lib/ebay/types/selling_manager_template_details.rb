@@ -7,8 +7,8 @@ module Ebay # :nodoc:
     #  text_node :sale_template_id, 'SaleTemplateID'
     #  text_node :sale_template_name, 'SaleTemplateName'
     #  numeric_node :success_percent, 'SuccessPercent'
-    #  array_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :default_value => []
-    #  array_node :templates, 'Template', :class => Item, :default_value => []
+    #  object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails
+    #  object_node :template, 'Template', :class => Item
     class SellingManagerTemplateDetails
       include XML::Mapping
       include Initializer
@@ -16,8 +16,8 @@ module Ebay # :nodoc:
       text_node :sale_template_id, 'SaleTemplateID'
       text_node :sale_template_name, 'SaleTemplateName'
       numeric_node :success_percent, 'SuccessPercent'
-      array_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :default_value => []
-      array_node :templates, 'Template', :class => Item, :default_value => []
+      object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails
+      object_node :template, 'Template', :class => Item
     end
   end
 end

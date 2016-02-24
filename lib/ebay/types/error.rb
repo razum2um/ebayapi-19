@@ -7,9 +7,9 @@ module Ebay # :nodoc:
     #  text_node :long_message, 'LongMessage'
     #  text_node :error_code, 'ErrorCode'
     #  boolean_node :user_display_hint, 'UserDisplayHint', 'true', 'false'
-    #  value_array_node :severity_codes, 'SeverityCode', :default_value => []
+    #  text_node :severity_code, 'SeverityCode'
     #  object_node :error_parameters, 'ErrorParameters', :class => ErrorParameter
-    #  value_array_node :error_classifications, 'ErrorClassification', :default_value => []
+    #  text_node :error_classification, 'ErrorClassification'
     class Error
       include XML::Mapping
       include Initializer
@@ -18,9 +18,9 @@ module Ebay # :nodoc:
       text_node :long_message, 'LongMessage'
       text_node :error_code, 'ErrorCode'
       boolean_node :user_display_hint, 'UserDisplayHint', 'true', 'false'
-      value_array_node :severity_codes, 'SeverityCode', :default_value => []
+      text_node :severity_code, 'SeverityCode'
       object_node :error_parameters, 'ErrorParameters', :class => ErrorParameter
-      value_array_node :error_classifications, 'ErrorClassification', :default_value => []
+      text_node :error_classification, 'ErrorClassification'
     end
   end
 end

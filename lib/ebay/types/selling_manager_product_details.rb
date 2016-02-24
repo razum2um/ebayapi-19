@@ -1,4 +1,3 @@
-require 'ebay/types/amount'
 require 'ebay/types/selling_manager_vendor_details'
 
 module Ebay # :nodoc:
@@ -8,11 +7,11 @@ module Ebay # :nodoc:
     #  numeric_node :product_id, 'ProductID'
     #  text_node :custom_label, 'CustomLabel'
     #  numeric_node :quantity_available, 'QuantityAvailable'
-    #  array_node :unit_costs, 'UnitCost', :class => Amount, :default_value => []
+    #  money_node :unit_cost, 'UnitCost'
     #  numeric_node :folder_id, 'FolderID'
     #  boolean_node :restock_alert, 'RestockAlert', 'true', 'false'
     #  numeric_node :restock_threshold, 'RestockThreshold'
-    #  array_node :vendor_infos, 'VendorInfo', :class => SellingManagerVendorDetails, :default_value => []
+    #  object_node :vendor_info, 'VendorInfo', :class => SellingManagerVendorDetails
     #  text_node :note, 'Note'
     class SellingManagerProductDetails
       include XML::Mapping
@@ -22,11 +21,11 @@ module Ebay # :nodoc:
       numeric_node :product_id, 'ProductID'
       text_node :custom_label, 'CustomLabel'
       numeric_node :quantity_available, 'QuantityAvailable'
-      array_node :unit_costs, 'UnitCost', :class => Amount, :default_value => []
+      money_node :unit_cost, 'UnitCost'
       numeric_node :folder_id, 'FolderID'
       boolean_node :restock_alert, 'RestockAlert', 'true', 'false'
       numeric_node :restock_threshold, 'RestockThreshold'
-      array_node :vendor_infos, 'VendorInfo', :class => SellingManagerVendorDetails, :default_value => []
+      object_node :vendor_info, 'VendorInfo', :class => SellingManagerVendorDetails
       text_node :note, 'Note'
     end
   end

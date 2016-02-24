@@ -3,14 +3,14 @@ require 'ebay/types/digital_delivery_user'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :recipients, 'Recipient', :class => DigitalDeliveryUser, :default_value => []
-    #  array_node :senders, 'Sender', :class => DigitalDeliveryUser, :default_value => []
+    #  object_node :recipient, 'Recipient', :class => DigitalDeliveryUser
+    #  object_node :sender, 'Sender', :class => DigitalDeliveryUser
     class DeliveryDetails
       include XML::Mapping
       include Initializer
       root_element_name 'DeliveryDetails'
-      array_node :recipients, 'Recipient', :class => DigitalDeliveryUser, :default_value => []
-      array_node :senders, 'Sender', :class => DigitalDeliveryUser, :default_value => []
+      object_node :recipient, 'Recipient', :class => DigitalDeliveryUser
+      object_node :sender, 'Sender', :class => DigitalDeliveryUser
     end
   end
 end

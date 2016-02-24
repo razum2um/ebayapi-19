@@ -16,8 +16,8 @@ module Ebay # :nodoc:
     #  numeric_node :periodic_usage, 'PeriodicUsage'
     #  date_time_node :periodic_start_date, 'PeriodicStartDate'
     #  date_time_node :mod_time, 'ModTime'
-    #  value_array_node :rule_current_statuses, 'RuleCurrentStatus', :default_value => []
-    #  value_array_node :rule_statuses, 'RuleStatus', :default_value => []
+    #  text_node :rule_current_status, 'RuleCurrentStatus'
+    #  text_node :rule_status, 'RuleStatus'
     class ApiAccessRule
       include XML::Mapping
       include Initializer
@@ -36,8 +36,8 @@ module Ebay # :nodoc:
       numeric_node :periodic_usage, 'PeriodicUsage'
       date_time_node :periodic_start_date, 'PeriodicStartDate'
       date_time_node :mod_time, 'ModTime'
-      value_array_node :rule_current_statuses, 'RuleCurrentStatus', :default_value => []
-      value_array_node :rule_statuses, 'RuleStatus', :default_value => []
+      text_node :rule_current_status, 'RuleCurrentStatus'
+      text_node :rule_status, 'RuleStatus'
     end
   end
 end

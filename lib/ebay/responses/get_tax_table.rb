@@ -4,13 +4,13 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  date_time_node :last_update_time, 'LastUpdateTime'
-    #  array_node :tax_tables, 'TaxTable', :class => TaxTable, :default_value => []
+    #  object_node :tax_table, 'TaxTable', :class => TaxTable
     class GetTaxTable < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetTaxTableResponse'
       date_time_node :last_update_time, 'LastUpdateTime'
-      array_node :tax_tables, 'TaxTable', :class => TaxTable, :default_value => []
+      object_node :tax_table, 'TaxTable', :class => TaxTable
     end
   end
 end

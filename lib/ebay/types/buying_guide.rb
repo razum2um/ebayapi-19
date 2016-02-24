@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :title, 'Title'
     #  text_node :text, 'Text'
     #  date_time_node :creation_time, 'CreationTime'
-    #  value_array_node :user_ids, 'UserID', :default_value => []
+    #  text_node :user_id, 'UserID'
     class BuyingGuide
       include XML::Mapping
       include Initializer
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       text_node :title, 'Title'
       text_node :text, 'Text'
       date_time_node :creation_time, 'CreationTime'
-      value_array_node :user_ids, 'UserID', :default_value => []
+      text_node :user_id, 'UserID'
     end
   end
 end

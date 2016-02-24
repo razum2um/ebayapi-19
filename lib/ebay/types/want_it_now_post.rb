@@ -4,8 +4,8 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :category_id, 'CategoryID'
     #  text_node :description, 'Description'
-    #  value_array_node :post_ids, 'PostID', :default_value => []
-    #  value_array_node :sites, 'Site', :default_value => []
+    #  text_node :post_id, 'PostID'
+    #  text_node :site, 'Site'
     #  date_time_node :start_time, 'StartTime'
     #  numeric_node :response_count, 'ResponseCount'
     #  text_node :title, 'Title'
@@ -15,8 +15,8 @@ module Ebay # :nodoc:
       root_element_name 'WantItNowPost'
       text_node :category_id, 'CategoryID'
       text_node :description, 'Description'
-      value_array_node :post_ids, 'PostID', :default_value => []
-      value_array_node :sites, 'Site', :default_value => []
+      text_node :post_id, 'PostID'
+      text_node :site, 'Site'
       date_time_node :start_time, 'StartTime'
       numeric_node :response_count, 'ResponseCount'
       text_node :title, 'Title'

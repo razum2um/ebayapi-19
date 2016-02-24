@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :user_ids, 'UserID', :default_value => []
+    #  text_node :user_id, 'UserID'
     #  date_time_node :start_time_from, 'StartTimeFrom'
     #  date_time_node :start_time_to, 'StartTimeTo'
     #  date_time_node :end_time_from, 'EndTimeFrom'
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellerEventsRequest'
-      value_array_node :user_ids, 'UserID', :default_value => []
+      text_node :user_id, 'UserID'
       date_time_node :start_time_from, 'StartTimeFrom'
       date_time_node :start_time_to, 'StartTimeTo'
       date_time_node :end_time_from, 'EndTimeFrom'

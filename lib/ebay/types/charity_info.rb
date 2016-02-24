@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :listing_np_contact_name, 'ListingNPContactName'
     #  text_node :mission, 'Mission'
     #  text_node :logo_url, 'LogoURL'
-    #  value_array_node :statuses, 'Status', :default_value => []
+    #  text_node :status, 'Status'
     #  text_node :searchable_string, 'SearchableString'
     #  numeric_node :charity_region, 'CharityRegion'
     #  numeric_node :charity_domain, 'CharityDomain'
@@ -37,7 +37,7 @@ module Ebay # :nodoc:
       text_node :listing_np_contact_name, 'ListingNPContactName'
       text_node :mission, 'Mission'
       text_node :logo_url, 'LogoURL'
-      value_array_node :statuses, 'Status', :default_value => []
+      text_node :status, 'Status'
       text_node :searchable_string, 'SearchableString'
       numeric_node :charity_region, 'CharityRegion'
       numeric_node :charity_domain, 'CharityDomain'

@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :currencies, 'Currency', :default_value => []
+    #  text_node :currency, 'Currency'
     #  text_node :description, 'Description'
     #  text_node :detail_version, 'DetailVersion'
     #  date_time_node :update_time, 'UpdateTime'
@@ -10,7 +10,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'CurrencyDetails'
-      value_array_node :currencies, 'Currency', :default_value => []
+      text_node :currency, 'Currency'
       text_node :description, 'Description'
       text_node :detail_version, 'DetailVersion'
       date_time_node :update_time, 'UpdateTime'

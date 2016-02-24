@@ -1,22 +1,21 @@
-require 'ebay/types/amount'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  numeric_node :shipping_service_priority, 'ShippingServicePriority'
-    #  value_array_node :shipping_service_types, 'ShippingServiceType', :default_value => []
-    #  array_node :shipping_service_costs, 'ShippingServiceCost', :class => Amount, :default_value => []
-    #  array_node :shipping_service_additional_costs, 'ShippingServiceAdditionalCost', :class => Amount, :default_value => []
-    #  array_node :shipping_surcharges, 'ShippingSurcharge', :class => Amount, :default_value => []
+    #  text_node :shipping_service_type, 'ShippingServiceType'
+    #  money_node :shipping_service_cost, 'ShippingServiceCost'
+    #  money_node :shipping_service_additional_cost, 'ShippingServiceAdditionalCost'
+    #  money_node :shipping_surcharge, 'ShippingSurcharge'
     class ShippingServiceCostOverride
       include XML::Mapping
       include Initializer
       root_element_name 'ShippingServiceCostOverride'
       numeric_node :shipping_service_priority, 'ShippingServicePriority'
-      value_array_node :shipping_service_types, 'ShippingServiceType', :default_value => []
-      array_node :shipping_service_costs, 'ShippingServiceCost', :class => Amount, :default_value => []
-      array_node :shipping_service_additional_costs, 'ShippingServiceAdditionalCost', :class => Amount, :default_value => []
-      array_node :shipping_surcharges, 'ShippingSurcharge', :class => Amount, :default_value => []
+      text_node :shipping_service_type, 'ShippingServiceType'
+      money_node :shipping_service_cost, 'ShippingServiceCost'
+      money_node :shipping_service_additional_cost, 'ShippingServiceAdditionalCost'
+      money_node :shipping_surcharge, 'ShippingSurcharge'
     end
   end
 end

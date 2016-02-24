@@ -4,11 +4,11 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  text_node :application_url, 'ApplicationURL'
-    #  value_array_node :application_enables, 'ApplicationEnable', :default_value => []
+    #  text_node :application_enable, 'ApplicationEnable'
     #  text_node :alert_email, 'AlertEmail'
-    #  value_array_node :alert_enables, 'AlertEnable', :default_value => []
-    #  value_array_node :notification_payload_types, 'NotificationPayloadType', :default_value => []
-    #  value_array_node :device_types, 'DeviceType', :default_value => []
+    #  text_node :alert_enable, 'AlertEnable'
+    #  text_node :notification_payload_type, 'NotificationPayloadType'
+    #  text_node :device_type, 'DeviceType'
     #  text_node :payload_version, 'PayloadVersion'
     #  object_node :delivery_url_details, 'DeliveryURLDetails', :class => DeliveryURLDetail
     class ApplicationDeliveryPreferences
@@ -16,11 +16,11 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'ApplicationDeliveryPreferences'
       text_node :application_url, 'ApplicationURL'
-      value_array_node :application_enables, 'ApplicationEnable', :default_value => []
+      text_node :application_enable, 'ApplicationEnable'
       text_node :alert_email, 'AlertEmail'
-      value_array_node :alert_enables, 'AlertEnable', :default_value => []
-      value_array_node :notification_payload_types, 'NotificationPayloadType', :default_value => []
-      value_array_node :device_types, 'DeviceType', :default_value => []
+      text_node :alert_enable, 'AlertEnable'
+      text_node :notification_payload_type, 'NotificationPayloadType'
+      text_node :device_type, 'DeviceType'
       text_node :payload_version, 'PayloadVersion'
       object_node :delivery_url_details, 'DeliveryURLDetails', :class => DeliveryURLDetail
       # Is the application enabled to received Platform Notifications?

@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :zip_code, 'ZipCode'
     #  numeric_node :latitude, 'Latitude'
     #  numeric_node :longitude, 'Longitude'
-    #  value_array_node :address_types, 'AddressType', :default_value => []
+    #  text_node :address_type, 'AddressType'
     class NonProfitAddress
       include XML::Mapping
       include Initializer
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       text_node :zip_code, 'ZipCode'
       numeric_node :latitude, 'Latitude'
       numeric_node :longitude, 'Longitude'
-      value_array_node :address_types, 'AddressType', :default_value => []
+      text_node :address_type, 'AddressType'
     end
   end
 end

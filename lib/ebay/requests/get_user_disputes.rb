@@ -3,20 +3,20 @@ require 'ebay/types/pagination'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :dispute_filter_types, 'DisputeFilterType', :default_value => []
-    #  value_array_node :dispute_sort_types, 'DisputeSortType', :default_value => []
+    #  text_node :dispute_filter_type, 'DisputeFilterType'
+    #  text_node :dispute_sort_type, 'DisputeSortType'
     #  date_time_node :mod_time_from, 'ModTimeFrom'
     #  date_time_node :mod_time_to, 'ModTimeTo'
-    #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
+    #  object_node :pagination, 'Pagination', :class => Pagination
     class GetUserDisputes < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetUserDisputesRequest'
-      value_array_node :dispute_filter_types, 'DisputeFilterType', :default_value => []
-      value_array_node :dispute_sort_types, 'DisputeSortType', :default_value => []
+      text_node :dispute_filter_type, 'DisputeFilterType'
+      text_node :dispute_sort_type, 'DisputeSortType'
       date_time_node :mod_time_from, 'ModTimeFrom'
       date_time_node :mod_time_to, 'ModTimeTo'
-      array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
+      object_node :pagination, 'Pagination', :class => Pagination
     end
   end
 end

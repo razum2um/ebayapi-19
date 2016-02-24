@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :url_types, 'URLType', :default_value => []
+    #  text_node :url_type, 'URLType'
     #  text_node :url, 'URL'
     #  text_node :detail_version, 'DetailVersion'
     #  date_time_node :update_time, 'UpdateTime'
@@ -10,7 +10,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'URLDetails'
-      value_array_node :url_types, 'URLType', :default_value => []
+      text_node :url_type, 'URLType'
       text_node :url, 'URL'
       text_node :detail_version, 'DetailVersion'
       date_time_node :update_time, 'UpdateTime'

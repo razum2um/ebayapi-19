@@ -10,13 +10,13 @@ module Ebay # :nodoc:
     #  text_node :stock_photo_url, 'StockPhotoURL'
     #  boolean_node :display_stock_photos, 'DisplayStockPhotos', 'true', 'false'
     #  numeric_node :item_count, 'ItemCount'
-    #  array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
+    #  object_node :external_product_id, 'ExternalProductID', :class => ExternalProductID
     #  numeric_node :product_reference_id, 'ProductReferenceID'
     #  numeric_node :attribute_set_id, 'AttributeSetID'
-    #  array_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray, :default_value => []
+    #  object_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray
     #  numeric_node :review_count, 'ReviewCount'
-    #  array_node :review_details, 'ReviewDetails', :class => ReviewDetails, :default_value => []
-    #  value_array_node :product_states, 'ProductState', :default_value => []
+    #  object_node :review_details, 'ReviewDetails', :class => ReviewDetails
+    #  text_node :product_state, 'ProductState'
     class CatalogProduct
       include XML::Mapping
       include Initializer
@@ -26,13 +26,13 @@ module Ebay # :nodoc:
       text_node :stock_photo_url, 'StockPhotoURL'
       boolean_node :display_stock_photos, 'DisplayStockPhotos', 'true', 'false'
       numeric_node :item_count, 'ItemCount'
-      array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
+      object_node :external_product_id, 'ExternalProductID', :class => ExternalProductID
       numeric_node :product_reference_id, 'ProductReferenceID'
       numeric_node :attribute_set_id, 'AttributeSetID'
-      array_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray, :default_value => []
+      object_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray
       numeric_node :review_count, 'ReviewCount'
-      array_node :review_details, 'ReviewDetails', :class => ReviewDetails, :default_value => []
-      value_array_node :product_states, 'ProductState', :default_value => []
+      object_node :review_details, 'ReviewDetails', :class => ReviewDetails
+      text_node :product_state, 'ProductState'
     end
   end
 end

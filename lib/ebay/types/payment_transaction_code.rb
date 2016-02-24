@@ -1,29 +1,28 @@
 require 'ebay/types/user_identity'
-require 'ebay/types/amount'
 require 'ebay/types/transaction_reference'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :payment_statuses, 'PaymentStatus', :default_value => []
-    #  array_node :payers, 'Payer', :class => UserIdentity, :default_value => []
-    #  array_node :payees, 'Payee', :class => UserIdentity, :default_value => []
+    #  text_node :payment_status, 'PaymentStatus'
+    #  object_node :payer, 'Payer', :class => UserIdentity
+    #  object_node :payee, 'Payee', :class => UserIdentity
     #  date_time_node :payment_time, 'PaymentTime'
-    #  array_node :payment_amounts, 'PaymentAmount', :class => Amount, :default_value => []
-    #  array_node :reference_ids, 'ReferenceID', :class => TransactionReference, :default_value => []
-    #  array_node :fee_or_credit_amounts, 'FeeOrCreditAmount', :class => Amount, :default_value => []
+    #  money_node :payment_amount, 'PaymentAmount'
+    #  object_node :reference_id, 'ReferenceID', :class => TransactionReference
+    #  money_node :fee_or_credit_amount, 'FeeOrCreditAmount'
     #  object_node :payment_reference_id, 'PaymentReferenceID', :class => TransactionReference
     class PaymentTransactionCode
       include XML::Mapping
       include Initializer
       root_element_name 'PaymentTransactionCode'
-      value_array_node :payment_statuses, 'PaymentStatus', :default_value => []
-      array_node :payers, 'Payer', :class => UserIdentity, :default_value => []
-      array_node :payees, 'Payee', :class => UserIdentity, :default_value => []
+      text_node :payment_status, 'PaymentStatus'
+      object_node :payer, 'Payer', :class => UserIdentity
+      object_node :payee, 'Payee', :class => UserIdentity
       date_time_node :payment_time, 'PaymentTime'
-      array_node :payment_amounts, 'PaymentAmount', :class => Amount, :default_value => []
-      array_node :reference_ids, 'ReferenceID', :class => TransactionReference, :default_value => []
-      array_node :fee_or_credit_amounts, 'FeeOrCreditAmount', :class => Amount, :default_value => []
+      money_node :payment_amount, 'PaymentAmount'
+      object_node :reference_id, 'ReferenceID', :class => TransactionReference
+      money_node :fee_or_credit_amount, 'FeeOrCreditAmount'
       object_node :payment_reference_id, 'PaymentReferenceID', :class => TransactionReference
     end
   end

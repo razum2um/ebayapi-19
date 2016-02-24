@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :pickup_method, 'PickupMethod'
     #  text_node :pickup_store_id, 'PickupStoreID'
-    #  value_array_node :pickup_statuses, 'PickupStatus', :default_value => []
+    #  text_node :pickup_status, 'PickupStatus'
     #  text_node :merchant_pickup_code, 'MerchantPickupCode'
     #  date_time_node :pickup_fulfillment_time, 'PickupFulfillmentTime'
     #  text_node :pickup_location_uuid, 'PickupLocationUUID'
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       root_element_name 'PickupMethodSelected'
       text_node :pickup_method, 'PickupMethod'
       text_node :pickup_store_id, 'PickupStoreID'
-      value_array_node :pickup_statuses, 'PickupStatus', :default_value => []
+      text_node :pickup_status, 'PickupStatus'
       text_node :merchant_pickup_code, 'MerchantPickupCode'
       date_time_node :pickup_fulfillment_time, 'PickupFulfillmentTime'
       text_node :pickup_location_uuid, 'PickupLocationUUID'

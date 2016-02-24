@@ -1,4 +1,3 @@
-require 'ebay/types/amount'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -6,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :sales_tax_percent, 'SalesTaxPercent'
     #  text_node :sales_tax_state, 'SalesTaxState'
     #  boolean_node :shipping_included_in_tax, 'ShippingIncludedInTax', 'true', 'false'
-    #  array_node :sales_tax_amounts, 'SalesTaxAmount', :class => Amount, :default_value => []
+    #  money_node :sales_tax_amount, 'SalesTaxAmount'
     class SalesTax
       include XML::Mapping
       include Initializer
@@ -14,7 +13,7 @@ module Ebay # :nodoc:
       numeric_node :sales_tax_percent, 'SalesTaxPercent'
       text_node :sales_tax_state, 'SalesTaxState'
       boolean_node :shipping_included_in_tax, 'ShippingIncludedInTax', 'true', 'false'
-      array_node :sales_tax_amounts, 'SalesTaxAmount', :class => Amount, :default_value => []
+      money_node :sales_tax_amount, 'SalesTaxAmount'
     end
   end
 end

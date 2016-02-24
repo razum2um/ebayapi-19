@@ -5,14 +5,14 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :shipping_carrier_used, 'ShippingCarrierUsed'
     #  text_node :shipment_tracking_number, 'ShipmentTrackingNumber'
-    #  array_node :shipment_line_items, 'ShipmentLineItem', :class => ShipmentLineItem, :default_value => []
+    #  object_node :shipment_line_item, 'ShipmentLineItem', :class => ShipmentLineItem
     class ShipmentTrackingDetails
       include XML::Mapping
       include Initializer
       root_element_name 'ShipmentTrackingDetails'
       text_node :shipping_carrier_used, 'ShippingCarrierUsed'
       text_node :shipment_tracking_number, 'ShipmentTrackingNumber'
-      array_node :shipment_line_items, 'ShipmentLineItem', :class => ShipmentLineItem, :default_value => []
+      object_node :shipment_line_item, 'ShipmentLineItem', :class => ShipmentLineItem
     end
   end
 end

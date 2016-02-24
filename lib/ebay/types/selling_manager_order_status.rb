@@ -2,16 +2,16 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
-    #  value_array_node :paid_statuses, 'PaidStatus', :default_value => []
-    #  value_array_node :shipped_statuses, 'ShippedStatus', :default_value => []
-    #  value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
+    #  text_node :checkout_status, 'CheckoutStatus'
+    #  text_node :paid_status, 'PaidStatus'
+    #  text_node :shipped_status, 'ShippedStatus'
+    #  text_node :ebay_payment_status, 'eBayPaymentStatus'
     #  text_node :paypal_transaction_id, 'PayPalTransactionID'
-    #  value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
-    #  value_array_node :feedback_receiveds, 'FeedbackReceived', :default_value => []
+    #  text_node :payment_method_used, 'PaymentMethodUsed'
+    #  text_node :feedback_received, 'FeedbackReceived'
     #  boolean_node :feedback_sent, 'FeedbackSent', 'true', 'false'
     #  numeric_node :total_emails_sent, 'TotalEmailsSent'
-    #  value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
+    #  text_node :payment_hold_status, 'PaymentHoldStatus'
     #  text_node :seller_invoice_number, 'SellerInvoiceNumber'
     #  date_time_node :shipped_time, 'ShippedTime'
     #  date_time_node :paid_time, 'PaidTime'
@@ -22,16 +22,16 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'SellingManagerOrderStatus'
-      value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
-      value_array_node :paid_statuses, 'PaidStatus', :default_value => []
-      value_array_node :shipped_statuses, 'ShippedStatus', :default_value => []
-      value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
+      text_node :checkout_status, 'CheckoutStatus'
+      text_node :paid_status, 'PaidStatus'
+      text_node :shipped_status, 'ShippedStatus'
+      text_node :ebay_payment_status, 'eBayPaymentStatus'
       text_node :paypal_transaction_id, 'PayPalTransactionID'
-      value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
-      value_array_node :feedback_receiveds, 'FeedbackReceived', :default_value => []
+      text_node :payment_method_used, 'PaymentMethodUsed'
+      text_node :feedback_received, 'FeedbackReceived'
       boolean_node :feedback_sent, 'FeedbackSent', 'true', 'false'
       numeric_node :total_emails_sent, 'TotalEmailsSent'
-      value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
+      text_node :payment_hold_status, 'PaymentHoldStatus'
       text_node :seller_invoice_number, 'SellerInvoiceNumber'
       date_time_node :shipped_time, 'ShippedTime'
       date_time_node :paid_time, 'PaidTime'

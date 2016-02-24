@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :charity_region, 'CharityRegion'
     #  numeric_node :charity_domain, 'CharityDomain'
     #  boolean_node :include_description, 'IncludeDescription', 'true', 'false'
-    #  value_array_node :match_types, 'MatchType', :default_value => []
+    #  text_node :match_type, 'MatchType'
     #  boolean_node :featured, 'Featured', 'true', 'false'
     #  numeric_node :campaign_id, 'CampaignID'
     class GetCharities < Abstract
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       numeric_node :charity_region, 'CharityRegion'
       numeric_node :charity_domain, 'CharityDomain'
       boolean_node :include_description, 'IncludeDescription', 'true', 'false'
-      value_array_node :match_types, 'MatchType', :default_value => []
+      text_node :match_type, 'MatchType'
       boolean_node :featured, 'Featured', 'true', 'false'
       numeric_node :campaign_id, 'CampaignID'
     end

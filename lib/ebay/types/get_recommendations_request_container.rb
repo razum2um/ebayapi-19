@@ -3,8 +3,8 @@ require 'ebay/types/item'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :listing_flows, 'ListingFlow', :default_value => []
-    #  array_node :items, 'Item', :class => Item, :default_value => []
+    #  text_node :listing_flow, 'ListingFlow'
+    #  object_node :item, 'Item', :class => Item
     #  text_node :recommendation_engine, 'RecommendationEngine'
     #  text_node :query, 'Query'
     #  text_node :correlation_id, 'CorrelationID'
@@ -15,8 +15,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetRecommendationsRequestContainer'
-      value_array_node :listing_flows, 'ListingFlow', :default_value => []
-      array_node :items, 'Item', :class => Item, :default_value => []
+      text_node :listing_flow, 'ListingFlow'
+      object_node :item, 'Item', :class => Item
       text_node :recommendation_engine, 'RecommendationEngine'
       text_node :query, 'Query'
       text_node :correlation_id, 'CorrelationID'

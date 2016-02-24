@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :package_id, 'PackageID'
     #  text_node :description, 'Description'
-    #  value_array_node :shipping_packages, 'ShippingPackage', :default_value => []
+    #  text_node :shipping_package, 'ShippingPackage'
     #  boolean_node :default_value, 'DefaultValue', 'true', 'false'
     #  boolean_node :dimensions_supported, 'DimensionsSupported', 'true', 'false'
     #  text_node :detail_version, 'DetailVersion'
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       root_element_name 'ShippingPackageDetails'
       numeric_node :package_id, 'PackageID'
       text_node :description, 'Description'
-      value_array_node :shipping_packages, 'ShippingPackage', :default_value => []
+      text_node :shipping_package, 'ShippingPackage'
       boolean_node :default_value, 'DefaultValue', 'true', 'false'
       boolean_node :dimensions_supported, 'DimensionsSupported', 'true', 'false'
       text_node :detail_version, 'DetailVersion'

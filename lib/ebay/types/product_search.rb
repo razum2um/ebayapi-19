@@ -13,12 +13,12 @@ module Ebay # :nodoc:
     #  numeric_node :sort_attribute_id, 'SortAttributeID'
     #  numeric_node :max_children_per_family, 'MaxChildrenPerFamily'
     #  object_node :search_attributes, 'SearchAttributes', :class => SearchAttributes
-    #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
+    #  object_node :pagination, 'Pagination', :class => Pagination
     #  boolean_node :available_items_only, 'AvailableItemsOnly', 'true', 'false'
     #  text_node :query_keywords, 'QueryKeywords'
-    #  array_node :characteristic_set_ids, 'CharacteristicSetIDs', :class => CharacteristicSetIDs, :default_value => []
+    #  object_node :characteristic_set_ids, 'CharacteristicSetIDs', :class => CharacteristicSetIDs
     #  text_node :product_reference_id, 'ProductReferenceID'
-    #  array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
+    #  object_node :external_product_id, 'ExternalProductID', :class => ExternalProductID
     class ProductSearch
       include XML::Mapping
       include Initializer
@@ -30,12 +30,12 @@ module Ebay # :nodoc:
       numeric_node :sort_attribute_id, 'SortAttributeID'
       numeric_node :max_children_per_family, 'MaxChildrenPerFamily'
       object_node :search_attributes, 'SearchAttributes', :class => SearchAttributes
-      array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
+      object_node :pagination, 'Pagination', :class => Pagination
       boolean_node :available_items_only, 'AvailableItemsOnly', 'true', 'false'
       text_node :query_keywords, 'QueryKeywords'
-      array_node :characteristic_set_ids, 'CharacteristicSetIDs', :class => CharacteristicSetIDs, :default_value => []
+      object_node :characteristic_set_ids, 'CharacteristicSetIDs', :class => CharacteristicSetIDs
       text_node :product_reference_id, 'ProductReferenceID'
-      array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
+      object_node :external_product_id, 'ExternalProductID', :class => ExternalProductID
     end
   end
 end

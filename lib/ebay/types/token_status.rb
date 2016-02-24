@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :statuses, 'Status', :default_value => []
+    #  text_node :status, 'Status'
     #  text_node :eias_token, 'EIASToken'
     #  date_time_node :expiration_time, 'ExpirationTime'
     #  date_time_node :revocation_time, 'RevocationTime'
@@ -10,7 +10,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'TokenStatus'
-      value_array_node :statuses, 'Status', :default_value => []
+      text_node :status, 'Status'
       text_node :eias_token, 'EIASToken'
       date_time_node :expiration_time, 'ExpirationTime'
       date_time_node :revocation_time, 'RevocationTime'

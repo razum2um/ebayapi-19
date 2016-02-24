@@ -3,36 +3,36 @@ require 'ebay/types/ebay_payment_mismatch_details'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
-    #  value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
+    #  text_node :ebay_payment_status, 'eBayPaymentStatus'
+    #  text_node :checkout_status, 'CheckoutStatus'
     #  date_time_node :last_time_modified, 'LastTimeModified'
-    #  value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
-    #  value_array_node :complete_statuses, 'CompleteStatus', :default_value => []
+    #  text_node :payment_method_used, 'PaymentMethodUsed'
+    #  text_node :complete_status, 'CompleteStatus'
     #  boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false'
-    #  value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
+    #  text_node :payment_hold_status, 'PaymentHoldStatus'
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
-    #  array_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :default_value => []
-    #  value_array_node :inquiry_statuses, 'InquiryStatus', :default_value => []
-    #  value_array_node :return_statuses, 'ReturnStatus', :default_value => []
-    #  value_array_node :payment_instruments, 'PaymentInstrument', :default_value => []
-    #  value_array_node :digital_statuses, 'DigitalStatus', :default_value => []
+    #  object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails
+    #  text_node :inquiry_status, 'InquiryStatus'
+    #  text_node :return_status, 'ReturnStatus'
+    #  text_node :payment_instrument, 'PaymentInstrument'
+    #  text_node :digital_status, 'DigitalStatus'
     class TransactionStatus
       include XML::Mapping
       include Initializer
       root_element_name 'TransactionStatus'
-      value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
-      value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
+      text_node :ebay_payment_status, 'eBayPaymentStatus'
+      text_node :checkout_status, 'CheckoutStatus'
       date_time_node :last_time_modified, 'LastTimeModified'
-      value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
-      value_array_node :complete_statuses, 'CompleteStatus', :default_value => []
+      text_node :payment_method_used, 'PaymentMethodUsed'
+      text_node :complete_status, 'CompleteStatus'
       boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false'
-      value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
+      text_node :payment_hold_status, 'PaymentHoldStatus'
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
-      array_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails, :default_value => []
-      value_array_node :inquiry_statuses, 'InquiryStatus', :default_value => []
-      value_array_node :return_statuses, 'ReturnStatus', :default_value => []
-      value_array_node :payment_instruments, 'PaymentInstrument', :default_value => []
-      value_array_node :digital_statuses, 'DigitalStatus', :default_value => []
+      object_node :ebay_payment_mismatch_details, 'eBayPaymentMismatchDetails', :class => EBayPaymentMismatchDetails
+      text_node :inquiry_status, 'InquiryStatus'
+      text_node :return_status, 'ReturnStatus'
+      text_node :payment_instrument, 'PaymentInstrument'
+      text_node :digital_status, 'DigitalStatus'
     end
   end
 end

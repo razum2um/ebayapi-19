@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :region_of_origin, 'RegionOfOrigin'
     #  text_node :description, 'Description'
-    #  value_array_node :statuses, 'Status', :default_value => []
+    #  text_node :status, 'Status'
     #  text_node :detail_version, 'DetailVersion'
     #  date_time_node :update_time, 'UpdateTime'
     class RegionOfOriginDetails
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       root_element_name 'RegionOfOriginDetails'
       text_node :region_of_origin, 'RegionOfOrigin'
       text_node :description, 'Description'
-      value_array_node :statuses, 'Status', :default_value => []
+      text_node :status, 'Status'
       text_node :detail_version, 'DetailVersion'
       date_time_node :update_time, 'UpdateTime'
     end

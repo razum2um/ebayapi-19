@@ -16,8 +16,8 @@ module Ebay # :nodoc:
     #  text_node :isbn, 'ISBN'
     #  text_node :upc, 'UPC'
     #  text_node :ean, 'EAN'
-    #  array_node :brand_mpns, 'BrandMPN', :class => BrandMPN, :default_value => []
-    #  array_node :ticket_listing_details, 'TicketListingDetails', :class => TicketListingDetails, :default_value => []
+    #  object_node :brand_mpn, 'BrandMPN', :class => BrandMPN
+    #  object_node :ticket_listing_details, 'TicketListingDetails', :class => TicketListingDetails
     #  boolean_node :use_first_product, 'UseFirstProduct', 'true', 'false'
     #  boolean_node :include_ebay_product_details, 'IncludeeBayProductDetails', 'true', 'false'
     class ProductListingDetails
@@ -36,8 +36,8 @@ module Ebay # :nodoc:
       text_node :isbn, 'ISBN'
       text_node :upc, 'UPC'
       text_node :ean, 'EAN'
-      array_node :brand_mpns, 'BrandMPN', :class => BrandMPN, :default_value => []
-      array_node :ticket_listing_details, 'TicketListingDetails', :class => TicketListingDetails, :default_value => []
+      object_node :brand_mpn, 'BrandMPN', :class => BrandMPN
+      object_node :ticket_listing_details, 'TicketListingDetails', :class => TicketListingDetails
       boolean_node :use_first_product, 'UseFirstProduct', 'true', 'false'
       boolean_node :include_ebay_product_details, 'IncludeeBayProductDetails', 'true', 'false'
     end

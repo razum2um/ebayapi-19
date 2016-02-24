@@ -3,8 +3,8 @@ require 'ebay/types/message_media'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :message_types, 'MessageType', :default_value => []
-    #  value_array_node :question_types, 'QuestionType', :default_value => []
+    #  text_node :message_type, 'MessageType'
+    #  text_node :question_type, 'QuestionType'
     #  boolean_node :email_copy_to_sender, 'EmailCopyToSender', 'true', 'false'
     #  boolean_node :hide_senders_email_address, 'HideSendersEmailAddress', 'true', 'false'
     #  boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'
@@ -20,8 +20,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'MemberMessage'
-      value_array_node :message_types, 'MessageType', :default_value => []
-      value_array_node :question_types, 'QuestionType', :default_value => []
+      text_node :message_type, 'MessageType'
+      text_node :question_type, 'QuestionType'
       boolean_node :email_copy_to_sender, 'EmailCopyToSender', 'true', 'false'
       boolean_node :hide_senders_email_address, 'HideSendersEmailAddress', 'true', 'false'
       boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'

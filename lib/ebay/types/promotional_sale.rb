@@ -5,26 +5,26 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :promotional_sale_id, 'PromotionalSaleID'
     #  text_node :promotional_sale_name, 'PromotionalSaleName'
-    #  array_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray, :default_value => []
-    #  value_array_node :statuses, 'Status', :default_value => []
-    #  value_array_node :discount_types, 'DiscountType', :default_value => []
+    #  object_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray
+    #  text_node :status, 'Status'
+    #  text_node :discount_type, 'DiscountType'
     #  numeric_node :discount_value, 'DiscountValue'
     #  date_time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
     #  date_time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
-    #  value_array_node :promotional_sale_types, 'PromotionalSaleType', :default_value => []
+    #  text_node :promotional_sale_type, 'PromotionalSaleType'
     class PromotionalSale
       include XML::Mapping
       include Initializer
       root_element_name 'PromotionalSale'
       numeric_node :promotional_sale_id, 'PromotionalSaleID'
       text_node :promotional_sale_name, 'PromotionalSaleName'
-      array_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray, :default_value => []
-      value_array_node :statuses, 'Status', :default_value => []
-      value_array_node :discount_types, 'DiscountType', :default_value => []
+      object_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray
+      text_node :status, 'Status'
+      text_node :discount_type, 'DiscountType'
       numeric_node :discount_value, 'DiscountValue'
       date_time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
       date_time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
-      value_array_node :promotional_sale_types, 'PromotionalSaleType', :default_value => []
+      text_node :promotional_sale_type, 'PromotionalSaleType'
     end
   end
 end

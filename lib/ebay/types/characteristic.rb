@@ -8,8 +8,8 @@ module Ebay # :nodoc:
     #  text_node :date_format, 'DateFormat'
     #  text_node :display_sequence, 'DisplaySequence'
     #  text_node :display_uom, 'DisplayUOM'
-    #  array_node :labels, 'Label', :class => Label, :default_value => []
-    #  value_array_node :sort_orders, 'SortOrder', :default_value => []
+    #  object_node :label, 'Label', :class => Label
+    #  text_node :sort_order, 'SortOrder'
     #  object_node :value_list, 'ValueList', :class => Val
     class Characteristic
       include XML::Mapping
@@ -19,8 +19,8 @@ module Ebay # :nodoc:
       text_node :date_format, 'DateFormat'
       text_node :display_sequence, 'DisplaySequence'
       text_node :display_uom, 'DisplayUOM'
-      array_node :labels, 'Label', :class => Label, :default_value => []
-      value_array_node :sort_orders, 'SortOrder', :default_value => []
+      object_node :label, 'Label', :class => Label
+      text_node :sort_order, 'SortOrder'
       object_node :value_list, 'ValueList', :class => Val
     end
   end

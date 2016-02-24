@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  text_node :charity_id, 'CharityID'
     #  text_node :mission, 'Mission'
     #  text_node :logo_url, 'LogoURL'
-    #  value_array_node :statuses, 'Status', :default_value => []
+    #  text_node :status, 'Status'
     #  boolean_node :charity_listing, 'CharityListing', 'true', 'false'
     class Charity
       include XML::Mapping
@@ -20,7 +20,7 @@ module Ebay # :nodoc:
       text_node :charity_id, 'CharityID'
       text_node :mission, 'Mission'
       text_node :logo_url, 'LogoURL'
-      value_array_node :statuses, 'Status', :default_value => []
+      text_node :status, 'Status'
       boolean_node :charity_listing, 'CharityListing', 'true', 'false'
     end
   end

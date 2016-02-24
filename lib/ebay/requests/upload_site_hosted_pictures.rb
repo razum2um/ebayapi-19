@@ -5,9 +5,9 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :picture_name, 'PictureName'
     #  numeric_node :picture_system_version, 'PictureSystemVersion'
-    #  value_array_node :picture_sets, 'PictureSet', :default_value => []
-    #  array_node :picture_data, 'PictureData', :class => Base64Binary, :default_value => []
-    #  value_array_node :picture_upload_policies, 'PictureUploadPolicy', :default_value => []
+    #  text_node :picture_set, 'PictureSet'
+    #  object_node :picture_data, 'PictureData', :class => Base64Binary
+    #  text_node :picture_upload_policy, 'PictureUploadPolicy'
     #  text_node :external_picture_url, 'ExternalPictureURL'
     #  text_node :picture_watermark, 'PictureWatermark'
     #  numeric_node :extension_in_days, 'ExtensionInDays'
@@ -17,9 +17,9 @@ module Ebay # :nodoc:
       root_element_name 'UploadSiteHostedPicturesRequest'
       text_node :picture_name, 'PictureName'
       numeric_node :picture_system_version, 'PictureSystemVersion'
-      value_array_node :picture_sets, 'PictureSet', :default_value => []
-      array_node :picture_data, 'PictureData', :class => Base64Binary, :default_value => []
-      value_array_node :picture_upload_policies, 'PictureUploadPolicy', :default_value => []
+      text_node :picture_set, 'PictureSet'
+      object_node :picture_data, 'PictureData', :class => Base64Binary
+      text_node :picture_upload_policy, 'PictureUploadPolicy'
       text_node :external_picture_url, 'ExternalPictureURL'
       text_node :picture_watermark, 'PictureWatermark'
       numeric_node :extension_in_days, 'ExtensionInDays'

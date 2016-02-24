@@ -13,74 +13,74 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :paisa_pay_status, 'PaisaPayStatus'
     #  boolean_node :allow_payment_edit, 'AllowPaymentEdit', 'true', 'false'
-    #  value_array_node :billing_currencies, 'BillingCurrency', :default_value => []
+    #  text_node :billing_currency, 'BillingCurrency'
     #  boolean_node :checkout_enabled, 'CheckoutEnabled', 'true', 'false'
     #  boolean_node :cip_bank_account_stored, 'CIPBankAccountStored', 'true', 'false'
     #  boolean_node :good_standing, 'GoodStanding', 'true', 'false'
-    #  value_array_node :merchandizing_prefs, 'MerchandizingPref', :default_value => []
+    #  text_node :merchandizing_pref, 'MerchandizingPref'
     #  boolean_node :qualifies_for_b2_bvat, 'QualifiesForB2BVAT', 'true', 'false'
-    #  value_array_node :seller_guarantee_levels, 'SellerGuaranteeLevel', :default_value => []
-    #  value_array_node :seller_levels, 'SellerLevel', :default_value => []
-    #  array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
-    #  array_node :scheduling_infos, 'SchedulingInfo', :class => SchedulingInfo, :default_value => []
+    #  text_node :seller_guarantee_level, 'SellerGuaranteeLevel'
+    #  text_node :seller_level, 'SellerLevel'
+    #  object_node :seller_payment_address, 'SellerPaymentAddress', :class => Address
+    #  object_node :scheduling_info, 'SchedulingInfo', :class => SchedulingInfo
     #  boolean_node :store_owner, 'StoreOwner', 'true', 'false'
     #  text_node :store_url, 'StoreURL'
-    #  value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
+    #  text_node :seller_business_type, 'SellerBusinessType'
     #  boolean_node :registered_business_seller, 'RegisteredBusinessSeller', 'true', 'false'
-    #  value_array_node :store_sites, 'StoreSite', :default_value => []
-    #  value_array_node :payment_methods, 'PaymentMethod', :default_value => []
-    #  array_node :pro_stores_preferences, 'ProStoresPreference', :class => ProStoresCheckoutPreference, :default_value => []
+    #  text_node :store_site, 'StoreSite'
+    #  text_node :payment_method, 'PaymentMethod'
+    #  object_node :pro_stores_preference, 'ProStoresPreference', :class => ProStoresCheckoutPreference
     #  boolean_node :charity_registered, 'CharityRegistered', 'true', 'false'
     #  boolean_node :safe_payment_exempt, 'SafePaymentExempt', 'true', 'false'
     #  numeric_node :paisa_pay_escrow_emi_status, 'PaisaPayEscrowEMIStatus'
-    #  array_node :charity_affiliation_details, 'CharityAffiliationDetails', :class => CharityAffiliationDetails, :default_value => []
+    #  object_node :charity_affiliation_details, 'CharityAffiliationDetails', :class => CharityAffiliationDetails
     #  numeric_node :transaction_percent, 'TransactionPercent'
-    #  array_node :integrated_merchant_credit_card_infos, 'IntegratedMerchantCreditCardInfo', :class => IntegratedMerchantCreditCardInfo, :default_value => []
-    #  array_node :feature_eligibilities, 'FeatureEligibility', :class => FeatureEligibility, :default_value => []
+    #  object_node :integrated_merchant_credit_card_info, 'IntegratedMerchantCreditCardInfo', :class => IntegratedMerchantCreditCardInfo
+    #  object_node :feature_eligibility, 'FeatureEligibility', :class => FeatureEligibility
     #  boolean_node :top_rated_seller, 'TopRatedSeller', 'true', 'false'
-    #  array_node :top_rated_seller_details, 'TopRatedSellerDetails', :class => TopRatedSellerDetails, :default_value => []
-    #  array_node :recoupment_policy_consents, 'RecoupmentPolicyConsent', :class => RecoupmentPolicyConsent, :default_value => []
+    #  object_node :top_rated_seller_details, 'TopRatedSellerDetails', :class => TopRatedSellerDetails
+    #  object_node :recoupment_policy_consent, 'RecoupmentPolicyConsent', :class => RecoupmentPolicyConsent
     #  boolean_node :domestic_rate_table, 'DomesticRateTable', 'true', 'false'
     #  boolean_node :international_rate_table, 'InternationalRateTable', 'true', 'false'
-    #  value_array_node :seller_ebay_payment_process_statuses, 'SellereBayPaymentProcessStatus', :default_value => []
-    #  array_node :seller_ebay_payment_process_consents, 'SellereBayPaymentProcessConsent', :class => SellereBayPaymentProcessConsentCode, :default_value => []
+    #  text_node :seller_ebay_payment_process_status, 'SellereBayPaymentProcessStatus'
+    #  object_node :seller_ebay_payment_process_consent, 'SellereBayPaymentProcessConsent', :class => SellereBayPaymentProcessConsentCode
     class Seller
       include XML::Mapping
       include Initializer
       root_element_name 'Seller'
       numeric_node :paisa_pay_status, 'PaisaPayStatus'
       boolean_node :allow_payment_edit, 'AllowPaymentEdit', 'true', 'false'
-      value_array_node :billing_currencies, 'BillingCurrency', :default_value => []
+      text_node :billing_currency, 'BillingCurrency'
       boolean_node :checkout_enabled, 'CheckoutEnabled', 'true', 'false'
       boolean_node :cip_bank_account_stored, 'CIPBankAccountStored', 'true', 'false'
       boolean_node :good_standing, 'GoodStanding', 'true', 'false'
-      value_array_node :merchandizing_prefs, 'MerchandizingPref', :default_value => []
+      text_node :merchandizing_pref, 'MerchandizingPref'
       boolean_node :qualifies_for_b2_bvat, 'QualifiesForB2BVAT', 'true', 'false'
-      value_array_node :seller_guarantee_levels, 'SellerGuaranteeLevel', :default_value => []
-      value_array_node :seller_levels, 'SellerLevel', :default_value => []
-      array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
-      array_node :scheduling_infos, 'SchedulingInfo', :class => SchedulingInfo, :default_value => []
+      text_node :seller_guarantee_level, 'SellerGuaranteeLevel'
+      text_node :seller_level, 'SellerLevel'
+      object_node :seller_payment_address, 'SellerPaymentAddress', :class => Address
+      object_node :scheduling_info, 'SchedulingInfo', :class => SchedulingInfo
       boolean_node :store_owner, 'StoreOwner', 'true', 'false'
       text_node :store_url, 'StoreURL'
-      value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
+      text_node :seller_business_type, 'SellerBusinessType'
       boolean_node :registered_business_seller, 'RegisteredBusinessSeller', 'true', 'false'
-      value_array_node :store_sites, 'StoreSite', :default_value => []
-      value_array_node :payment_methods, 'PaymentMethod', :default_value => []
-      array_node :pro_stores_preferences, 'ProStoresPreference', :class => ProStoresCheckoutPreference, :default_value => []
+      text_node :store_site, 'StoreSite'
+      text_node :payment_method, 'PaymentMethod'
+      object_node :pro_stores_preference, 'ProStoresPreference', :class => ProStoresCheckoutPreference
       boolean_node :charity_registered, 'CharityRegistered', 'true', 'false'
       boolean_node :safe_payment_exempt, 'SafePaymentExempt', 'true', 'false'
       numeric_node :paisa_pay_escrow_emi_status, 'PaisaPayEscrowEMIStatus'
-      array_node :charity_affiliation_details, 'CharityAffiliationDetails', :class => CharityAffiliationDetails, :default_value => []
+      object_node :charity_affiliation_details, 'CharityAffiliationDetails', :class => CharityAffiliationDetails
       numeric_node :transaction_percent, 'TransactionPercent'
-      array_node :integrated_merchant_credit_card_infos, 'IntegratedMerchantCreditCardInfo', :class => IntegratedMerchantCreditCardInfo, :default_value => []
-      array_node :feature_eligibilities, 'FeatureEligibility', :class => FeatureEligibility, :default_value => []
+      object_node :integrated_merchant_credit_card_info, 'IntegratedMerchantCreditCardInfo', :class => IntegratedMerchantCreditCardInfo
+      object_node :feature_eligibility, 'FeatureEligibility', :class => FeatureEligibility
       boolean_node :top_rated_seller, 'TopRatedSeller', 'true', 'false'
-      array_node :top_rated_seller_details, 'TopRatedSellerDetails', :class => TopRatedSellerDetails, :default_value => []
-      array_node :recoupment_policy_consents, 'RecoupmentPolicyConsent', :class => RecoupmentPolicyConsent, :default_value => []
+      object_node :top_rated_seller_details, 'TopRatedSellerDetails', :class => TopRatedSellerDetails
+      object_node :recoupment_policy_consent, 'RecoupmentPolicyConsent', :class => RecoupmentPolicyConsent
       boolean_node :domestic_rate_table, 'DomesticRateTable', 'true', 'false'
       boolean_node :international_rate_table, 'InternationalRateTable', 'true', 'false'
-      value_array_node :seller_ebay_payment_process_statuses, 'SellereBayPaymentProcessStatus', :default_value => []
-      array_node :seller_ebay_payment_process_consents, 'SellereBayPaymentProcessConsent', :class => SellereBayPaymentProcessConsentCode, :default_value => []
+      text_node :seller_ebay_payment_process_status, 'SellereBayPaymentProcessStatus'
+      object_node :seller_ebay_payment_process_consent, 'SellereBayPaymentProcessConsent', :class => SellereBayPaymentProcessConsentCode
     end
   end
 end

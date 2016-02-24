@@ -4,8 +4,8 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  text_node :picture_name, 'PictureName'
-    #  value_array_node :picture_sets, 'PictureSet', :default_value => []
-    #  value_array_node :picture_formats, 'PictureFormat', :default_value => []
+    #  text_node :picture_set, 'PictureSet'
+    #  text_node :picture_format, 'PictureFormat'
     #  text_node :full_url, 'FullURL'
     #  text_node :base_url, 'BaseURL'
     #  object_node :picture_set_member, 'PictureSetMember', :class => PictureSetMember
@@ -16,8 +16,8 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'SiteHostedPictureDetails'
       text_node :picture_name, 'PictureName'
-      value_array_node :picture_sets, 'PictureSet', :default_value => []
-      value_array_node :picture_formats, 'PictureFormat', :default_value => []
+      text_node :picture_set, 'PictureSet'
+      text_node :picture_format, 'PictureFormat'
       text_node :full_url, 'FullURL'
       text_node :base_url, 'BaseURL'
       object_node :picture_set_member, 'PictureSetMember', :class => PictureSetMember

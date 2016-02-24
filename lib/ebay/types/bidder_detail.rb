@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :user_ids, 'UserID', :default_value => []
+    #  text_node :user_id, 'UserID'
     #  text_node :email, 'Email'
     #  numeric_node :feedback_score, 'FeedbackScore'
     #  numeric_node :unique_negative_feedback_count, 'UniqueNegativeFeedbackCount'
@@ -12,7 +12,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'BidderDetail'
-      value_array_node :user_ids, 'UserID', :default_value => []
+      text_node :user_id, 'UserID'
       text_node :email, 'Email'
       numeric_node :feedback_score, 'FeedbackScore'
       numeric_node :unique_negative_feedback_count, 'UniqueNegativeFeedbackCount'

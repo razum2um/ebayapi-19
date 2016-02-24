@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :recipient_user_id, 'RecipientUserID'
     #  text_node :send_to_name, 'SendToName'
     #  text_node :subject, 'Subject'
-    #  value_array_node :message_ids, 'MessageID', :default_value => []
+    #  text_node :message_id, 'MessageID'
     #  text_node :external_message_id, 'ExternalMessageID'
     #  text_node :content_type, 'ContentType'
     #  text_node :text, 'Text'
@@ -19,14 +19,14 @@ module Ebay # :nodoc:
     #  date_time_node :creation_date, 'CreationDate'
     #  date_time_node :receive_date, 'ReceiveDate'
     #  date_time_node :expiration_date, 'ExpirationDate'
-    #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
-    #  array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
-    #  array_node :folders, 'Folder', :class => MyMessagesFolder, :default_value => []
+    #  text_node :item_id, 'ItemID'
+    #  object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails
+    #  object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails
+    #  object_node :folder, 'Folder', :class => MyMessagesFolder
     #  text_node :content, 'Content'
-    #  value_array_node :message_types, 'MessageType', :default_value => []
-    #  value_array_node :listing_statuses, 'ListingStatus', :default_value => []
-    #  value_array_node :question_types, 'QuestionType', :default_value => []
+    #  text_node :message_type, 'MessageType'
+    #  text_node :listing_status, 'ListingStatus'
+    #  text_node :question_type, 'QuestionType'
     #  boolean_node :replied, 'Replied', 'true', 'false'
     #  boolean_node :high_priority, 'HighPriority', 'true', 'false'
     #  date_time_node :item_end_time, 'ItemEndTime'
@@ -40,7 +40,7 @@ module Ebay # :nodoc:
       text_node :recipient_user_id, 'RecipientUserID'
       text_node :send_to_name, 'SendToName'
       text_node :subject, 'Subject'
-      value_array_node :message_ids, 'MessageID', :default_value => []
+      text_node :message_id, 'MessageID'
       text_node :external_message_id, 'ExternalMessageID'
       text_node :content_type, 'ContentType'
       text_node :text, 'Text'
@@ -49,14 +49,14 @@ module Ebay # :nodoc:
       date_time_node :creation_date, 'CreationDate'
       date_time_node :receive_date, 'ReceiveDate'
       date_time_node :expiration_date, 'ExpirationDate'
-      value_array_node :item_ids, 'ItemID', :default_value => []
-      array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
-      array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
-      array_node :folders, 'Folder', :class => MyMessagesFolder, :default_value => []
+      text_node :item_id, 'ItemID'
+      object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails
+      object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails
+      object_node :folder, 'Folder', :class => MyMessagesFolder
       text_node :content, 'Content'
-      value_array_node :message_types, 'MessageType', :default_value => []
-      value_array_node :listing_statuses, 'ListingStatus', :default_value => []
-      value_array_node :question_types, 'QuestionType', :default_value => []
+      text_node :message_type, 'MessageType'
+      text_node :listing_status, 'ListingStatus'
+      text_node :question_type, 'QuestionType'
       boolean_node :replied, 'Replied', 'true', 'false'
       boolean_node :high_priority, 'HighPriority', 'true', 'false'
       date_time_node :item_end_time, 'ItemEndTime'

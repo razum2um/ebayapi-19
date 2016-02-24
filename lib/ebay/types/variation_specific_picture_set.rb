@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :picture_url, 'PictureURL'
     #  text_node :gallery_url, 'GalleryURL'
     #  text_node :external_picture_url, 'ExternalPictureURL'
-    #  array_node :extended_picture_details, 'ExtendedPictureDetails', :class => ExtendedPictureDetails, :default_value => []
+    #  object_node :extended_picture_details, 'ExtendedPictureDetails', :class => ExtendedPictureDetails
     class VariationSpecificPictureSet
       include XML::Mapping
       include Initializer
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       text_node :picture_url, 'PictureURL'
       text_node :gallery_url, 'GalleryURL'
       text_node :external_picture_url, 'ExternalPictureURL'
-      array_node :extended_picture_details, 'ExtendedPictureDetails', :class => ExtendedPictureDetails, :default_value => []
+      object_node :extended_picture_details, 'ExtendedPictureDetails', :class => ExtendedPictureDetails
     end
   end
 end

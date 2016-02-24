@@ -2,8 +2,8 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :sites, 'Site', :default_value => []
-    #  value_array_node :seller_ebay_payment_process_statuses, 'SellereBayPaymentProcessStatus', :default_value => []
+    #  text_node :site, 'Site'
+    #  text_node :seller_ebay_payment_process_status, 'SellereBayPaymentProcessStatus'
     #  date_time_node :accepted_time, 'AcceptedTime'
     #  date_time_node :seller_ebay_payment_process_enable_time, 'SellereBayPaymentProcessEnableTime'
     #  text_node :user_agreement_url, 'UserAgreementURL'
@@ -11,8 +11,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'UserAgreementInfo'
-      value_array_node :sites, 'Site', :default_value => []
-      value_array_node :seller_ebay_payment_process_statuses, 'SellereBayPaymentProcessStatus', :default_value => []
+      text_node :site, 'Site'
+      text_node :seller_ebay_payment_process_status, 'SellereBayPaymentProcessStatus'
       date_time_node :accepted_time, 'AcceptedTime'
       date_time_node :seller_ebay_payment_process_enable_time, 'SellereBayPaymentProcessEnableTime'
       text_node :user_agreement_url, 'UserAgreementURL'

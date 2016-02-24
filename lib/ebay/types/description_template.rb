@@ -7,7 +7,11 @@ module Ebay # :nodoc:
     #  text_node :image_url, 'ImageURL'
     #  text_node :name, 'Name'
     #  text_node :template_xml, 'TemplateXML'
-    #  value_array_node :types, 'Type', :default_value => []
+    #  text_node :type, 'Type'
+def type
+  @type
+end
+
     class DescriptionTemplate
       include XML::Mapping
       include Initializer
@@ -17,7 +21,11 @@ module Ebay # :nodoc:
       text_node :image_url, 'ImageURL'
       text_node :name, 'Name'
       text_node :template_xml, 'TemplateXML'
-      value_array_node :types, 'Type', :default_value => []
+      text_node :type, 'Type'
+def type
+  @type
+end
+
     end
   end
 end

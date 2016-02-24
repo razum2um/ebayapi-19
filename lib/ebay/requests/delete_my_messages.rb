@@ -4,14 +4,14 @@ require 'ebay/types/my_messages_message_id_array'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  array_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray, :default_value => []
-    #  array_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray, :default_value => []
+    #  object_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray
+    #  object_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray
     class DeleteMyMessages < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'DeleteMyMessagesRequest'
-      array_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray, :default_value => []
-      array_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray, :default_value => []
+      object_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray
+      object_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray
     end
   end
 end

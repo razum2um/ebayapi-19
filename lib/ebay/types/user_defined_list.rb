@@ -9,9 +9,9 @@ module Ebay # :nodoc:
     #  numeric_node :item_count, 'ItemCount'
     #  numeric_node :favorite_searche_count, 'FavoriteSearcheCount'
     #  numeric_node :favorite_seller_count, 'FavoriteSellerCount'
-    #  array_node :items, 'ItemArray', :class => ItemArray, :default_value => []
-    #  array_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :default_value => []
-    #  array_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :default_value => []
+    #  object_node :items, 'ItemArray', :class => ItemArray
+    #  object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList
+    #  object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList
     class UserDefinedList
       include XML::Mapping
       include Initializer
@@ -20,9 +20,9 @@ module Ebay # :nodoc:
       numeric_node :item_count, 'ItemCount'
       numeric_node :favorite_searche_count, 'FavoriteSearcheCount'
       numeric_node :favorite_seller_count, 'FavoriteSellerCount'
-      array_node :items, 'ItemArray', :class => ItemArray, :default_value => []
-      array_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :default_value => []
-      array_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :default_value => []
+      object_node :items, 'ItemArray', :class => ItemArray
+      object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList
+      object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList
     end
   end
 end

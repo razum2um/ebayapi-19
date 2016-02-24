@@ -9,8 +9,8 @@ module Ebay # :nodoc:
     #  numeric_node :sale_template_id, 'SaleTemplateID'
     #  numeric_node :sale_template_group_id, 'SaleTemplateGroupID'
     #  text_node :sale_template_name, 'SaleTemplateName'
-    #  array_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :default_value => []
-    #  array_node :fees, 'Fees', :class => Fees, :default_value => []
+    #  object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails
+    #  object_node :fees, 'Fees', :class => Fees
     class AddSellingManagerTemplate < Abstract
       include XML::Mapping
       include Initializer
@@ -20,8 +20,8 @@ module Ebay # :nodoc:
       numeric_node :sale_template_id, 'SaleTemplateID'
       numeric_node :sale_template_group_id, 'SaleTemplateGroupID'
       text_node :sale_template_name, 'SaleTemplateName'
-      array_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails, :default_value => []
-      array_node :fees, 'Fees', :class => Fees, :default_value => []
+      object_node :selling_manager_product_details, 'SellingManagerProductDetails', :class => SellingManagerProductDetails
+      object_node :fees, 'Fees', :class => Fees
     end
   end
 end

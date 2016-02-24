@@ -5,9 +5,13 @@ module Ebay # :nodoc:
     #  text_node :delivery_url, 'DeliveryURL'
     #  text_node :reference_id, 'ReferenceID'
     #  date_time_node :expiration_time, 'ExpirationTime'
-    #  value_array_node :types, 'Type', :default_value => []
+    #  text_node :type, 'Type'
+def type
+  @type
+end
+
     #  numeric_node :retries, 'Retries'
-    #  value_array_node :delivery_statuses, 'DeliveryStatus', :default_value => []
+    #  text_node :delivery_status, 'DeliveryStatus'
     #  date_time_node :next_retry_time, 'NextRetryTime'
     #  date_time_node :delivery_time, 'DeliveryTime'
     #  text_node :error_message, 'ErrorMessage'
@@ -19,9 +23,13 @@ module Ebay # :nodoc:
       text_node :delivery_url, 'DeliveryURL'
       text_node :reference_id, 'ReferenceID'
       date_time_node :expiration_time, 'ExpirationTime'
-      value_array_node :types, 'Type', :default_value => []
+      text_node :type, 'Type'
+def type
+  @type
+end
+
       numeric_node :retries, 'Retries'
-      value_array_node :delivery_statuses, 'DeliveryStatus', :default_value => []
+      text_node :delivery_status, 'DeliveryStatus'
       date_time_node :next_retry_time, 'NextRetryTime'
       date_time_node :delivery_time, 'DeliveryTime'
       text_node :error_message, 'ErrorMessage'

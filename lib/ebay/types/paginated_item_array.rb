@@ -4,14 +4,14 @@ require 'ebay/types/pagination_result'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :items, 'ItemArray', :class => ItemArray, :default_value => []
-    #  array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+    #  object_node :items, 'ItemArray', :class => ItemArray
+    #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult
     class PaginatedItemArray
       include XML::Mapping
       include Initializer
       root_element_name 'PaginatedItemArray'
-      array_node :items, 'ItemArray', :class => ItemArray, :default_value => []
-      array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+      object_node :items, 'ItemArray', :class => ItemArray
+      object_node :pagination_result, 'PaginationResult', :class => PaginationResult
     end
   end
 end

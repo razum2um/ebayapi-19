@@ -3,7 +3,7 @@ require 'ebay/types/picture_manager_folder'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :subscription_levels, 'SubscriptionLevel', :default_value => []
+    #  text_node :subscription_level, 'SubscriptionLevel'
     #  numeric_node :storage_used, 'StorageUsed'
     #  numeric_node :total_storage_available, 'TotalStorageAvailable'
     #  boolean_node :keep_original, 'KeepOriginal', 'true', 'false'
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'PictureManagerDetails'
-      value_array_node :subscription_levels, 'SubscriptionLevel', :default_value => []
+      text_node :subscription_level, 'SubscriptionLevel'
       numeric_node :storage_used, 'StorageUsed'
       numeric_node :total_storage_available, 'TotalStorageAvailable'
       boolean_node :keep_original, 'KeepOriginal', 'true', 'false'

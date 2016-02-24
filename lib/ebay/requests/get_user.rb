@@ -2,7 +2,7 @@
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :item_ids, 'ItemID', :default_value => []
+    #  text_node :item_id, 'ItemID'
     #  text_node :user_id, 'UserID'
     #  boolean_node :include_express_requirements, 'IncludeExpressRequirements', 'true', 'false'
     #  boolean_node :include_feature_eligibility, 'IncludeFeatureEligibility', 'true', 'false'
@@ -10,7 +10,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetUserRequest'
-      value_array_node :item_ids, 'ItemID', :default_value => []
+      text_node :item_id, 'ItemID'
       text_node :user_id, 'UserID'
       boolean_node :include_express_requirements, 'IncludeExpressRequirements', 'true', 'false'
       boolean_node :include_feature_eligibility, 'IncludeFeatureEligibility', 'true', 'false'

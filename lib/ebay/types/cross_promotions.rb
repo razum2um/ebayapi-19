@@ -3,9 +3,9 @@ require 'ebay/types/promoted_item'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  value_array_node :primary_schemes, 'PrimaryScheme', :default_value => []
-    #  value_array_node :promotion_methods, 'PromotionMethod', :default_value => []
+    #  text_node :item_id, 'ItemID'
+    #  text_node :primary_scheme, 'PrimaryScheme'
+    #  text_node :promotion_method, 'PromotionMethod'
     #  text_node :seller_id, 'SellerID'
     #  boolean_node :shipping_discount, 'ShippingDiscount', 'true', 'false'
     #  text_node :store_name, 'StoreName'
@@ -14,9 +14,9 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'CrossPromotions'
-      value_array_node :item_ids, 'ItemID', :default_value => []
-      value_array_node :primary_schemes, 'PrimaryScheme', :default_value => []
-      value_array_node :promotion_methods, 'PromotionMethod', :default_value => []
+      text_node :item_id, 'ItemID'
+      text_node :primary_scheme, 'PrimaryScheme'
+      text_node :promotion_method, 'PromotionMethod'
       text_node :seller_id, 'SellerID'
       boolean_node :shipping_discount, 'ShippingDiscount', 'true', 'false'
       text_node :store_name, 'StoreName'

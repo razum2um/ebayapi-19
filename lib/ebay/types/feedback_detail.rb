@@ -1,19 +1,18 @@
-require 'ebay/types/amount'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :commenting_users, 'CommentingUser', :default_value => []
+    #  text_node :commenting_user, 'CommentingUser'
     #  numeric_node :commenting_user_score, 'CommentingUserScore'
     #  text_node :comment_text, 'CommentText'
     #  date_time_node :comment_time, 'CommentTime'
-    #  value_array_node :comment_types, 'CommentType', :default_value => []
+    #  text_node :comment_type, 'CommentType'
     #  text_node :feedback_response, 'FeedbackResponse'
     #  text_node :followup, 'Followup'
-    #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  value_array_node :roles, 'Role', :default_value => []
+    #  text_node :item_id, 'ItemID'
+    #  text_node :role, 'Role'
     #  text_node :item_title, 'ItemTitle'
-    #  array_node :item_prices, 'ItemPrice', :class => Amount, :default_value => []
+    #  money_node :item_price, 'ItemPrice'
     #  text_node :feedback_id, 'FeedbackID'
     #  text_node :transaction_id, 'TransactionID'
     #  boolean_node :comment_replaced, 'CommentReplaced', 'true', 'false'
@@ -26,17 +25,17 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'FeedbackDetail'
-      value_array_node :commenting_users, 'CommentingUser', :default_value => []
+      text_node :commenting_user, 'CommentingUser'
       numeric_node :commenting_user_score, 'CommentingUserScore'
       text_node :comment_text, 'CommentText'
       date_time_node :comment_time, 'CommentTime'
-      value_array_node :comment_types, 'CommentType', :default_value => []
+      text_node :comment_type, 'CommentType'
       text_node :feedback_response, 'FeedbackResponse'
       text_node :followup, 'Followup'
-      value_array_node :item_ids, 'ItemID', :default_value => []
-      value_array_node :roles, 'Role', :default_value => []
+      text_node :item_id, 'ItemID'
+      text_node :role, 'Role'
       text_node :item_title, 'ItemTitle'
-      array_node :item_prices, 'ItemPrice', :class => Amount, :default_value => []
+      money_node :item_price, 'ItemPrice'
       text_node :feedback_id, 'FeedbackID'
       text_node :transaction_id, 'TransactionID'
       boolean_node :comment_replaced, 'CommentReplaced', 'true', 'false'

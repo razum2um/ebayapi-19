@@ -5,8 +5,8 @@ module Ebay # :nodoc:
     #  boolean_node :active_items_only, 'ActiveItemsOnly', 'true', 'false'
     #  date_time_node :end_time_from, 'EndTimeFrom'
     #  date_time_node :end_time_to, 'EndTimeTo'
-    #  value_array_node :user_ids, 'UserID', :default_value => []
-    #  value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
+    #  text_node :user_id, 'UserID'
+    #  text_node :granularity_level, 'GranularityLevel'
     class GetBidderList < Abstract
       include XML::Mapping
       include Initializer
@@ -14,8 +14,8 @@ module Ebay # :nodoc:
       boolean_node :active_items_only, 'ActiveItemsOnly', 'true', 'false'
       date_time_node :end_time_from, 'EndTimeFrom'
       date_time_node :end_time_to, 'EndTimeTo'
-      value_array_node :user_ids, 'UserID', :default_value => []
-      value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
+      text_node :user_id, 'UserID'
+      text_node :granularity_level, 'GranularityLevel'
     end
   end
 end

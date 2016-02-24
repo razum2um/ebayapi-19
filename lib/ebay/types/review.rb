@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :title, 'Title'
     #  numeric_node :rating, 'Rating'
     #  text_node :text, 'Text'
-    #  value_array_node :user_ids, 'UserID', :default_value => []
+    #  text_node :user_id, 'UserID'
     #  date_time_node :creation_time, 'CreationTime'
     class Review
       include XML::Mapping
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       text_node :title, 'Title'
       numeric_node :rating, 'Rating'
       text_node :text, 'Text'
-      value_array_node :user_ids, 'UserID', :default_value => []
+      text_node :user_id, 'UserID'
       date_time_node :creation_time, 'CreationTime'
     end
   end

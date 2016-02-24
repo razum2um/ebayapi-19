@@ -5,16 +5,16 @@ require 'ebay/types/sku_array'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :user_ids, 'UserID', :default_value => []
-    #  array_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray, :default_value => []
+    #  text_node :user_id, 'UserID'
+    #  object_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray
     #  date_time_node :end_time_from, 'EndTimeFrom'
     #  date_time_node :end_time_to, 'EndTimeTo'
     #  numeric_node :sort, 'Sort'
     #  date_time_node :start_time_from, 'StartTimeFrom'
     #  date_time_node :start_time_to, 'StartTimeTo'
-    #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-    #  value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
-    #  array_node :skus, 'SKUArray', :class => SKUArray, :default_value => []
+    #  object_node :pagination, 'Pagination', :class => Pagination
+    #  text_node :granularity_level, 'GranularityLevel'
+    #  object_node :skus, 'SKUArray', :class => SKUArray
     #  boolean_node :include_watch_count, 'IncludeWatchCount', 'true', 'false'
     #  boolean_node :admin_ended_items_only, 'AdminEndedItemsOnly', 'true', 'false'
     #  numeric_node :category_id, 'CategoryID'
@@ -23,16 +23,16 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellerListRequest'
-      value_array_node :user_ids, 'UserID', :default_value => []
-      array_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray, :default_value => []
+      text_node :user_id, 'UserID'
+      object_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray
       date_time_node :end_time_from, 'EndTimeFrom'
       date_time_node :end_time_to, 'EndTimeTo'
       numeric_node :sort, 'Sort'
       date_time_node :start_time_from, 'StartTimeFrom'
       date_time_node :start_time_to, 'StartTimeTo'
-      array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-      value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
-      array_node :skus, 'SKUArray', :class => SKUArray, :default_value => []
+      object_node :pagination, 'Pagination', :class => Pagination
+      text_node :granularity_level, 'GranularityLevel'
+      object_node :skus, 'SKUArray', :class => SKUArray
       boolean_node :include_watch_count, 'IncludeWatchCount', 'true', 'false'
       boolean_node :admin_ended_items_only, 'AdminEndedItemsOnly', 'true', 'false'
       numeric_node :category_id, 'CategoryID'

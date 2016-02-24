@@ -4,15 +4,15 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  numeric_node :task_id, 'TaskID'
-    #  value_array_node :statuses, 'Status', :default_value => []
-    #  array_node :custom_categories, 'CustomCategory', :class => StoreCustomCategoryArray, :default_value => []
+    #  text_node :status, 'Status'
+    #  object_node :custom_category, 'CustomCategory', :class => StoreCustomCategoryArray
     class SetStoreCategories < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'SetStoreCategoriesResponse'
       numeric_node :task_id, 'TaskID'
-      value_array_node :statuses, 'Status', :default_value => []
-      array_node :custom_categories, 'CustomCategory', :class => StoreCustomCategoryArray, :default_value => []
+      text_node :status, 'Status'
+      object_node :custom_category, 'CustomCategory', :class => StoreCustomCategoryArray
     end
   end
 end

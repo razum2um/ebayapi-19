@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  object_node :bid_group_item, 'BidGroupItem', :class => BidGroupItem
     #  numeric_node :bid_group_id, 'BidGroupID'
     #  text_node :bid_group_name, 'BidGroupName'
-    #  value_array_node :bid_group_statuses, 'BidGroupStatus', :default_value => []
+    #  text_node :bid_group_status, 'BidGroupStatus'
     class BidGroup
       include XML::Mapping
       include Initializer
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       object_node :bid_group_item, 'BidGroupItem', :class => BidGroupItem
       numeric_node :bid_group_id, 'BidGroupID'
       text_node :bid_group_name, 'BidGroupName'
-      value_array_node :bid_group_statuses, 'BidGroupStatus', :default_value => []
+      text_node :bid_group_status, 'BidGroupStatus'
     end
   end
 end

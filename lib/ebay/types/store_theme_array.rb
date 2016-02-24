@@ -5,13 +5,13 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  object_node :theme, 'Theme', :class => StoreTheme
-    #  array_node :generic_color_schemes, 'GenericColorSchemeArray', :class => StoreColorSchemeArray, :default_value => []
+    #  object_node :generic_color_schemes, 'GenericColorSchemeArray', :class => StoreColorSchemeArray
     class StoreThemeArray
       include XML::Mapping
       include Initializer
       root_element_name 'StoreThemeArray'
       object_node :theme, 'Theme', :class => StoreTheme
-      array_node :generic_color_schemes, 'GenericColorSchemeArray', :class => StoreColorSchemeArray, :default_value => []
+      object_node :generic_color_schemes, 'GenericColorSchemeArray', :class => StoreColorSchemeArray
     end
   end
 end

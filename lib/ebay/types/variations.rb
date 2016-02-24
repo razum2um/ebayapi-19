@@ -8,16 +8,16 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :variation, 'Variation', :class => Variation
     #  object_node :pictures, 'Pictures', :class => Pictures
-    #  array_node :variation_specifics_sets, 'VariationSpecificsSet', :class => NameValueListArray, :default_value => []
-    #  array_node :modify_name_lists, 'ModifyNameList', :class => ModifyNameArray, :default_value => []
+    #  object_node :variation_specifics_set, 'VariationSpecificsSet', :class => NameValueListArray
+    #  object_node :modify_name_list, 'ModifyNameList', :class => ModifyNameArray
     class Variations
       include XML::Mapping
       include Initializer
       root_element_name 'Variations'
       object_node :variation, 'Variation', :class => Variation
       object_node :pictures, 'Pictures', :class => Pictures
-      array_node :variation_specifics_sets, 'VariationSpecificsSet', :class => NameValueListArray, :default_value => []
-      array_node :modify_name_lists, 'ModifyNameList', :class => ModifyNameArray, :default_value => []
+      object_node :variation_specifics_set, 'VariationSpecificsSet', :class => NameValueListArray
+      object_node :modify_name_list, 'ModifyNameList', :class => ModifyNameArray
     end
   end
 end

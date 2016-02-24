@@ -8,12 +8,12 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  boolean_node :linked_paypal_account, 'LinkedPayPalAccount', 'true', 'false'
-    #  array_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolationsDetails, :default_value => []
-    #  array_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirementsDetails, :default_value => []
-    #  array_node :maximum_unpaid_item_strikes_infos, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfoDetails, :default_value => []
-    #  array_node :minimum_feedback_scores, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails, :default_value => []
+    #  object_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolationsDetails
+    #  object_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirementsDetails
+    #  object_node :maximum_unpaid_item_strikes_info, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfoDetails
+    #  object_node :minimum_feedback_score, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails
     #  boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
-    #  array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
+    #  object_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails
     #  text_node :detail_version, 'DetailVersion'
     #  date_time_node :update_time, 'UpdateTime'
     class SiteBuyerRequirementDetails
@@ -21,12 +21,12 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'SiteBuyerRequirementDetails'
       boolean_node :linked_paypal_account, 'LinkedPayPalAccount', 'true', 'false'
-      array_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolationsDetails, :default_value => []
-      array_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirementsDetails, :default_value => []
-      array_node :maximum_unpaid_item_strikes_infos, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfoDetails, :default_value => []
-      array_node :minimum_feedback_scores, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails, :default_value => []
+      object_node :maximum_buyer_policy_violations, 'MaximumBuyerPolicyViolations', :class => MaximumBuyerPolicyViolationsDetails
+      object_node :maximum_item_requirements, 'MaximumItemRequirements', :class => MaximumItemRequirementsDetails
+      object_node :maximum_unpaid_item_strikes_info, 'MaximumUnpaidItemStrikesInfo', :class => MaximumUnpaidItemStrikesInfoDetails
+      object_node :minimum_feedback_score, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails
       boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
-      array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
+      object_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails
       text_node :detail_version, 'DetailVersion'
       date_time_node :update_time, 'UpdateTime'
     end

@@ -4,14 +4,14 @@ require 'ebay/types/refund_information'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :payments, 'Payments', :class => PaymentInformation, :default_value => []
-    #  array_node :refunds, 'Refunds', :class => RefundInformation, :default_value => []
+    #  object_node :payments, 'Payments', :class => PaymentInformation
+    #  object_node :refunds, 'Refunds', :class => RefundInformation
     class PaymentsInformation
       include XML::Mapping
       include Initializer
       root_element_name 'PaymentsInformation'
-      array_node :payments, 'Payments', :class => PaymentInformation, :default_value => []
-      array_node :refunds, 'Refunds', :class => RefundInformation, :default_value => []
+      object_node :payments, 'Payments', :class => PaymentInformation
+      object_node :refunds, 'Refunds', :class => RefundInformation
     end
   end
 end

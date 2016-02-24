@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :shipping_service_id, 'ShippingServiceID'
     #  numeric_node :shipping_time_max, 'ShippingTimeMax'
     #  numeric_node :shipping_time_min, 'ShippingTimeMin'
-    #  value_array_node :shipping_service_codes, 'ShippingServiceCode', :default_value => []
+    #  text_node :shipping_service_code, 'ShippingServiceCode'
     #  text_node :service_type, 'ServiceType'
     #  text_node :shipping_package, 'ShippingPackage'
     #  boolean_node :dimensions_required, 'DimensionsRequired', 'true', 'false'
@@ -38,7 +38,7 @@ module Ebay # :nodoc:
       numeric_node :shipping_service_id, 'ShippingServiceID'
       numeric_node :shipping_time_max, 'ShippingTimeMax'
       numeric_node :shipping_time_min, 'ShippingTimeMin'
-      value_array_node :shipping_service_codes, 'ShippingServiceCode', :default_value => []
+      text_node :shipping_service_code, 'ShippingServiceCode'
       text_node :service_type, 'ServiceType'
       text_node :shipping_package, 'ShippingPackage'
       boolean_node :dimensions_required, 'DimensionsRequired', 'true', 'false'

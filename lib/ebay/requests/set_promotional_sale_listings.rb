@@ -4,8 +4,8 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  numeric_node :promotional_sale_id, 'PromotionalSaleID'
-    #  value_array_node :actions, 'Action', :default_value => []
-    #  array_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray, :default_value => []
+    #  text_node :action, 'Action'
+    #  object_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray
     #  numeric_node :store_category_id, 'StoreCategoryID'
     #  numeric_node :category_id, 'CategoryID'
     #  boolean_node :all_fixed_price_items, 'AllFixedPriceItems', 'true', 'false'
@@ -16,8 +16,8 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'SetPromotionalSaleListingsRequest'
       numeric_node :promotional_sale_id, 'PromotionalSaleID'
-      value_array_node :actions, 'Action', :default_value => []
-      array_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray, :default_value => []
+      text_node :action, 'Action'
+      object_node :promotional_sale_item_ids, 'PromotionalSaleItemIDArray', :class => ItemIDArray
       numeric_node :store_category_id, 'StoreCategoryID'
       numeric_node :category_id, 'CategoryID'
       boolean_node :all_fixed_price_items, 'AllFixedPriceItems', 'true', 'false'

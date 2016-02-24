@@ -7,18 +7,18 @@ module Ebay # :nodoc:
     # == Attributes
     #  date_time_node :start_time, 'StartTime'
     #  date_time_node :end_time, 'EndTime'
-    #  array_node :notification_details, 'NotificationDetailsArray', :class => NotificationDetailsArray, :default_value => []
-    #  array_node :mark_up_mark_down_histories, 'MarkUpMarkDownHistory', :class => MarkUpMarkDownHistory, :default_value => []
-    #  array_node :notification_statistics, 'NotificationStatistics', :class => NotificationStatistics, :default_value => []
+    #  object_node :notification_details, 'NotificationDetailsArray', :class => NotificationDetailsArray
+    #  object_node :mark_up_mark_down_history, 'MarkUpMarkDownHistory', :class => MarkUpMarkDownHistory
+    #  object_node :notification_statistics, 'NotificationStatistics', :class => NotificationStatistics
     class GetNotificationsUsage < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetNotificationsUsageResponse'
       date_time_node :start_time, 'StartTime'
       date_time_node :end_time, 'EndTime'
-      array_node :notification_details, 'NotificationDetailsArray', :class => NotificationDetailsArray, :default_value => []
-      array_node :mark_up_mark_down_histories, 'MarkUpMarkDownHistory', :class => MarkUpMarkDownHistory, :default_value => []
-      array_node :notification_statistics, 'NotificationStatistics', :class => NotificationStatistics, :default_value => []
+      object_node :notification_details, 'NotificationDetailsArray', :class => NotificationDetailsArray
+      object_node :mark_up_mark_down_history, 'MarkUpMarkDownHistory', :class => MarkUpMarkDownHistory
+      object_node :notification_statistics, 'NotificationStatistics', :class => NotificationStatistics
     end
   end
 end

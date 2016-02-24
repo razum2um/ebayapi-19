@@ -10,35 +10,35 @@ require 'ebay/types/user_defined_list'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  array_node :buying_summaries, 'BuyingSummary', :class => BuyingSummary, :default_value => []
-    #  array_node :watch_lists, 'WatchList', :class => PaginatedItemArray, :default_value => []
-    #  array_node :bid_lists, 'BidList', :class => PaginatedItemArray, :default_value => []
-    #  array_node :best_offer_lists, 'BestOfferList', :class => PaginatedItemArray, :default_value => []
-    #  array_node :won_lists, 'WonList', :class => PaginatedOrderTransactionArray, :default_value => []
-    #  array_node :lost_lists, 'LostList', :class => PaginatedItemArray, :default_value => []
-    #  array_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :default_value => []
-    #  array_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :default_value => []
+    #  object_node :buying_summary, 'BuyingSummary', :class => BuyingSummary
+    #  object_node :watch_list, 'WatchList', :class => PaginatedItemArray
+    #  object_node :bid_list, 'BidList', :class => PaginatedItemArray
+    #  object_node :best_offer_list, 'BestOfferList', :class => PaginatedItemArray
+    #  object_node :won_list, 'WonList', :class => PaginatedOrderTransactionArray
+    #  object_node :lost_list, 'LostList', :class => PaginatedItemArray
+    #  object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList
+    #  object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList
     #  object_node :second_chance_offer, 'SecondChanceOffer', :class => Item
-    #  array_node :bid_assistant_lists, 'BidAssistantList', :class => BidGroupArray, :default_value => []
-    #  array_node :deleted_from_won_lists, 'DeletedFromWonList', :class => PaginatedOrderTransactionArray, :default_value => []
-    #  array_node :deleted_from_lost_lists, 'DeletedFromLostList', :class => PaginatedItemArray, :default_value => []
+    #  object_node :bid_assistant_list, 'BidAssistantList', :class => BidGroupArray
+    #  object_node :deleted_from_won_list, 'DeletedFromWonList', :class => PaginatedOrderTransactionArray
+    #  object_node :deleted_from_lost_list, 'DeletedFromLostList', :class => PaginatedItemArray
     #  object_node :user_defined_list, 'UserDefinedList', :class => UserDefinedList
     class GetMyeBayBuying < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetMyeBayBuyingResponse'
-      array_node :buying_summaries, 'BuyingSummary', :class => BuyingSummary, :default_value => []
-      array_node :watch_lists, 'WatchList', :class => PaginatedItemArray, :default_value => []
-      array_node :bid_lists, 'BidList', :class => PaginatedItemArray, :default_value => []
-      array_node :best_offer_lists, 'BestOfferList', :class => PaginatedItemArray, :default_value => []
-      array_node :won_lists, 'WonList', :class => PaginatedOrderTransactionArray, :default_value => []
-      array_node :lost_lists, 'LostList', :class => PaginatedItemArray, :default_value => []
-      array_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList, :default_value => []
-      array_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList, :default_value => []
+      object_node :buying_summary, 'BuyingSummary', :class => BuyingSummary
+      object_node :watch_list, 'WatchList', :class => PaginatedItemArray
+      object_node :bid_list, 'BidList', :class => PaginatedItemArray
+      object_node :best_offer_list, 'BestOfferList', :class => PaginatedItemArray
+      object_node :won_list, 'WonList', :class => PaginatedOrderTransactionArray
+      object_node :lost_list, 'LostList', :class => PaginatedItemArray
+      object_node :favorite_searches, 'FavoriteSearches', :class => MyeBayFavoriteSearchList
+      object_node :favorite_sellers, 'FavoriteSellers', :class => MyeBayFavoriteSellerList
       object_node :second_chance_offer, 'SecondChanceOffer', :class => Item
-      array_node :bid_assistant_lists, 'BidAssistantList', :class => BidGroupArray, :default_value => []
-      array_node :deleted_from_won_lists, 'DeletedFromWonList', :class => PaginatedOrderTransactionArray, :default_value => []
-      array_node :deleted_from_lost_lists, 'DeletedFromLostList', :class => PaginatedItemArray, :default_value => []
+      object_node :bid_assistant_list, 'BidAssistantList', :class => BidGroupArray
+      object_node :deleted_from_won_list, 'DeletedFromWonList', :class => PaginatedOrderTransactionArray
+      object_node :deleted_from_lost_list, 'DeletedFromLostList', :class => PaginatedItemArray
       object_node :user_defined_list, 'UserDefinedList', :class => UserDefinedList
     end
   end

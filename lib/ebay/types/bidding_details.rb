@@ -1,10 +1,9 @@
-require 'ebay/types/amount'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :converted_max_bids, 'ConvertedMaxBid', :class => Amount, :default_value => []
-    #  array_node :max_bids, 'MaxBid', :class => Amount, :default_value => []
+    #  money_node :converted_max_bid, 'ConvertedMaxBid'
+    #  money_node :max_bid, 'MaxBid'
     #  numeric_node :quantity_bid, 'QuantityBid'
     #  numeric_node :quantity_won, 'QuantityWon'
     #  boolean_node :winning, 'Winning', 'true', 'false'
@@ -13,8 +12,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'BiddingDetails'
-      array_node :converted_max_bids, 'ConvertedMaxBid', :class => Amount, :default_value => []
-      array_node :max_bids, 'MaxBid', :class => Amount, :default_value => []
+      money_node :converted_max_bid, 'ConvertedMaxBid'
+      money_node :max_bid, 'MaxBid'
       numeric_node :quantity_bid, 'QuantityBid'
       numeric_node :quantity_won, 'QuantityWon'
       boolean_node :winning, 'Winning', 'true', 'false'

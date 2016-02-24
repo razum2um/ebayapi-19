@@ -1,4 +1,3 @@
-require 'ebay/types/amount'
 require 'ebay/types/refund_transaction_array'
 require 'ebay/types/refund_failure_reason'
 require 'ebay/types/refund_funding_source_array'
@@ -6,15 +5,15 @@ require 'ebay/types/refund_funding_source_array'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :refund_from_sellers, 'RefundFromSeller', :class => Amount, :default_value => []
-    #  array_node :total_refund_to_buyers, 'TotalRefundToBuyer', :class => Amount, :default_value => []
+    #  money_node :refund_from_seller, 'RefundFromSeller'
+    #  money_node :total_refund_to_buyer, 'TotalRefundToBuyer'
     #  date_time_node :refund_time, 'RefundTime'
     #  text_node :refund_id, 'RefundID'
-    #  array_node :refund_transactions, 'RefundTransactionArray', :class => RefundTransactionArray, :default_value => []
-    #  array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
-    #  value_array_node :refund_statuses, 'RefundStatus', :default_value => []
-    #  array_node :refund_failure_reasons, 'RefundFailureReason', :class => RefundFailureReason, :default_value => []
-    #  array_node :refund_funding_sources, 'RefundFundingSourceArray', :class => RefundFundingSourceArray, :default_value => []
+    #  object_node :refund_transactions, 'RefundTransactionArray', :class => RefundTransactionArray
+    #  money_node :refund_amount, 'RefundAmount'
+    #  text_node :refund_status, 'RefundStatus'
+    #  object_node :refund_failure_reason, 'RefundFailureReason', :class => RefundFailureReason
+    #  object_node :refund_funding_sources, 'RefundFundingSourceArray', :class => RefundFundingSourceArray
     #  text_node :external_reference_id, 'ExternalReferenceID'
     #  date_time_node :refund_requested_time, 'RefundRequestedTime'
     #  date_time_node :refund_completion_time, 'RefundCompletionTime'
@@ -24,15 +23,15 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'Refund'
-      array_node :refund_from_sellers, 'RefundFromSeller', :class => Amount, :default_value => []
-      array_node :total_refund_to_buyers, 'TotalRefundToBuyer', :class => Amount, :default_value => []
+      money_node :refund_from_seller, 'RefundFromSeller'
+      money_node :total_refund_to_buyer, 'TotalRefundToBuyer'
       date_time_node :refund_time, 'RefundTime'
       text_node :refund_id, 'RefundID'
-      array_node :refund_transactions, 'RefundTransactionArray', :class => RefundTransactionArray, :default_value => []
-      array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
-      value_array_node :refund_statuses, 'RefundStatus', :default_value => []
-      array_node :refund_failure_reasons, 'RefundFailureReason', :class => RefundFailureReason, :default_value => []
-      array_node :refund_funding_sources, 'RefundFundingSourceArray', :class => RefundFundingSourceArray, :default_value => []
+      object_node :refund_transactions, 'RefundTransactionArray', :class => RefundTransactionArray
+      money_node :refund_amount, 'RefundAmount'
+      text_node :refund_status, 'RefundStatus'
+      object_node :refund_failure_reason, 'RefundFailureReason', :class => RefundFailureReason
+      object_node :refund_funding_sources, 'RefundFundingSourceArray', :class => RefundFundingSourceArray
       text_node :external_reference_id, 'ExternalReferenceID'
       date_time_node :refund_requested_time, 'RefundRequestedTime'
       date_time_node :refund_completion_time, 'RefundCompletionTime'

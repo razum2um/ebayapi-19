@@ -2,28 +2,28 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :bold_titles, 'BoldTitle', :default_value => []
-    #  value_array_node :borders, 'Border', :default_value => []
-    #  value_array_node :highlights, 'Highlight', :default_value => []
-    #  value_array_node :gift_icons, 'GiftIcon', :default_value => []
-    #  value_array_node :home_page_featureds, 'HomePageFeatured', :default_value => []
-    #  value_array_node :featured_firsts, 'FeaturedFirst', :default_value => []
-    #  value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
-    #  value_array_node :pro_packs, 'ProPack', :default_value => []
+    #  text_node :bold_title, 'BoldTitle'
+    #  text_node :border, 'Border'
+    #  text_node :highlight, 'Highlight'
+    #  text_node :gift_icon, 'GiftIcon'
+    #  text_node :home_page_featured, 'HomePageFeatured'
+    #  text_node :featured_first, 'FeaturedFirst'
+    #  text_node :featured_plus, 'FeaturedPlus'
+    #  text_node :pro_pack, 'ProPack'
     #  text_node :detail_version, 'DetailVersion'
     #  date_time_node :update_time, 'UpdateTime'
     class ListingFeatureDetails
       include XML::Mapping
       include Initializer
       root_element_name 'ListingFeatureDetails'
-      value_array_node :bold_titles, 'BoldTitle', :default_value => []
-      value_array_node :borders, 'Border', :default_value => []
-      value_array_node :highlights, 'Highlight', :default_value => []
-      value_array_node :gift_icons, 'GiftIcon', :default_value => []
-      value_array_node :home_page_featureds, 'HomePageFeatured', :default_value => []
-      value_array_node :featured_firsts, 'FeaturedFirst', :default_value => []
-      value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
-      value_array_node :pro_packs, 'ProPack', :default_value => []
+      text_node :bold_title, 'BoldTitle'
+      text_node :border, 'Border'
+      text_node :highlight, 'Highlight'
+      text_node :gift_icon, 'GiftIcon'
+      text_node :home_page_featured, 'HomePageFeatured'
+      text_node :featured_first, 'FeaturedFirst'
+      text_node :featured_plus, 'FeaturedPlus'
+      text_node :pro_pack, 'ProPack'
       text_node :detail_version, 'DetailVersion'
       date_time_node :update_time, 'UpdateTime'
     end

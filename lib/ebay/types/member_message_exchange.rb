@@ -5,10 +5,10 @@ require 'ebay/types/message_media'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :items, 'Item', :class => Item, :default_value => []
-    #  array_node :questions, 'Question', :class => MemberMessage, :default_value => []
+    #  object_node :item, 'Item', :class => Item
+    #  object_node :question, 'Question', :class => MemberMessage
     #  text_node :response, 'Response'
-    #  value_array_node :message_statuses, 'MessageStatus', :default_value => []
+    #  text_node :message_status, 'MessageStatus'
     #  date_time_node :creation_date, 'CreationDate'
     #  date_time_node :last_modified_date, 'LastModifiedDate'
     #  object_node :message_media, 'MessageMedia', :class => MessageMedia
@@ -16,10 +16,10 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'MemberMessageExchange'
-      array_node :items, 'Item', :class => Item, :default_value => []
-      array_node :questions, 'Question', :class => MemberMessage, :default_value => []
+      object_node :item, 'Item', :class => Item
+      object_node :question, 'Question', :class => MemberMessage
       text_node :response, 'Response'
-      value_array_node :message_statuses, 'MessageStatus', :default_value => []
+      text_node :message_status, 'MessageStatus'
       date_time_node :creation_date, 'CreationDate'
       date_time_node :last_modified_date, 'LastModifiedDate'
       object_node :message_media, 'MessageMedia', :class => MessageMedia

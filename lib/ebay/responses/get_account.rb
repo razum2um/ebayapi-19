@@ -6,10 +6,10 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  text_node :account_id, 'AccountID'
-    #  array_node :account_summaries, 'AccountSummary', :class => AccountSummary, :default_value => []
-    #  value_array_node :currencies, 'Currency', :default_value => []
-    #  array_node :account_entries, 'AccountEntries', :class => AccountEntries, :default_value => []
-    #  array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+    #  object_node :account_summary, 'AccountSummary', :class => AccountSummary
+    #  text_node :currency, 'Currency'
+    #  object_node :account_entries, 'AccountEntries', :class => AccountEntries
+    #  object_node :pagination_result, 'PaginationResult', :class => PaginationResult
     #  boolean_node :has_more_entries, 'HasMoreEntries', 'true', 'false'
     #  numeric_node :entries_per_page, 'EntriesPerPage'
     #  numeric_node :page_number, 'PageNumber'
@@ -18,10 +18,10 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetAccountResponse'
       text_node :account_id, 'AccountID'
-      array_node :account_summaries, 'AccountSummary', :class => AccountSummary, :default_value => []
-      value_array_node :currencies, 'Currency', :default_value => []
-      array_node :account_entries, 'AccountEntries', :class => AccountEntries, :default_value => []
-      array_node :pagination_results, 'PaginationResult', :class => PaginationResult, :default_value => []
+      object_node :account_summary, 'AccountSummary', :class => AccountSummary
+      text_node :currency, 'Currency'
+      object_node :account_entries, 'AccountEntries', :class => AccountEntries
+      object_node :pagination_result, 'PaginationResult', :class => PaginationResult
       boolean_node :has_more_entries, 'HasMoreEntries', 'true', 'false'
       numeric_node :entries_per_page, 'EntriesPerPage'
       numeric_node :page_number, 'PageNumber'

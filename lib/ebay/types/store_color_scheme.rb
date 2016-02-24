@@ -6,16 +6,16 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :color_scheme_id, 'ColorSchemeID'
     #  text_node :name, 'Name'
-    #  array_node :colors, 'Color', :class => StoreColor, :default_value => []
-    #  array_node :fonts, 'Font', :class => StoreFont, :default_value => []
+    #  object_node :color, 'Color', :class => StoreColor
+    #  object_node :font, 'Font', :class => StoreFont
     class StoreColorScheme
       include XML::Mapping
       include Initializer
       root_element_name 'StoreColorScheme'
       numeric_node :color_scheme_id, 'ColorSchemeID'
       text_node :name, 'Name'
-      array_node :colors, 'Color', :class => StoreColor, :default_value => []
-      array_node :fonts, 'Font', :class => StoreFont, :default_value => []
+      object_node :color, 'Color', :class => StoreColor
+      object_node :font, 'Font', :class => StoreFont
     end
   end
 end

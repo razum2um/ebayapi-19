@@ -4,22 +4,22 @@ require 'ebay/types/selling_manager_search'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :sorts, 'Sort', :default_value => []
+    #  text_node :sort, 'Sort'
     #  numeric_node :folder_id, 'FolderID'
-    #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-    #  value_array_node :sort_orders, 'SortOrder', :default_value => []
-    #  array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
+    #  object_node :pagination, 'Pagination', :class => Pagination
+    #  text_node :sort_order, 'SortOrder'
+    #  object_node :search, 'Search', :class => SellingManagerSearch
     #  numeric_node :store_category_id, 'StoreCategoryID'
     #  text_node :filter, 'Filter'
     class GetSellingManagerInventory < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellingManagerInventoryRequest'
-      value_array_node :sorts, 'Sort', :default_value => []
+      text_node :sort, 'Sort'
       numeric_node :folder_id, 'FolderID'
-      array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-      value_array_node :sort_orders, 'SortOrder', :default_value => []
-      array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
+      object_node :pagination, 'Pagination', :class => Pagination
+      text_node :sort_order, 'SortOrder'
+      object_node :search, 'Search', :class => SellingManagerSearch
       numeric_node :store_category_id, 'StoreCategoryID'
       text_node :filter, 'Filter'
     end

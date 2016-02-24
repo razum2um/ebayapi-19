@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  text_node :template_text, 'TemplateText'
     #  text_node :logo_url, 'LogoURL'
-    #  value_array_node :logo_types, 'LogoType', :default_value => []
+    #  text_node :logo_type, 'LogoType'
     #  boolean_node :email_customized, 'EmailCustomized', 'true', 'false'
     #  boolean_node :text_customized, 'TextCustomized', 'true', 'false'
     #  boolean_node :logo_customized, 'LogoCustomized', 'true', 'false'
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       root_element_name 'EndOfAuctionEmailPreferences'
       text_node :template_text, 'TemplateText'
       text_node :logo_url, 'LogoURL'
-      value_array_node :logo_types, 'LogoType', :default_value => []
+      text_node :logo_type, 'LogoType'
       boolean_node :email_customized, 'EmailCustomized', 'true', 'false'
       boolean_node :text_customized, 'TextCustomized', 'true', 'false'
       boolean_node :logo_customized, 'LogoCustomized', 'true', 'false'

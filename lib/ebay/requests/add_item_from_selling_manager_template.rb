@@ -5,14 +5,14 @@ module Ebay # :nodoc:
     # == Attributes
     #  numeric_node :sale_template_id, 'SaleTemplateID'
     #  date_time_node :schedule_time, 'ScheduleTime'
-    #  array_node :items, 'Item', :class => Item, :default_value => []
+    #  object_node :item, 'Item', :class => Item
     class AddItemFromSellingManagerTemplate < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'AddItemFromSellingManagerTemplateRequest'
       numeric_node :sale_template_id, 'SaleTemplateID'
       date_time_node :schedule_time, 'ScheduleTime'
-      array_node :items, 'Item', :class => Item, :default_value => []
+      object_node :item, 'Item', :class => Item
     end
   end
 end

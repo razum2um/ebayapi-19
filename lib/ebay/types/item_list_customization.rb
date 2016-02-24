@@ -4,23 +4,23 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  boolean_node :include, 'Include', 'true', 'false'
-    #  value_array_node :listing_types, 'ListingType', :default_value => []
-    #  value_array_node :sorts, 'Sort', :default_value => []
+    #  text_node :listing_type, 'ListingType'
+    #  text_node :sort, 'Sort'
     #  numeric_node :duration_in_days, 'DurationInDays'
     #  boolean_node :include_notes, 'IncludeNotes', 'true', 'false'
-    #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-    #  value_array_node :order_status_filters, 'OrderStatusFilter', :default_value => []
+    #  object_node :pagination, 'Pagination', :class => Pagination
+    #  text_node :order_status_filter, 'OrderStatusFilter'
     class ItemListCustomization
       include XML::Mapping
       include Initializer
       root_element_name 'ItemListCustomization'
       boolean_node :include, 'Include', 'true', 'false'
-      value_array_node :listing_types, 'ListingType', :default_value => []
-      value_array_node :sorts, 'Sort', :default_value => []
+      text_node :listing_type, 'ListingType'
+      text_node :sort, 'Sort'
       numeric_node :duration_in_days, 'DurationInDays'
       boolean_node :include_notes, 'IncludeNotes', 'true', 'false'
-      array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-      value_array_node :order_status_filters, 'OrderStatusFilter', :default_value => []
+      object_node :pagination, 'Pagination', :class => Pagination
+      text_node :order_status_filter, 'OrderStatusFilter'
     end
   end
 end

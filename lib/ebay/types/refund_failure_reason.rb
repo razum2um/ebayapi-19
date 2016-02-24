@@ -2,12 +2,12 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :refund_failure_codes, 'RefundFailureCode', :default_value => []
+    #  text_node :refund_failure_code, 'RefundFailureCode'
     class RefundFailureReason
       include XML::Mapping
       include Initializer
       root_element_name 'RefundFailureReason'
-      value_array_node :refund_failure_codes, 'RefundFailureCode', :default_value => []
+      text_node :refund_failure_code, 'RefundFailureCode'
     end
   end
 end

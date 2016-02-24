@@ -16,9 +16,9 @@ module Ebay # :nodoc:
     #  text_node :text, 'Text'
     #  boolean_node :flagged, 'Flagged', 'true', 'false'
     #  boolean_node :read, 'Read', 'true', 'false'
-    #  time_node :creation_date, 'CreationDate'
-    #  time_node :receive_date, 'ReceiveDate'
-    #  time_node :expiration_date, 'ExpirationDate'
+    #  date_time_node :creation_date, 'CreationDate'
+    #  date_time_node :receive_date, 'ReceiveDate'
+    #  date_time_node :expiration_date, 'ExpirationDate'
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
     #  array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
@@ -29,7 +29,7 @@ module Ebay # :nodoc:
     #  value_array_node :question_types, 'QuestionType', :default_value => []
     #  boolean_node :replied, 'Replied', 'true', 'false'
     #  boolean_node :high_priority, 'HighPriority', 'true', 'false'
-    #  time_node :item_end_time, 'ItemEndTime'
+    #  date_time_node :item_end_time, 'ItemEndTime'
     #  text_node :item_title, 'ItemTitle'
     #  object_node :message_media, 'MessageMedia', :class => MessageMedia
     class MyMessagesMessage
@@ -46,9 +46,9 @@ module Ebay # :nodoc:
       text_node :text, 'Text'
       boolean_node :flagged, 'Flagged', 'true', 'false'
       boolean_node :read, 'Read', 'true', 'false'
-      time_node :creation_date, 'CreationDate'
-      time_node :receive_date, 'ReceiveDate'
-      time_node :expiration_date, 'ExpirationDate'
+      date_time_node :creation_date, 'CreationDate'
+      date_time_node :receive_date, 'ReceiveDate'
+      date_time_node :expiration_date, 'ExpirationDate'
       value_array_node :item_ids, 'ItemID', :default_value => []
       array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
       array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
@@ -59,7 +59,7 @@ module Ebay # :nodoc:
       value_array_node :question_types, 'QuestionType', :default_value => []
       boolean_node :replied, 'Replied', 'true', 'false'
       boolean_node :high_priority, 'HighPriority', 'true', 'false'
-      time_node :item_end_time, 'ItemEndTime'
+      date_time_node :item_end_time, 'ItemEndTime'
       text_node :item_title, 'ItemTitle'
       object_node :message_media, 'MessageMedia', :class => MessageMedia
     end

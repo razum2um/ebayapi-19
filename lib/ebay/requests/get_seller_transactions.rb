@@ -4,8 +4,8 @@ require 'ebay/types/sku_array'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  time_node :mod_time_from, 'ModTimeFrom'
-    #  time_node :mod_time_to, 'ModTimeTo'
+    #  date_time_node :mod_time_from, 'ModTimeFrom'
+    #  date_time_node :mod_time_to, 'ModTimeTo'
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  boolean_node :include_final_value_fee, 'IncludeFinalValueFee', 'true', 'false'
     #  boolean_node :include_containing_order, 'IncludeContainingOrder', 'true', 'false'
@@ -18,8 +18,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellerTransactionsRequest'
-      time_node :mod_time_from, 'ModTimeFrom'
-      time_node :mod_time_to, 'ModTimeTo'
+      date_time_node :mod_time_from, 'ModTimeFrom'
+      date_time_node :mod_time_to, 'ModTimeTo'
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       boolean_node :include_final_value_fee, 'IncludeFinalValueFee', 'true', 'false'
       boolean_node :include_containing_order, 'IncludeContainingOrder', 'true', 'false'

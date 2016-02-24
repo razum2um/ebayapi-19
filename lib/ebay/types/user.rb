@@ -20,12 +20,12 @@ module Ebay # :nodoc:
     #  boolean_node :ebay_good_standing, 'eBayGoodStanding', 'true', 'false'
     #  boolean_node :new_user, 'NewUser', 'true', 'false'
     #  array_node :registration_addresses, 'RegistrationAddress', :class => Address, :default_value => []
-    #  time_node :registration_date, 'RegistrationDate'
+    #  date_time_node :registration_date, 'RegistrationDate'
     #  value_array_node :sites, 'Site', :default_value => []
     #  value_array_node :statuses, 'Status', :default_value => []
     #  value_array_node :user_ids, 'UserID', :default_value => []
     #  boolean_node :user_id_changed, 'UserIDChanged', 'true', 'false'
-    #  time_node :user_id_last_changed, 'UserIDLastChanged'
+    #  date_time_node :user_id_last_changed, 'UserIDLastChanged'
     #  value_array_node :vat_statuses, 'VATStatus', :default_value => []
     #  array_node :buyer_infos, 'BuyerInfo', :class => Buyer, :default_value => []
     #  array_node :seller_infos, 'SellerInfo', :class => Seller, :default_value => []
@@ -69,12 +69,12 @@ module Ebay # :nodoc:
       boolean_node :ebay_good_standing, 'eBayGoodStanding', 'true', 'false'
       boolean_node :new_user, 'NewUser', 'true', 'false'
       array_node :registration_addresses, 'RegistrationAddress', :class => Address, :default_value => []
-      time_node :registration_date, 'RegistrationDate'
+      date_time_node :registration_date, 'RegistrationDate'
       value_array_node :sites, 'Site', :default_value => []
       value_array_node :statuses, 'Status', :default_value => []
       value_array_node :user_ids, 'UserID', :default_value => []
       boolean_node :user_id_changed, 'UserIDChanged', 'true', 'false'
-      time_node :user_id_last_changed, 'UserIDLastChanged'
+      date_time_node :user_id_last_changed, 'UserIDLastChanged'
       value_array_node :vat_statuses, 'VATStatus', :default_value => []
       array_node :buyer_infos, 'BuyerInfo', :class => Buyer, :default_value => []
       array_node :seller_infos, 'SellerInfo', :class => Seller, :default_value => []

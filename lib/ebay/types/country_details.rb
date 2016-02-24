@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  value_array_node :countries, 'Country', :default_value => []
     #  text_node :description, 'Description'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class CountryDetails
       include XML::Mapping
       include Initializer
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       value_array_node :countries, 'Country', :default_value => []
       text_node :description, 'Description'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

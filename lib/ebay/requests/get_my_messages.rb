@@ -9,8 +9,8 @@ module Ebay # :nodoc:
     #  array_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray, :default_value => []
     #  array_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray, :default_value => []
     #  numeric_node :folder_id, 'FolderID'
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
+    #  date_time_node :start_time, 'StartTime'
+    #  date_time_node :end_time, 'EndTime'
     #  array_node :external_message_ids, 'ExternalMessageIDs', :class => MyMessagesExternalMessageIDArray, :default_value => []
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  boolean_node :include_high_priority_message_only, 'IncludeHighPriorityMessageOnly', 'true', 'false'
@@ -21,8 +21,8 @@ module Ebay # :nodoc:
       array_node :alert_ids, 'AlertIDs', :class => MyMessagesAlertIDArray, :default_value => []
       array_node :message_ids, 'MessageIDs', :class => MyMessagesMessageIDArray, :default_value => []
       numeric_node :folder_id, 'FolderID'
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
+      date_time_node :start_time, 'StartTime'
+      date_time_node :end_time, 'EndTime'
       array_node :external_message_ids, 'ExternalMessageIDs', :class => MyMessagesExternalMessageIDArray, :default_value => []
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       boolean_node :include_high_priority_message_only, 'IncludeHighPriorityMessageOnly', 'true', 'false'

@@ -5,8 +5,8 @@ module Ebay # :nodoc:
     #  text_node :cancel_reason, 'CancelReason'
     #  text_node :cancel_reason_details, 'CancelReasonDetails'
     #  text_node :cancel_intiator, 'CancelIntiator'
-    #  time_node :cancel_intiation_date, 'CancelIntiationDate'
-    #  time_node :cancel_complete_date, 'CancelCompleteDate'
+    #  date_time_node :cancel_intiation_date, 'CancelIntiationDate'
+    #  date_time_node :cancel_complete_date, 'CancelCompleteDate'
     class CancelDetail
       include XML::Mapping
       include Initializer
@@ -14,8 +14,8 @@ module Ebay # :nodoc:
       text_node :cancel_reason, 'CancelReason'
       text_node :cancel_reason_details, 'CancelReasonDetails'
       text_node :cancel_intiator, 'CancelIntiator'
-      time_node :cancel_intiation_date, 'CancelIntiationDate'
-      time_node :cancel_complete_date, 'CancelCompleteDate'
+      date_time_node :cancel_intiation_date, 'CancelIntiationDate'
+      date_time_node :cancel_complete_date, 'CancelCompleteDate'
     end
   end
 end

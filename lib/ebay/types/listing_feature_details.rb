@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
     #  value_array_node :pro_packs, 'ProPack', :default_value => []
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ListingFeatureDetails
       include XML::Mapping
       include Initializer
@@ -25,7 +25,7 @@ module Ebay # :nodoc:
       value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
       value_array_node :pro_packs, 'ProPack', :default_value => []
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

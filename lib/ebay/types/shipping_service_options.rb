@@ -17,7 +17,7 @@ module Ebay # :nodoc:
     #  boolean_node :local_pickup, 'LocalPickup', 'true', 'false'
     #  array_node :import_charges, 'ImportCharge', :class => Amount, :default_value => []
     #  object_node :shipping_package_info, 'ShippingPackageInfo', :class => ShippingPackageInfo
-    #  time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
+    #  date_time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
     #  text_node :logistic_plan_type, 'LogisticPlanType'
     class ShippingServiceOptions
       include XML::Mapping
@@ -36,7 +36,7 @@ module Ebay # :nodoc:
       boolean_node :local_pickup, 'LocalPickup', 'true', 'false'
       array_node :import_charges, 'ImportCharge', :class => Amount, :default_value => []
       object_node :shipping_package_info, 'ShippingPackageInfo', :class => ShippingPackageInfo
-      time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
+      date_time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
       text_node :logistic_plan_type, 'LogisticPlanType'
     end
   end

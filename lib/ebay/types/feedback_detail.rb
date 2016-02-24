@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  value_array_node :commenting_users, 'CommentingUser', :default_value => []
     #  numeric_node :commenting_user_score, 'CommentingUserScore'
     #  text_node :comment_text, 'CommentText'
-    #  time_node :comment_time, 'CommentTime'
+    #  date_time_node :comment_time, 'CommentTime'
     #  value_array_node :comment_types, 'CommentType', :default_value => []
     #  text_node :feedback_response, 'FeedbackResponse'
     #  text_node :followup, 'Followup'
@@ -29,7 +29,7 @@ module Ebay # :nodoc:
       value_array_node :commenting_users, 'CommentingUser', :default_value => []
       numeric_node :commenting_user_score, 'CommentingUserScore'
       text_node :comment_text, 'CommentText'
-      time_node :comment_time, 'CommentTime'
+      date_time_node :comment_time, 'CommentTime'
       value_array_node :comment_types, 'CommentType', :default_value => []
       text_node :feedback_response, 'FeedbackResponse'
       text_node :followup, 'Followup'

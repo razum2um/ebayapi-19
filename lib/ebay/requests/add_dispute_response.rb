@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  value_array_node :dispute_activities, 'DisputeActivity', :default_value => []
     #  text_node :shipping_carrier_used, 'ShippingCarrierUsed'
     #  text_node :shipment_track_number, 'ShipmentTrackNumber'
-    #  time_node :shipping_time, 'ShippingTime'
+    #  date_time_node :shipping_time, 'ShippingTime'
     class AddDisputeResponse < Abstract
       include XML::Mapping
       include Initializer
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       value_array_node :dispute_activities, 'DisputeActivity', :default_value => []
       text_node :shipping_carrier_used, 'ShippingCarrierUsed'
       text_node :shipment_track_number, 'ShipmentTrackNumber'
-      time_node :shipping_time, 'ShippingTime'
+      date_time_node :shipping_time, 'ShippingTime'
     end
   end
 end

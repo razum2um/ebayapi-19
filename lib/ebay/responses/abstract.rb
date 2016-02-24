@@ -5,7 +5,7 @@ require 'ebay/types/bot_block_response'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  time_node :timestamp, 'Timestamp'
+    #  date_time_node :timestamp, 'Timestamp'
     #  value_array_node :acks, 'Ack', :default_value => []
     #  text_node :correlation_id, 'CorrelationID'
     #  object_node :errors, 'Errors', :class => Error
@@ -24,7 +24,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'AbstractResponse'
-      time_node :timestamp, 'Timestamp'
+      date_time_node :timestamp, 'Timestamp'
       value_array_node :acks, 'Ack', :default_value => []
       text_node :correlation_id, 'CorrelationID'
       object_node :errors, 'Errors', :class => Error

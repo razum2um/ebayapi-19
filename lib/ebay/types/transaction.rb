@@ -33,7 +33,7 @@ module Ebay # :nodoc:
     #  array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
     #  array_node :converted_amount_paids, 'ConvertedAmountPaid', :class => Amount, :default_value => []
     #  array_node :converted_transaction_prices, 'ConvertedTransactionPrice', :class => Amount, :default_value => []
-    #  time_node :created_date, 'CreatedDate'
+    #  date_time_node :created_date, 'CreatedDate'
     #  value_array_node :deposit_types, 'DepositType', :default_value => []
     #  array_node :items, 'Item', :class => Item, :default_value => []
     #  numeric_node :quantity_purchased, 'QuantityPurchased'
@@ -49,8 +49,8 @@ module Ebay # :nodoc:
     #  array_node :dutch_auction_bids, 'DutchAuctionBid', :class => Amount, :default_value => []
     #  value_array_node :buyer_paid_statuses, 'BuyerPaidStatus', :default_value => []
     #  value_array_node :seller_paid_statuses, 'SellerPaidStatus', :default_value => []
-    #  time_node :paid_time, 'PaidTime'
-    #  time_node :shipped_time, 'ShippedTime'
+    #  date_time_node :paid_time, 'PaidTime'
+    #  date_time_node :shipped_time, 'ShippedTime'
     #  array_node :total_prices, 'TotalPrice', :class => Amount, :default_value => []
     #  array_node :feedback_lefts, 'FeedbackLeft', :class => FeedbackInfo, :default_value => []
     #  array_node :feedback_receiveds, 'FeedbackReceived', :class => FeedbackInfo, :default_value => []
@@ -79,7 +79,7 @@ module Ebay # :nodoc:
     #  text_node :codice_fiscale, 'CodiceFiscale'
     #  boolean_node :is_multi_leg_shipping, 'IsMultiLegShipping', 'true', 'false'
     #  array_node :multi_leg_shipping_details, 'MultiLegShippingDetails', :class => MultiLegShippingDetails, :default_value => []
-    #  time_node :invoice_sent_time, 'InvoiceSentTime'
+    #  date_time_node :invoice_sent_time, 'InvoiceSentTime'
     #  array_node :unpaid_items, 'UnpaidItem', :class => UnpaidItem, :default_value => []
     #  boolean_node :intangible_item, 'IntangibleItem', 'true', 'false'
     #  array_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :default_value => []
@@ -105,7 +105,7 @@ module Ebay # :nodoc:
       array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
       array_node :converted_amount_paids, 'ConvertedAmountPaid', :class => Amount, :default_value => []
       array_node :converted_transaction_prices, 'ConvertedTransactionPrice', :class => Amount, :default_value => []
-      time_node :created_date, 'CreatedDate'
+      date_time_node :created_date, 'CreatedDate'
       value_array_node :deposit_types, 'DepositType', :default_value => []
       array_node :items, 'Item', :class => Item, :default_value => []
       numeric_node :quantity_purchased, 'QuantityPurchased'
@@ -121,8 +121,8 @@ module Ebay # :nodoc:
       array_node :dutch_auction_bids, 'DutchAuctionBid', :class => Amount, :default_value => []
       value_array_node :buyer_paid_statuses, 'BuyerPaidStatus', :default_value => []
       value_array_node :seller_paid_statuses, 'SellerPaidStatus', :default_value => []
-      time_node :paid_time, 'PaidTime'
-      time_node :shipped_time, 'ShippedTime'
+      date_time_node :paid_time, 'PaidTime'
+      date_time_node :shipped_time, 'ShippedTime'
       array_node :total_prices, 'TotalPrice', :class => Amount, :default_value => []
       array_node :feedback_lefts, 'FeedbackLeft', :class => FeedbackInfo, :default_value => []
       array_node :feedback_receiveds, 'FeedbackReceived', :class => FeedbackInfo, :default_value => []
@@ -151,7 +151,7 @@ module Ebay # :nodoc:
       text_node :codice_fiscale, 'CodiceFiscale'
       boolean_node :is_multi_leg_shipping, 'IsMultiLegShipping', 'true', 'false'
       array_node :multi_leg_shipping_details, 'MultiLegShippingDetails', :class => MultiLegShippingDetails, :default_value => []
-      time_node :invoice_sent_time, 'InvoiceSentTime'
+      date_time_node :invoice_sent_time, 'InvoiceSentTime'
       array_node :unpaid_items, 'UnpaidItem', :class => UnpaidItem, :default_value => []
       boolean_node :intangible_item, 'IntangibleItem', 'true', 'false'
       array_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :default_value => []

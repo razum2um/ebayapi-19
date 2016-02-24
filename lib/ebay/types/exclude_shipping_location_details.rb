@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :location, 'Location'
     #  text_node :region, 'Region'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ExcludeShippingLocationDetails
       include XML::Mapping
       include Initializer
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       text_node :location, 'Location'
       text_node :region, 'Region'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

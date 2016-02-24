@@ -21,7 +21,7 @@ module Ebay # :nodoc:
     #  object_node :shipping_cost_paid_by, 'ShippingCostPaidBy', :class => ShippingCostPaidByDetails
     #  object_node :restocking_fee_value, 'RestockingFeeValue', :class => RestockingFeeValueDetails
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ReturnPolicyDetails
       include XML::Mapping
       include Initializer
@@ -37,7 +37,7 @@ module Ebay # :nodoc:
       object_node :shipping_cost_paid_by, 'ShippingCostPaidBy', :class => ShippingCostPaidByDetails
       object_node :restocking_fee_value, 'RestockingFeeValue', :class => RestockingFeeValueDetails
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  numeric_node :quantity, 'Quantity'
     #  boolean_node :second_chance_enabled, 'SecondChanceEnabled', 'true', 'false'
     #  value_array_node :site_currencies, 'SiteCurrency', :default_value => []
-    #  time_node :time_bid, 'TimeBid'
+    #  date_time_node :time_bid, 'TimeBid'
     #  array_node :highest_bids, 'HighestBid', :class => Amount, :default_value => []
     #  array_node :converted_prices, 'ConvertedPrice', :class => Amount, :default_value => []
     #  text_node :transaction_id, 'TransactionID'
@@ -32,7 +32,7 @@ module Ebay # :nodoc:
       numeric_node :quantity, 'Quantity'
       boolean_node :second_chance_enabled, 'SecondChanceEnabled', 'true', 'false'
       value_array_node :site_currencies, 'SiteCurrency', :default_value => []
-      time_node :time_bid, 'TimeBid'
+      date_time_node :time_bid, 'TimeBid'
       array_node :highest_bids, 'HighestBid', :class => Amount, :default_value => []
       array_node :converted_prices, 'ConvertedPrice', :class => Amount, :default_value => []
       text_node :transaction_id, 'TransactionID'

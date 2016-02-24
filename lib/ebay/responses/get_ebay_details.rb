@@ -49,7 +49,7 @@ module Ebay # :nodoc:
     #  object_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails
     #  array_node :variation_details, 'VariationDetails', :class => VariationDetails, :default_value => []
     #  object_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     #  object_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails
     #  object_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails
     #  array_node :product_details, 'ProductDetails', :class => ProductDetails, :default_value => []
@@ -79,7 +79,7 @@ module Ebay # :nodoc:
       object_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails
       array_node :variation_details, 'VariationDetails', :class => VariationDetails, :default_value => []
       object_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
       object_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails
       object_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails
       array_node :product_details, 'ProductDetails', :class => ProductDetails, :default_value => []

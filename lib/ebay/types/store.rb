@@ -23,7 +23,7 @@ module Ebay # :nodoc:
     #  array_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray, :default_value => []
     #  array_node :custom_listing_headers, 'CustomListingHeader', :class => StoreCustomListingHeader, :default_value => []
     #  value_array_node :merch_displays, 'MerchDisplay', :default_value => []
-    #  time_node :last_opened_time, 'LastOpenedTime'
+    #  date_time_node :last_opened_time, 'LastOpenedTime'
     #  boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false'
     class Store
       include XML::Mapping
@@ -46,7 +46,7 @@ module Ebay # :nodoc:
       array_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray, :default_value => []
       array_node :custom_listing_headers, 'CustomListingHeader', :class => StoreCustomListingHeader, :default_value => []
       value_array_node :merch_displays, 'MerchDisplay', :default_value => []
-      time_node :last_opened_time, 'LastOpenedTime'
+      date_time_node :last_opened_time, 'LastOpenedTime'
       boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false'
     end
   end

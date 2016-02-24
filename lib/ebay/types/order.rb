@@ -26,7 +26,7 @@ module Ebay # :nodoc:
     #  array_node :checkout_statuses, 'CheckoutStatus', :class => CheckoutStatus, :default_value => []
     #  array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
     #  value_array_node :creating_user_roles, 'CreatingUserRole', :default_value => []
-    #  time_node :created_time, 'CreatedTime'
+    #  date_time_node :created_time, 'CreatedTime'
     #  text_node :payment_methods, 'PaymentMethods'
     #  text_node :seller_email, 'SellerEmail'
     #  array_node :shipping_addresses, 'ShippingAddress', :class => Address, :default_value => []
@@ -36,8 +36,8 @@ module Ebay # :nodoc:
     #  object_node :external_transaction, 'ExternalTransaction', :class => ExternalTransaction
     #  array_node :transactions, 'TransactionArray', :class => TransactionArray, :default_value => []
     #  value_array_node :buyer_user_ids, 'BuyerUserID', :default_value => []
-    #  time_node :paid_time, 'PaidTime'
-    #  time_node :shipped_time, 'ShippedTime'
+    #  date_time_node :paid_time, 'PaidTime'
+    #  date_time_node :shipped_time, 'ShippedTime'
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
     #  boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false'
     #  text_node :buyer_checkout_message, 'BuyerCheckoutMessage'
@@ -76,7 +76,7 @@ module Ebay # :nodoc:
       array_node :checkout_statuses, 'CheckoutStatus', :class => CheckoutStatus, :default_value => []
       array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
       value_array_node :creating_user_roles, 'CreatingUserRole', :default_value => []
-      time_node :created_time, 'CreatedTime'
+      date_time_node :created_time, 'CreatedTime'
       text_node :payment_methods, 'PaymentMethods'
       text_node :seller_email, 'SellerEmail'
       array_node :shipping_addresses, 'ShippingAddress', :class => Address, :default_value => []
@@ -86,8 +86,8 @@ module Ebay # :nodoc:
       object_node :external_transaction, 'ExternalTransaction', :class => ExternalTransaction
       array_node :transactions, 'TransactionArray', :class => TransactionArray, :default_value => []
       value_array_node :buyer_user_ids, 'BuyerUserID', :default_value => []
-      time_node :paid_time, 'PaidTime'
-      time_node :shipped_time, 'ShippedTime'
+      date_time_node :paid_time, 'PaidTime'
+      date_time_node :shipped_time, 'ShippedTime'
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
       boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false'
       text_node :buyer_checkout_message, 'BuyerCheckoutMessage'

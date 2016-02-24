@@ -15,11 +15,11 @@ module Ebay # :nodoc:
     #  text_node :text, 'Text'
     #  value_array_node :resolution_statuses, 'ResolutionStatus', :default_value => []
     #  boolean_node :read, 'Read', 'true', 'false'
-    #  time_node :creation_date, 'CreationDate'
-    #  time_node :receive_date, 'ReceiveDate'
-    #  time_node :expiration_date, 'ExpirationDate'
-    #  time_node :resolution_date, 'ResolutionDate'
-    #  time_node :last_read_date, 'LastReadDate'
+    #  date_time_node :creation_date, 'CreationDate'
+    #  date_time_node :receive_date, 'ReceiveDate'
+    #  date_time_node :expiration_date, 'ExpirationDate'
+    #  date_time_node :resolution_date, 'ResolutionDate'
+    #  date_time_node :last_read_date, 'LastReadDate'
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  boolean_node :is_timed_resolution, 'IsTimedResolution', 'true', 'false'
     #  text_node :action_url, 'ActionURL'
@@ -40,11 +40,11 @@ module Ebay # :nodoc:
       text_node :text, 'Text'
       value_array_node :resolution_statuses, 'ResolutionStatus', :default_value => []
       boolean_node :read, 'Read', 'true', 'false'
-      time_node :creation_date, 'CreationDate'
-      time_node :receive_date, 'ReceiveDate'
-      time_node :expiration_date, 'ExpirationDate'
-      time_node :resolution_date, 'ResolutionDate'
-      time_node :last_read_date, 'LastReadDate'
+      date_time_node :creation_date, 'CreationDate'
+      date_time_node :receive_date, 'ReceiveDate'
+      date_time_node :expiration_date, 'ExpirationDate'
+      date_time_node :resolution_date, 'ResolutionDate'
+      date_time_node :last_read_date, 'LastReadDate'
       value_array_node :item_ids, 'ItemID', :default_value => []
       boolean_node :is_timed_resolution, 'IsTimedResolution', 'true', 'false'
       text_node :action_url, 'ActionURL'

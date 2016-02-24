@@ -4,8 +4,8 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  time_node :mod_time_from, 'ModTimeFrom'
-    #  time_node :mod_time_to, 'ModTimeTo'
+    #  date_time_node :mod_time_from, 'ModTimeFrom'
+    #  date_time_node :mod_time_to, 'ModTimeTo'
     #  text_node :transaction_id, 'TransactionID'
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  boolean_node :include_final_value_fee, 'IncludeFinalValueFee', 'true', 'false'
@@ -19,8 +19,8 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetItemTransactionsRequest'
       value_array_node :item_ids, 'ItemID', :default_value => []
-      time_node :mod_time_from, 'ModTimeFrom'
-      time_node :mod_time_to, 'ModTimeTo'
+      date_time_node :mod_time_from, 'ModTimeFrom'
+      date_time_node :mod_time_to, 'ModTimeTo'
       text_node :transaction_id, 'TransactionID'
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       boolean_node :include_final_value_fee, 'IncludeFinalValueFee', 'true', 'false'

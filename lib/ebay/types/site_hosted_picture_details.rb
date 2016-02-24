@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :base_url, 'BaseURL'
     #  object_node :picture_set_member, 'PictureSetMember', :class => PictureSetMember
     #  text_node :external_picture_url, 'ExternalPictureURL'
-    #  time_node :use_by_date, 'UseByDate'
+    #  date_time_node :use_by_date, 'UseByDate'
     class SiteHostedPictureDetails
       include XML::Mapping
       include Initializer
@@ -22,7 +22,7 @@ module Ebay # :nodoc:
       text_node :base_url, 'BaseURL'
       object_node :picture_set_member, 'PictureSetMember', :class => PictureSetMember
       text_node :external_picture_url, 'ExternalPictureURL'
-      time_node :use_by_date, 'UseByDate'
+      date_time_node :use_by_date, 'UseByDate'
     end
   end
 end

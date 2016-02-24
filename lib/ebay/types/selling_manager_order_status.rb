@@ -13,10 +13,10 @@ module Ebay # :nodoc:
     #  numeric_node :total_emails_sent, 'TotalEmailsSent'
     #  value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
     #  text_node :seller_invoice_number, 'SellerInvoiceNumber'
-    #  time_node :shipped_time, 'ShippedTime'
-    #  time_node :paid_time, 'PaidTime'
-    #  time_node :last_email_sent_time, 'LastEmailSentTime'
-    #  time_node :seller_invoice_time, 'SellerInvoiceTime'
+    #  date_time_node :shipped_time, 'ShippedTime'
+    #  date_time_node :paid_time, 'PaidTime'
+    #  date_time_node :last_email_sent_time, 'LastEmailSentTime'
+    #  date_time_node :seller_invoice_time, 'SellerInvoiceTime'
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
     class SellingManagerOrderStatus
       include XML::Mapping
@@ -33,10 +33,10 @@ module Ebay # :nodoc:
       numeric_node :total_emails_sent, 'TotalEmailsSent'
       value_array_node :payment_hold_statuses, 'PaymentHoldStatus', :default_value => []
       text_node :seller_invoice_number, 'SellerInvoiceNumber'
-      time_node :shipped_time, 'ShippedTime'
-      time_node :paid_time, 'PaidTime'
-      time_node :last_email_sent_time, 'LastEmailSentTime'
-      time_node :seller_invoice_time, 'SellerInvoiceTime'
+      date_time_node :shipped_time, 'ShippedTime'
+      date_time_node :paid_time, 'PaidTime'
+      date_time_node :last_email_sent_time, 'LastEmailSentTime'
+      date_time_node :seller_invoice_time, 'SellerInvoiceTime'
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
     end
   end

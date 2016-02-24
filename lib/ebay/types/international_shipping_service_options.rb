@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  text_node :ship_to_location, 'ShipToLocation'
     #  array_node :shipping_insurance_costs, 'ShippingInsuranceCost', :class => Amount, :default_value => []
     #  array_node :import_charges, 'ImportCharge', :class => Amount, :default_value => []
-    #  time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
+    #  date_time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
     class InternationalShippingServiceOptions
       include XML::Mapping
       include Initializer
@@ -22,7 +22,7 @@ module Ebay # :nodoc:
       text_node :ship_to_location, 'ShipToLocation'
       array_node :shipping_insurance_costs, 'ShippingInsuranceCost', :class => Amount, :default_value => []
       array_node :import_charges, 'ImportCharge', :class => Amount, :default_value => []
-      time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
+      date_time_node :shipping_service_cut_off_time, 'ShippingServiceCutOffTime'
     end
   end
 end

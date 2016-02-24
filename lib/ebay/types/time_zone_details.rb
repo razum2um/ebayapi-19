@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :daylight_savings_offset, 'DaylightSavingsOffset'
     #  boolean_node :daylight_savings_in_effect, 'DaylightSavingsInEffect', 'true', 'false'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class TimeZoneDetails
       include XML::Mapping
       include Initializer
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       text_node :daylight_savings_offset, 'DaylightSavingsOffset'
       boolean_node :daylight_savings_in_effect, 'DaylightSavingsInEffect', 'true', 'false'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

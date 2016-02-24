@@ -6,7 +6,7 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  text_node :category_version, 'CategoryVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     #  object_node :category, 'Category', :class => CategoryFeature
     #  array_node :site_defaults, 'SiteDefaults', :class => SiteDefaults, :default_value => []
     #  array_node :feature_definitions, 'FeatureDefinitions', :class => FeatureDefinitions, :default_value => []
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetCategoryFeaturesResponse'
       text_node :category_version, 'CategoryVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
       object_node :category, 'Category', :class => CategoryFeature
       array_node :site_defaults, 'SiteDefaults', :class => SiteDefaults, :default_value => []
       array_node :feature_definitions, 'FeatureDefinitions', :class => FeatureDefinitions, :default_value => []

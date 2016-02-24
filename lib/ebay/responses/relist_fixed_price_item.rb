@@ -8,8 +8,8 @@ module Ebay # :nodoc:
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  value_array_node :skus, 'SKU', :default_value => []
     #  array_node :fees, 'Fees', :class => Fees, :default_value => []
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
+    #  date_time_node :start_time, 'StartTime'
+    #  date_time_node :end_time, 'EndTime'
     #  text_node :category_id, 'CategoryID'
     #  text_node :category2_id, 'Category2ID'
     #  text_node :discount_reason, 'DiscountReason'
@@ -22,8 +22,8 @@ module Ebay # :nodoc:
       value_array_node :item_ids, 'ItemID', :default_value => []
       value_array_node :skus, 'SKU', :default_value => []
       array_node :fees, 'Fees', :class => Fees, :default_value => []
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
+      date_time_node :start_time, 'StartTime'
+      date_time_node :end_time, 'EndTime'
       text_node :category_id, 'CategoryID'
       text_node :category2_id, 'Category2ID'
       text_node :discount_reason, 'DiscountReason'

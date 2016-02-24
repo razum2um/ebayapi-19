@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :description, 'Description'
     #  value_array_node :post_ids, 'PostID', :default_value => []
     #  value_array_node :sites, 'Site', :default_value => []
-    #  time_node :start_time, 'StartTime'
+    #  date_time_node :start_time, 'StartTime'
     #  numeric_node :response_count, 'ResponseCount'
     #  text_node :title, 'Title'
     class WantItNowPost
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       text_node :description, 'Description'
       value_array_node :post_ids, 'PostID', :default_value => []
       value_array_node :sites, 'Site', :default_value => []
-      time_node :start_time, 'StartTime'
+      date_time_node :start_time, 'StartTime'
       numeric_node :response_count, 'ResponseCount'
       text_node :title, 'Title'
     end

@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  boolean_node :default_value, 'DefaultValue', 'true', 'false'
     #  boolean_node :dimensions_supported, 'DimensionsSupported', 'true', 'false'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ShippingPackageDetails
       include XML::Mapping
       include Initializer
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       boolean_node :default_value, 'DefaultValue', 'true', 'false'
       boolean_node :dimensions_supported, 'DimensionsSupported', 'true', 'false'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

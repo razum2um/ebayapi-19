@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  value_array_node :refund_statuses, 'RefundStatus', :default_value => []
     #  value_array_node :refund_types, 'RefundType', :default_value => []
     #  array_node :refund_tos, 'RefundTo', :class => UserIdentity, :default_value => []
-    #  time_node :refund_time, 'RefundTime'
+    #  date_time_node :refund_time, 'RefundTime'
     #  array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
     #  array_node :reference_ids, 'ReferenceID', :class => TransactionReference, :default_value => []
     #  array_node :fee_or_credit_amounts, 'FeeOrCreditAmount', :class => Amount, :default_value => []
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       value_array_node :refund_statuses, 'RefundStatus', :default_value => []
       value_array_node :refund_types, 'RefundType', :default_value => []
       array_node :refund_tos, 'RefundTo', :class => UserIdentity, :default_value => []
-      time_node :refund_time, 'RefundTime'
+      date_time_node :refund_time, 'RefundTime'
       array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
       array_node :reference_ids, 'ReferenceID', :class => TransactionReference, :default_value => []
       array_node :fee_or_credit_amounts, 'FeeOrCreditAmount', :class => Amount, :default_value => []

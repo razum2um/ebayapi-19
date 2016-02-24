@@ -4,7 +4,7 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  text_node :category_id, 'CategoryID'
-    #  time_node :last_update_time, 'LastUpdateTime'
+    #  date_time_node :last_update_time, 'LastUpdateTime'
     #  numeric_node :max_names, 'MaxNames'
     #  numeric_node :max_values_per_name, 'MaxValuesPerName'
     #  text_node :name, 'Name'
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetCategorySpecificsRequest'
       text_node :category_id, 'CategoryID'
-      time_node :last_update_time, 'LastUpdateTime'
+      date_time_node :last_update_time, 'LastUpdateTime'
       numeric_node :max_names, 'MaxNames'
       numeric_node :max_values_per_name, 'MaxValuesPerName'
       text_node :name, 'Name'

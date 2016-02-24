@@ -87,7 +87,7 @@ module Ebay # :nodoc:
     #  boolean_node :relist_link, 'RelistLink', 'true', 'false'
     #  array_node :reserve_prices, 'ReservePrice', :class => Amount, :default_value => []
     #  array_node :revise_statuses, 'ReviseStatus', :class => ReviseStatus, :default_value => []
-    #  time_node :schedule_time, 'ScheduleTime'
+    #  date_time_node :schedule_time, 'ScheduleTime'
     #  array_node :secondary_categories, 'SecondaryCategory', :class => Category, :default_value => []
     #  array_node :free_added_categories, 'FreeAddedCategory', :class => Category, :default_value => []
     #  array_node :sellers, 'Seller', :class => User, :default_value => []
@@ -246,7 +246,7 @@ module Ebay # :nodoc:
       boolean_node :relist_link, 'RelistLink', 'true', 'false'
       array_node :reserve_prices, 'ReservePrice', :class => Amount, :default_value => []
       array_node :revise_statuses, 'ReviseStatus', :class => ReviseStatus, :default_value => []
-      time_node :schedule_time, 'ScheduleTime'
+      date_time_node :schedule_time, 'ScheduleTime'
       array_node :secondary_categories, 'SecondaryCategory', :class => Category, :default_value => []
       array_node :free_added_categories, 'FreeAddedCategory', :class => Category, :default_value => []
       array_node :sellers, 'Seller', :class => User, :default_value => []

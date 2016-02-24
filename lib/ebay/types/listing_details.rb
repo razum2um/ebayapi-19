@@ -12,8 +12,8 @@ module Ebay # :nodoc:
     #  boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false'
     #  value_array_node :relisted_item_ids, 'RelistedItemID', :default_value => []
     #  value_array_node :second_chance_original_item_ids, 'SecondChanceOriginalItemID', :default_value => []
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
+    #  date_time_node :start_time, 'StartTime'
+    #  date_time_node :end_time, 'EndTime'
     #  text_node :view_item_url, 'ViewItemURL'
     #  boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false'
     #  boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false'
@@ -40,8 +40,8 @@ module Ebay # :nodoc:
       boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false'
       value_array_node :relisted_item_ids, 'RelistedItemID', :default_value => []
       value_array_node :second_chance_original_item_ids, 'SecondChanceOriginalItemID', :default_value => []
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
+      date_time_node :start_time, 'StartTime'
+      date_time_node :end_time, 'EndTime'
       text_node :view_item_url, 'ViewItemURL'
       boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false'
       boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false'

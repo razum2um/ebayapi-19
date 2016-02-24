@@ -35,7 +35,7 @@ module Ebay # :nodoc:
     #  text_node :buyer_id, 'BuyerID'
     #  text_node :buyer_email, 'BuyerEmail'
     #  numeric_node :sale_record_id, 'SaleRecordID'
-    #  time_node :creation_time, 'CreationTime'
+    #  date_time_node :creation_time, 'CreationTime'
     #  array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
     #  text_node :refund_status, 'RefundStatus'
     class SellingManagerSoldOrder
@@ -69,7 +69,7 @@ module Ebay # :nodoc:
       text_node :buyer_id, 'BuyerID'
       text_node :buyer_email, 'BuyerEmail'
       numeric_node :sale_record_id, 'SaleRecordID'
-      time_node :creation_time, 'CreationTime'
+      date_time_node :creation_time, 'CreationTime'
       array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
       text_node :refund_status, 'RefundStatus'
     end

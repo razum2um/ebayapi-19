@@ -5,7 +5,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  value_array_node :best_offer_ids, 'BestOfferID', :default_value => []
-    #  time_node :expiration_time, 'ExpirationTime'
+    #  date_time_node :expiration_time, 'ExpirationTime'
     #  array_node :buyers, 'Buyer', :class => User, :default_value => []
     #  array_node :prices, 'Price', :class => Amount, :default_value => []
     #  value_array_node :statuses, 'Status', :default_value => []
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'BestOffer'
       value_array_node :best_offer_ids, 'BestOfferID', :default_value => []
-      time_node :expiration_time, 'ExpirationTime'
+      date_time_node :expiration_time, 'ExpirationTime'
       array_node :buyers, 'Buyer', :class => User, :default_value => []
       array_node :prices, 'Price', :class => Amount, :default_value => []
       value_array_node :statuses, 'Status', :default_value => []

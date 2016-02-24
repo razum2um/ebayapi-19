@@ -9,8 +9,8 @@ module Ebay # :nodoc:
     #  value_array_node :statuses, 'Status', :default_value => []
     #  value_array_node :discount_types, 'DiscountType', :default_value => []
     #  numeric_node :discount_value, 'DiscountValue'
-    #  time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
-    #  time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
+    #  date_time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
+    #  date_time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
     #  value_array_node :promotional_sale_types, 'PromotionalSaleType', :default_value => []
     class PromotionalSale
       include XML::Mapping
@@ -22,8 +22,8 @@ module Ebay # :nodoc:
       value_array_node :statuses, 'Status', :default_value => []
       value_array_node :discount_types, 'DiscountType', :default_value => []
       numeric_node :discount_value, 'DiscountValue'
-      time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
-      time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
+      date_time_node :promotional_sale_start_time, 'PromotionalSaleStartTime'
+      date_time_node :promotional_sale_end_time, 'PromotionalSaleEndTime'
       value_array_node :promotional_sale_types, 'PromotionalSaleType', :default_value => []
     end
   end

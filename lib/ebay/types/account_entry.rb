@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  value_array_node :account_details_entry_types, 'AccountDetailsEntryType', :default_value => []
     #  text_node :description, 'Description'
     #  array_node :balances, 'Balance', :class => Amount, :default_value => []
-    #  time_node :date, 'Date'
+    #  date_time_node :date, 'Date'
     #  array_node :gross_detail_amounts, 'GrossDetailAmount', :class => Amount, :default_value => []
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  text_node :memo, 'Memo'
@@ -25,7 +25,7 @@ module Ebay # :nodoc:
       value_array_node :account_details_entry_types, 'AccountDetailsEntryType', :default_value => []
       text_node :description, 'Description'
       array_node :balances, 'Balance', :class => Amount, :default_value => []
-      time_node :date, 'Date'
+      date_time_node :date, 'Date'
       array_node :gross_detail_amounts, 'GrossDetailAmount', :class => Amount, :default_value => []
       value_array_node :item_ids, 'ItemID', :default_value => []
       text_node :memo, 'Memo'

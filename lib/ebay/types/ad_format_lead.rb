@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  array_node :addresses, 'Address', :class => Address, :default_value => []
     #  text_node :best_time_to_call, 'BestTimeToCall'
     #  text_node :email, 'Email'
-    #  time_node :submitted_time, 'SubmittedTime'
+    #  date_time_node :submitted_time, 'SubmittedTime'
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  text_node :item_title, 'ItemTitle'
     #  value_array_node :user_ids, 'UserID', :default_value => []
@@ -32,7 +32,7 @@ module Ebay # :nodoc:
       array_node :addresses, 'Address', :class => Address, :default_value => []
       text_node :best_time_to_call, 'BestTimeToCall'
       text_node :email, 'Email'
-      time_node :submitted_time, 'SubmittedTime'
+      date_time_node :submitted_time, 'SubmittedTime'
       value_array_node :item_ids, 'ItemID', :default_value => []
       text_node :item_title, 'ItemTitle'
       value_array_node :user_ids, 'UserID', :default_value => []

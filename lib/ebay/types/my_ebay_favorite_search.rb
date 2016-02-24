@@ -9,8 +9,8 @@ module Ebay # :nodoc:
     #  text_node :category_id, 'CategoryID'
     #  value_array_node :item_sorts, 'ItemSort', :default_value => []
     #  value_array_node :sort_orders, 'SortOrder', :default_value => []
-    #  time_node :end_time_from, 'EndTimeFrom'
-    #  time_node :end_time_to, 'EndTimeTo'
+    #  date_time_node :end_time_from, 'EndTimeFrom'
+    #  date_time_node :end_time_to, 'EndTimeTo'
     #  numeric_node :max_distance, 'MaxDistance'
     #  text_node :postal_code, 'PostalCode'
     #  value_array_node :item_types, 'ItemType', :default_value => []
@@ -40,8 +40,8 @@ module Ebay # :nodoc:
       text_node :category_id, 'CategoryID'
       value_array_node :item_sorts, 'ItemSort', :default_value => []
       value_array_node :sort_orders, 'SortOrder', :default_value => []
-      time_node :end_time_from, 'EndTimeFrom'
-      time_node :end_time_to, 'EndTimeTo'
+      date_time_node :end_time_from, 'EndTimeFrom'
+      date_time_node :end_time_to, 'EndTimeTo'
       numeric_node :max_distance, 'MaxDistance'
       text_node :postal_code, 'PostalCode'
       value_array_node :item_types, 'ItemType', :default_value => []

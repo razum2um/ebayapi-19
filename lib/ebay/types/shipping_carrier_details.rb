@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :description, 'Description'
     #  value_array_node :shipping_carriers, 'ShippingCarrier', :default_value => []
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ShippingCarrierDetails
       include XML::Mapping
       include Initializer
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       text_node :description, 'Description'
       value_array_node :shipping_carriers, 'ShippingCarrier', :default_value => []
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

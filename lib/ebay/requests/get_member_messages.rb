@@ -7,8 +7,8 @@ module Ebay # :nodoc:
     #  value_array_node :mail_message_types, 'MailMessageType', :default_value => []
     #  value_array_node :message_statuses, 'MessageStatus', :default_value => []
     #  boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'
-    #  time_node :start_creation_time, 'StartCreationTime'
-    #  time_node :end_creation_time, 'EndCreationTime'
+    #  date_time_node :start_creation_time, 'StartCreationTime'
+    #  date_time_node :end_creation_time, 'EndCreationTime'
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  text_node :member_message_id, 'MemberMessageID'
     #  value_array_node :sender_ids, 'SenderID', :default_value => []
@@ -20,8 +20,8 @@ module Ebay # :nodoc:
       value_array_node :mail_message_types, 'MailMessageType', :default_value => []
       value_array_node :message_statuses, 'MessageStatus', :default_value => []
       boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'
-      time_node :start_creation_time, 'StartCreationTime'
-      time_node :end_creation_time, 'EndCreationTime'
+      date_time_node :start_creation_time, 'StartCreationTime'
+      date_time_node :end_creation_time, 'EndCreationTime'
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       text_node :member_message_id, 'MemberMessageID'
       value_array_node :sender_ids, 'SenderID', :default_value => []

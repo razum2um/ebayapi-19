@@ -6,8 +6,8 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
+    #  date_time_node :start_time, 'StartTime'
+    #  date_time_node :end_time, 'EndTime'
     #  array_node :fees, 'Fees', :class => Fees, :default_value => []
     #  text_node :category_id, 'CategoryID'
     #  text_node :category2_id, 'Category2ID'
@@ -20,8 +20,8 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'ReviseItemResponse'
       value_array_node :item_ids, 'ItemID', :default_value => []
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
+      date_time_node :start_time, 'StartTime'
+      date_time_node :end_time, 'EndTime'
       array_node :fees, 'Fees', :class => Fees, :default_value => []
       text_node :category_id, 'CategoryID'
       text_node :category2_id, 'Category2ID'

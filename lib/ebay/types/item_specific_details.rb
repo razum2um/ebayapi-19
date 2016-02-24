@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :max_characters_per_value, 'MaxCharactersPerValue'
     #  numeric_node :max_characters_per_name, 'MaxCharactersPerName'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class ItemSpecificDetails
       include XML::Mapping
       include Initializer
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       numeric_node :max_characters_per_value, 'MaxCharactersPerValue'
       numeric_node :max_characters_per_name, 'MaxCharactersPerName'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

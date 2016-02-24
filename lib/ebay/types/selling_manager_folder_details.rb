@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  text_node :folder_name, 'FolderName'
     #  text_node :folder_comment, 'FolderComment'
     #  object_node :child_folder, 'ChildFolder', :class => SellingManagerFolderDetails
-    #  time_node :creation_time, 'CreationTime'
+    #  date_time_node :creation_time, 'CreationTime'
     class SellingManagerFolderDetails
       include XML::Mapping
       include Initializer
@@ -20,7 +20,7 @@ module Ebay # :nodoc:
       text_node :folder_name, 'FolderName'
       text_node :folder_comment, 'FolderComment'
       object_node :child_folder, 'ChildFolder', :class => SellingManagerFolderDetails
-      time_node :creation_time, 'CreationTime'
+      date_time_node :creation_time, 'CreationTime'
     end
   end
 end

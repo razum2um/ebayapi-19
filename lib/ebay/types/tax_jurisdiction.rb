@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :shipping_included_in_tax, 'ShippingIncludedInTax', 'true', 'false'
     #  text_node :jurisdiction_name, 'JurisdictionName'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class TaxJurisdiction
       include XML::Mapping
       include Initializer
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       boolean_node :shipping_included_in_tax, 'ShippingIncludedInTax', 'true', 'false'
       text_node :jurisdiction_name, 'JurisdictionName'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

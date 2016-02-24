@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
     #  array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     class SiteBuyerRequirementDetails
       include XML::Mapping
       include Initializer
@@ -28,7 +28,7 @@ module Ebay # :nodoc:
       boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
       array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
     end
   end
 end

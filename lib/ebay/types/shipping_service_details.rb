@@ -25,7 +25,7 @@ module Ebay # :nodoc:
     #  object_node :shipping_service_package_details, 'ShippingServicePackageDetails', :class => ShippingServicePackageDetails
     #  boolean_node :weight_required, 'WeightRequired', 'true', 'false'
     #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  date_time_node :update_time, 'UpdateTime'
     #  text_node :shipping_category, 'ShippingCategory'
     class ShippingServiceDetails
       include XML::Mapping
@@ -52,7 +52,7 @@ module Ebay # :nodoc:
       object_node :shipping_service_package_details, 'ShippingServicePackageDetails', :class => ShippingServicePackageDetails
       boolean_node :weight_required, 'WeightRequired', 'true', 'false'
       text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      date_time_node :update_time, 'UpdateTime'
       text_node :shipping_category, 'ShippingCategory'
     end
   end

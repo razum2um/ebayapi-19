@@ -8,8 +8,8 @@ module Ebay
       def initialize(name, attributes = {})
         @name = name
         @type = attributes[:type]
-        @min = attributes[:min] || "1"
-        @max = attributes[:max] || "1"
+        @min = attributes[:min].to_s || "1"
+        @max = attributes[:max].to_s || "1"
         @field = attributes[:field]
         @child = attributes[:child]
       end

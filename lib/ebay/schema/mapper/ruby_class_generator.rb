@@ -203,8 +203,8 @@ module Ebay
       def node_for(element)
         name = element.name.name
         type = element.type.name
-        min = element.minoccurs || "1"
-        max = element.maxoccurs || "1"
+        min = element.minoccurs.to_s || "1"
+        max = element.maxoccurs.to_s || "1"
 
         options = { :type => type,
           :min => min,

@@ -3,16 +3,16 @@ require 'ebay/types/seller_dashboard_alert'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :site, 'Site'
-    #  text_node :status, 'Status'
-    #  object_node :alert, 'Alert', :class => SellerDashboardAlert
+    #  value_array_node :sites, 'Site', :default_value => []
+    #  text_node :status, 'Status', :optional => true
+    #  object_node :alert, 'Alert', :class => SellerDashboardAlert, :optional => true
     class PerformanceDashboard
       include XML::Mapping
       include Initializer
       root_element_name 'PerformanceDashboard'
-      text_node :site, 'Site'
-      text_node :status, 'Status'
-      object_node :alert, 'Alert', :class => SellerDashboardAlert
+      value_array_node :sites, 'Site', :default_value => []
+      text_node :status, 'Status', :optional => true
+      object_node :alert, 'Alert', :class => SellerDashboardAlert, :optional => true
     end
   end
 end

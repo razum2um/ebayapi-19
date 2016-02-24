@@ -2,8 +2,8 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :status, 'Status'
-    #  text_node :type, 'Type'
+    #  text_node :status, 'Status', :optional => true
+    #  text_node :type, 'Type', :optional => true
 def type
   @type
 end
@@ -12,8 +12,8 @@ end
       include XML::Mapping
       include Initializer
       root_element_name 'UnpaidItem'
-      text_node :status, 'Status'
-      text_node :type, 'Type'
+      text_node :status, 'Status', :optional => true
+      text_node :type, 'Type', :optional => true
 def type
   @type
 end

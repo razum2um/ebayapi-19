@@ -132,274 +132,274 @@ require 'ebay/types/digital_good_delivery_enabled_definition'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  object_node :listing_durations, 'ListingDurations', :class => ListingDurationDefinitions
-    #  object_node :shipping_terms_required, 'ShippingTermsRequired', :class => ShippingTermRequiredDefinition
-    #  object_node :best_offer_enabled, 'BestOfferEnabled', :class => BestOfferEnabledDefinition
-    #  object_node :dutch_bin_enabled, 'DutchBINEnabled', :class => DutchBINEnabledDefinition
-    #  object_node :user_consent_required, 'UserConsentRequired', :class => UserConsentRequiredDefinition
-    #  object_node :home_page_featured_enabled, 'HomePageFeaturedEnabled', :class => HomePageFeaturedEnabledDefinition
-    #  object_node :pro_pack_enabled, 'ProPackEnabled', :class => ProPackEnabledDefinition
-    #  object_node :basic_upgrade_pack_enabled, 'BasicUpgradePackEnabled', :class => BasicUpgradePackEnabledDefinition
-    #  object_node :value_pack_enabled, 'ValuePackEnabled', :class => ValuePackEnabledDefinition
-    #  object_node :pro_pack_plus_enabled, 'ProPackPlusEnabled', :class => ProPackPlusEnabledDefinition
-    #  object_node :ad_format_enabled, 'AdFormatEnabled', :class => AdFormatEnabledDefinition
-    #  object_node :best_offer_counter_enabled, 'BestOfferCounterEnabled', :class => BestOfferCounterEnabledDefinition
-    #  object_node :best_offer_auto_decline_enabled, 'BestOfferAutoDeclineEnabled', :class => BestOfferAutoDeclineEnabledDefinition
-    #  object_node :local_market_speciality_subscription, 'LocalMarketSpecialitySubscription', :class => LocalMarketSpecialitySubscriptionDefinition
-    #  object_node :local_market_regular_subscription, 'LocalMarketRegularSubscription', :class => LocalMarketRegularSubscriptionDefinition
-    #  object_node :local_market_premium_subscription, 'LocalMarketPremiumSubscription', :class => LocalMarketPremiumSubscriptionDefinition
-    #  object_node :local_market_non_subscription, 'LocalMarketNonSubscription', :class => LocalMarketNonSubscriptionDefinition
-    #  object_node :express_enabled, 'ExpressEnabled', :class => ExpressEnabledDefinition
-    #  object_node :express_pictures_required, 'ExpressPicturesRequired', :class => ExpressPicturesRequiredDefinition
-    #  object_node :express_condition_required, 'ExpressConditionRequired', :class => ExpressConditionRequiredDefinition
-    #  object_node :minimum_reserve_price, 'MinimumReservePrice', :class => MinimumReservePriceDefinition
-    #  object_node :transaction_confirmation_request_enabled, 'TransactionConfirmationRequestEnabled', :class => TCREnabledDefinition
-    #  object_node :seller_contact_details_enabled, 'SellerContactDetailsEnabled', :class => SellerContactDetailsEnabledDefinition
-    #  object_node :store_inventory_enabled, 'StoreInventoryEnabled', :class => StoreInventoryEnabledDefinition
-    #  object_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', :class => SkypeMeTransactionalEnabledDefinition
-    #  object_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', :class => SkypeMeNonTransactionalEnabledDefinition
-    #  object_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :class => LocalListingDistancesRegularDefinition
-    #  object_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :class => LocalListingDistancesSpecialtyDefinition
-    #  object_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :class => LocalListingDistancesNonSubscriptionDefinition
-    #  object_node :classified_ad_payment_method_enabled, 'ClassifiedAdPaymentMethodEnabled', :class => ClassifiedAdPaymentMethodEnabledDefinition
-    #  object_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', :class => ClassifiedAdShippingMethodEnabledDefinition
-    #  object_node :classified_ad_best_offer_enabled, 'ClassifiedAdBestOfferEnabled', :class => ClassifiedAdBestOfferEnabledDefinition
-    #  object_node :classified_ad_counter_offer_enabled, 'ClassifiedAdCounterOfferEnabled', :class => ClassifiedAdCounterOfferEnabledDefinition
-    #  object_node :classified_ad_auto_decline_enabled, 'ClassifiedAdAutoDeclineEnabled', :class => ClassifiedAdAutoDeclineEnabledDefinition
-    #  object_node :classified_ad_contact_by_phone_enabled, 'ClassifiedAdContactByPhoneEnabled', :class => ClassifiedAdContactByPhoneEnabledDefinition
-    #  object_node :classified_ad_contact_by_email_enabled, 'ClassifiedAdContactByEmailEnabled', :class => ClassifiedAdContactByEmailEnabledDefintion
-    #  object_node :safe_payment_required, 'SafePaymentRequired', :class => SafePaymentRequiredDefinition
-    #  object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition
-    #  object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition
-    #  object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition
-    #  object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition
-    #  object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition
-    #  object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition
-    #  object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition
-    #  object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition
-    #  object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition
-    #  object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition
-    #  object_node :cross_border_trade_gb_enabled, 'CrossBorderTradeGBEnabled', :class => CrossBorderTradeGBEnabledDefinition
-    #  object_node :cross_border_trade_australia_enabled, 'CrossBorderTradeAustraliaEnabled', :class => CrossBorderTradeAustraliaEnabledDefinition
-    #  object_node :paypal_buyer_protection_enabled, 'PayPalBuyerProtectionEnabled', :class => PayPalBuyerProtectionEnabledDefinition
-    #  object_node :buyer_guarantee_enabled, 'BuyerGuaranteeEnabled', :class => BuyerGuaranteeEnabledDefinition
-    #  object_node :combined_fixed_price_treatment_enabled, 'CombinedFixedPriceTreatmentEnabled', :class => CombinedFixedPriceTreatmentEnabledDefinition
-    #  object_node :gallery_featured_durations, 'GalleryFeaturedDurations', :class => ListingEnhancementDurationDefinition
-    #  object_node :in_escrow_workflow_timeline, 'INEscrowWorkflowTimeline', :class => INEscrowWorkflowTimelineDefinition
-    #  object_node :paypal_required, 'PayPalRequired', :class => PayPalRequiredDefinition
-    #  object_node :ebay_motors_pro_ad_format_enabled, 'eBayMotorsProAdFormatEnabled', :class => EBayMotorsProAdFormatEnabledDefinition
-    #  object_node :ebay_motors_pro_contact_by_phone_enabled, 'eBayMotorsProContactByPhoneEnabled', :class => EBayMotorsProContactByPhoneEnabledDefinition
-    #  object_node :ebay_motors_pro_phone_count, 'eBayMotorsProPhoneCount', :class => EBayMotorsProPhoneCountDefinition
-    #  object_node :ebay_motors_pro_contact_by_address_enabled, 'eBayMotorsProContactByAddressEnabled', :class => EBayMotorsProContactByAddressEnabledDefinition
-    #  object_node :ebay_motors_pro_street_count, 'eBayMotorsProStreetCount', :class => EBayMotorsProStreetCountDefinition
-    #  object_node :ebay_motors_pro_company_name_enabled, 'eBayMotorsProCompanyNameEnabled', :class => EBayMotorsProCompanyNameEnabledDefinition
-    #  object_node :ebay_motors_pro_contact_by_email_enabled, 'eBayMotorsProContactByEmailEnabled', :class => EBayMotorsProContactByEmailEnabledDefinition
-    #  object_node :ebay_motors_pro_best_offer_enabled, 'eBayMotorsProBestOfferEnabled', :class => EBayMotorsProBestOfferEnabledDefinition
-    #  object_node :ebay_motors_pro_auto_accept_enabled, 'eBayMotorsProAutoAcceptEnabled', :class => EBayMotorsProAutoAcceptEnabledDefinition
-    #  object_node :ebay_motors_pro_auto_decline_enabled, 'eBayMotorsProAutoDeclineEnabled', :class => EBayMotorsProAutoDeclineEnabledDefinition
-    #  object_node :ebay_motors_pro_payment_method_check_out_enabled, 'eBayMotorsProPaymentMethodCheckOutEnabled', :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinition
-    #  object_node :ebay_motors_pro_shipping_method_enabled, 'eBayMotorsProShippingMethodEnabled', :class => EBayMotorsProShippingMethodEnabledDefinition
-    #  object_node :ebay_motors_pro_counter_offer_enabled, 'eBayMotorsProCounterOfferEnabled', :class => EBayMotorsProCounterOfferEnabledDefinition
-    #  object_node :ebay_motors_pro_seller_contact_details_enabled, 'eBayMotorsProSellerContactDetailsEnabled', :class => EBayMotorsProSellerContactDetailsEnabledDefinition
-    #  object_node :local_market_ad_format_enabled, 'LocalMarketAdFormatEnabled', :class => LocalMarketAdFormatEnabledDefinition
-    #  object_node :local_market_contact_by_phone_enabled, 'LocalMarketContactByPhoneEnabled', :class => LocalMarketContactByPhoneEnabledDefinition
-    #  object_node :local_market_phone_count, 'LocalMarketPhoneCount', :class => LocalMarketPhoneCountDefinition
-    #  object_node :local_market_contact_by_address_enabled, 'LocalMarketContactByAddressEnabled', :class => LocalMarketContactByAddressEnabledDefinition
-    #  object_node :local_market_street_count, 'LocalMarketStreetCount', :class => LocalMarketStreetCountDefinition
-    #  object_node :local_market_company_name_enabled, 'LocalMarketCompanyNameEnabled', :class => LocalMarketCompanyNameEnabledDefinition
-    #  object_node :local_market_contact_by_email_enabled, 'LocalMarketContactByEmailEnabled', :class => LocalMarketContactByEmailEnabledDefinition
-    #  object_node :local_market_best_offer_enabled, 'LocalMarketBestOfferEnabled', :class => LocalMarketBestOfferEnabledDefinition
-    #  object_node :local_market_auto_accept_enabled, 'LocalMarketAutoAcceptEnabled', :class => LocalMarketAutoAcceptEnabledDefinition
-    #  object_node :local_market_auto_decline_enabled, 'LocalMarketAutoDeclineEnabled', :class => LocalMarketAutoDeclineEnabledDefinition
-    #  object_node :local_market_payment_method_check_out_enabled, 'LocalMarketPaymentMethodCheckOutEnabled', :class => LocalMarketPaymentMethodCheckOutEnabledDefinition
-    #  object_node :local_market_shipping_method_enabled, 'LocalMarketShippingMethodEnabled', :class => LocalMarketShippingMethodEnabledDefinition
-    #  object_node :local_market_counter_offer_enabled, 'LocalMarketCounterOfferEnabled', :class => LocalMarketCounterOfferEnabledDefinition
-    #  object_node :local_market_seller_contact_details_enabled, 'LocalMarketSellerContactDetailsEnabled', :class => LocalMarketSellerContactDetailsEnabledDefinition
-    #  object_node :classified_ad_phone_count, 'ClassifiedAdPhoneCount', :class => ClassifiedAdPhoneCountDefinition
-    #  object_node :classified_ad_contact_by_address_enabled, 'ClassifiedAdContactByAddressEnabled', :class => ClassifiedAdContactByAddressEnabledDefinition
-    #  object_node :classified_ad_street_count, 'ClassifiedAdStreetCount', :class => ClassifiedAdStreetCountDefinition
-    #  object_node :classified_ad_company_name_enabled, 'ClassifiedAdCompanyNameEnabled', :class => ClassifiedAdCompanyNameEnabledDefinition
-    #  object_node :speciality_subscription, 'SpecialitySubscription', :class => SpecialitySubscriptionDefinition
-    #  object_node :regular_subscription, 'RegularSubscription', :class => RegularSubscriptionDefinition
-    #  object_node :premium_subscription, 'PremiumSubscription', :class => PremiumSubscriptionDefinition
-    #  object_node :non_subscription, 'NonSubscription', :class => NonSubscriptionDefinition
-    #  object_node :return_policy_enabled, 'ReturnPolicyEnabled', :class => ReturnPolicyEnabledDefinition
-    #  object_node :handling_time_enabled, 'HandlingTimeEnabled', :class => HandlingTimeEnabledDefinition
-    #  object_node :paypal_required_for_store_owner, 'PayPalRequiredForStoreOwner', :class => PayPalRequiredForStoreOwnerDefinition
-    #  object_node :revise_quantity_allowed, 'ReviseQuantityAllowed', :class => ReviseQuantityAllowedDefinition
-    #  object_node :revise_price_allowed, 'RevisePriceAllowed', :class => RevisePriceAllowedDefinition
-    #  object_node :store_owner_extended_listing_durations_enabled, 'StoreOwnerExtendedListingDurationsEnabled', :class => StoreOwnerExtendedListingDurationsEnabledDefinition
-    #  object_node :store_owner_extended_listing_durations, 'StoreOwnerExtendedListingDurations', :class => StoreOwnerExtendedListingDurationsDefinition
-    #  object_node :payment_method, 'PaymentMethod', :class => PaymentMethodDefinition
-    #  object_node :group1_max_flat_shipping_cost, 'Group1MaxFlatShippingCost', :class => Group1MaxFlatShippingCostDefinition
-    #  object_node :group2_max_flat_shipping_cost, 'Group2MaxFlatShippingCost', :class => Group2MaxFlatShippingCostDefinition
-    #  object_node :group3_max_flat_shipping_cost, 'Group3MaxFlatShippingCost', :class => Group3MaxFlatShippingCostDefinition
-    #  object_node :max_flat_shipping_cost_cbt_exempt, 'MaxFlatShippingCostCBTExempt', :class => MaxFlatShippingCostCBTExemptDefinition
-    #  object_node :max_flat_shipping_cost, 'MaxFlatShippingCost', :class => MaxFlatShippingCostDefinition
-    #  object_node :variations_enabled, 'VariationsEnabled', :class => VariationsEnabledDefinition
-    #  object_node :attribute_conversion_enabled, 'AttributeConversionEnabled', :class => AttributeConversionEnabledFeatureDefinition
-    #  object_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', :class => FreeGalleryPlusEnabledDefinition
-    #  object_node :free_picture_pack_enabled, 'FreePicturePackEnabled', :class => FreePicturePackEnabledDefinition
-    #  object_node :item_compatibility_enabled, 'ItemCompatibilityEnabled', :class => ItemCompatibilityEnabledDefinition
-    #  object_node :max_item_compatibility, 'MaxItemCompatibility', :class => MaxItemCompatibilityDefinition
-    #  object_node :min_item_compatibility, 'MinItemCompatibility', :class => MinItemCompatibilityDefinition
-    #  object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition
-    #  object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition
-    #  object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition
-    #  object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition
-    #  object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition
-    #  object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition
-    #  object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition
-    #  object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition
-    #  object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition
-    #  object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition
-    #  object_node :shipping_profile_category_group, 'ShippingProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-    #  object_node :payment_profile_category_group, 'PaymentProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-    #  object_node :return_policy_profile_category_group, 'ReturnPolicyProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-    #  object_node :vin_supported, 'VINSupported', :class => VINSupportedDefinition
-    #  object_node :vrm_supported, 'VRMSupported', :class => VRMSupportedDefinition
-    #  object_node :seller_provided_title_supported, 'SellerProvidedTitleSupported', :class => SellerProvidedTitleSupportedDefinition
-    #  object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition
-    #  object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition
-    #  object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition
-    #  object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition
-    #  object_node :digital_good_delivery_enabled, 'DigitalGoodDeliveryEnabled', :class => DigitalGoodDeliveryEnabledDefinition
+    #  object_node :listing_durations, 'ListingDurations', :class => ListingDurationDefinitions, :optional => true
+    #  object_node :shipping_terms_required, 'ShippingTermsRequired', :class => ShippingTermRequiredDefinition, :optional => true
+    #  object_node :best_offer_enabled, 'BestOfferEnabled', :class => BestOfferEnabledDefinition, :optional => true
+    #  object_node :dutch_bin_enabled, 'DutchBINEnabled', :class => DutchBINEnabledDefinition, :optional => true
+    #  object_node :user_consent_required, 'UserConsentRequired', :class => UserConsentRequiredDefinition, :optional => true
+    #  object_node :home_page_featured_enabled, 'HomePageFeaturedEnabled', :class => HomePageFeaturedEnabledDefinition, :optional => true
+    #  object_node :pro_pack_enabled, 'ProPackEnabled', :class => ProPackEnabledDefinition, :optional => true
+    #  object_node :basic_upgrade_pack_enabled, 'BasicUpgradePackEnabled', :class => BasicUpgradePackEnabledDefinition, :optional => true
+    #  object_node :value_pack_enabled, 'ValuePackEnabled', :class => ValuePackEnabledDefinition, :optional => true
+    #  object_node :pro_pack_plus_enabled, 'ProPackPlusEnabled', :class => ProPackPlusEnabledDefinition, :optional => true
+    #  object_node :ad_format_enabled, 'AdFormatEnabled', :class => AdFormatEnabledDefinition, :optional => true
+    #  object_node :best_offer_counter_enabled, 'BestOfferCounterEnabled', :class => BestOfferCounterEnabledDefinition, :optional => true
+    #  object_node :best_offer_auto_decline_enabled, 'BestOfferAutoDeclineEnabled', :class => BestOfferAutoDeclineEnabledDefinition, :optional => true
+    #  object_node :local_market_speciality_subscription, 'LocalMarketSpecialitySubscription', :class => LocalMarketSpecialitySubscriptionDefinition, :optional => true
+    #  object_node :local_market_regular_subscription, 'LocalMarketRegularSubscription', :class => LocalMarketRegularSubscriptionDefinition, :optional => true
+    #  object_node :local_market_premium_subscription, 'LocalMarketPremiumSubscription', :class => LocalMarketPremiumSubscriptionDefinition, :optional => true
+    #  object_node :local_market_non_subscription, 'LocalMarketNonSubscription', :class => LocalMarketNonSubscriptionDefinition, :optional => true
+    #  object_node :express_enabled, 'ExpressEnabled', :class => ExpressEnabledDefinition, :optional => true
+    #  object_node :express_pictures_required, 'ExpressPicturesRequired', :class => ExpressPicturesRequiredDefinition, :optional => true
+    #  object_node :express_condition_required, 'ExpressConditionRequired', :class => ExpressConditionRequiredDefinition, :optional => true
+    #  object_node :minimum_reserve_price, 'MinimumReservePrice', :class => MinimumReservePriceDefinition, :optional => true
+    #  object_node :transaction_confirmation_request_enabled, 'TransactionConfirmationRequestEnabled', :class => TCREnabledDefinition, :optional => true
+    #  object_node :seller_contact_details_enabled, 'SellerContactDetailsEnabled', :class => SellerContactDetailsEnabledDefinition, :optional => true
+    #  object_node :store_inventory_enabled, 'StoreInventoryEnabled', :class => StoreInventoryEnabledDefinition, :optional => true
+    #  object_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', :class => SkypeMeTransactionalEnabledDefinition, :optional => true
+    #  object_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', :class => SkypeMeNonTransactionalEnabledDefinition, :optional => true
+    #  object_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :class => LocalListingDistancesRegularDefinition, :optional => true
+    #  object_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :class => LocalListingDistancesSpecialtyDefinition, :optional => true
+    #  object_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :class => LocalListingDistancesNonSubscriptionDefinition, :optional => true
+    #  object_node :classified_ad_payment_method_enabled, 'ClassifiedAdPaymentMethodEnabled', :class => ClassifiedAdPaymentMethodEnabledDefinition, :optional => true
+    #  object_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', :class => ClassifiedAdShippingMethodEnabledDefinition, :optional => true
+    #  object_node :classified_ad_best_offer_enabled, 'ClassifiedAdBestOfferEnabled', :class => ClassifiedAdBestOfferEnabledDefinition, :optional => true
+    #  object_node :classified_ad_counter_offer_enabled, 'ClassifiedAdCounterOfferEnabled', :class => ClassifiedAdCounterOfferEnabledDefinition, :optional => true
+    #  object_node :classified_ad_auto_decline_enabled, 'ClassifiedAdAutoDeclineEnabled', :class => ClassifiedAdAutoDeclineEnabledDefinition, :optional => true
+    #  object_node :classified_ad_contact_by_phone_enabled, 'ClassifiedAdContactByPhoneEnabled', :class => ClassifiedAdContactByPhoneEnabledDefinition, :optional => true
+    #  object_node :classified_ad_contact_by_email_enabled, 'ClassifiedAdContactByEmailEnabled', :class => ClassifiedAdContactByEmailEnabledDefintion, :optional => true
+    #  object_node :safe_payment_required, 'SafePaymentRequired', :class => SafePaymentRequiredDefinition, :optional => true
+    #  object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition, :optional => true
+    #  object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition, :optional => true
+    #  object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition, :optional => true
+    #  object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition, :optional => true
+    #  object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition, :optional => true
+    #  object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition, :optional => true
+    #  object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition, :optional => true
+    #  object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition, :optional => true
+    #  object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition, :optional => true
+    #  object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition, :optional => true
+    #  object_node :cross_border_trade_gb_enabled, 'CrossBorderTradeGBEnabled', :class => CrossBorderTradeGBEnabledDefinition, :optional => true
+    #  object_node :cross_border_trade_australia_enabled, 'CrossBorderTradeAustraliaEnabled', :class => CrossBorderTradeAustraliaEnabledDefinition, :optional => true
+    #  object_node :paypal_buyer_protection_enabled, 'PayPalBuyerProtectionEnabled', :class => PayPalBuyerProtectionEnabledDefinition, :optional => true
+    #  object_node :buyer_guarantee_enabled, 'BuyerGuaranteeEnabled', :class => BuyerGuaranteeEnabledDefinition, :optional => true
+    #  object_node :combined_fixed_price_treatment_enabled, 'CombinedFixedPriceTreatmentEnabled', :class => CombinedFixedPriceTreatmentEnabledDefinition, :optional => true
+    #  object_node :gallery_featured_durations, 'GalleryFeaturedDurations', :class => ListingEnhancementDurationDefinition, :optional => true
+    #  object_node :in_escrow_workflow_timeline, 'INEscrowWorkflowTimeline', :class => INEscrowWorkflowTimelineDefinition, :optional => true
+    #  object_node :paypal_required, 'PayPalRequired', :class => PayPalRequiredDefinition, :optional => true
+    #  object_node :ebay_motors_pro_ad_format_enabled, 'eBayMotorsProAdFormatEnabled', :class => EBayMotorsProAdFormatEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_contact_by_phone_enabled, 'eBayMotorsProContactByPhoneEnabled', :class => EBayMotorsProContactByPhoneEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_phone_count, 'eBayMotorsProPhoneCount', :class => EBayMotorsProPhoneCountDefinition, :optional => true
+    #  object_node :ebay_motors_pro_contact_by_address_enabled, 'eBayMotorsProContactByAddressEnabled', :class => EBayMotorsProContactByAddressEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_street_count, 'eBayMotorsProStreetCount', :class => EBayMotorsProStreetCountDefinition, :optional => true
+    #  object_node :ebay_motors_pro_company_name_enabled, 'eBayMotorsProCompanyNameEnabled', :class => EBayMotorsProCompanyNameEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_contact_by_email_enabled, 'eBayMotorsProContactByEmailEnabled', :class => EBayMotorsProContactByEmailEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_best_offer_enabled, 'eBayMotorsProBestOfferEnabled', :class => EBayMotorsProBestOfferEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_auto_accept_enabled, 'eBayMotorsProAutoAcceptEnabled', :class => EBayMotorsProAutoAcceptEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_auto_decline_enabled, 'eBayMotorsProAutoDeclineEnabled', :class => EBayMotorsProAutoDeclineEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_payment_method_check_out_enabled, 'eBayMotorsProPaymentMethodCheckOutEnabled', :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_shipping_method_enabled, 'eBayMotorsProShippingMethodEnabled', :class => EBayMotorsProShippingMethodEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_counter_offer_enabled, 'eBayMotorsProCounterOfferEnabled', :class => EBayMotorsProCounterOfferEnabledDefinition, :optional => true
+    #  object_node :ebay_motors_pro_seller_contact_details_enabled, 'eBayMotorsProSellerContactDetailsEnabled', :class => EBayMotorsProSellerContactDetailsEnabledDefinition, :optional => true
+    #  object_node :local_market_ad_format_enabled, 'LocalMarketAdFormatEnabled', :class => LocalMarketAdFormatEnabledDefinition, :optional => true
+    #  object_node :local_market_contact_by_phone_enabled, 'LocalMarketContactByPhoneEnabled', :class => LocalMarketContactByPhoneEnabledDefinition, :optional => true
+    #  object_node :local_market_phone_count, 'LocalMarketPhoneCount', :class => LocalMarketPhoneCountDefinition, :optional => true
+    #  object_node :local_market_contact_by_address_enabled, 'LocalMarketContactByAddressEnabled', :class => LocalMarketContactByAddressEnabledDefinition, :optional => true
+    #  object_node :local_market_street_count, 'LocalMarketStreetCount', :class => LocalMarketStreetCountDefinition, :optional => true
+    #  object_node :local_market_company_name_enabled, 'LocalMarketCompanyNameEnabled', :class => LocalMarketCompanyNameEnabledDefinition, :optional => true
+    #  object_node :local_market_contact_by_email_enabled, 'LocalMarketContactByEmailEnabled', :class => LocalMarketContactByEmailEnabledDefinition, :optional => true
+    #  object_node :local_market_best_offer_enabled, 'LocalMarketBestOfferEnabled', :class => LocalMarketBestOfferEnabledDefinition, :optional => true
+    #  object_node :local_market_auto_accept_enabled, 'LocalMarketAutoAcceptEnabled', :class => LocalMarketAutoAcceptEnabledDefinition, :optional => true
+    #  object_node :local_market_auto_decline_enabled, 'LocalMarketAutoDeclineEnabled', :class => LocalMarketAutoDeclineEnabledDefinition, :optional => true
+    #  object_node :local_market_payment_method_check_out_enabled, 'LocalMarketPaymentMethodCheckOutEnabled', :class => LocalMarketPaymentMethodCheckOutEnabledDefinition, :optional => true
+    #  object_node :local_market_shipping_method_enabled, 'LocalMarketShippingMethodEnabled', :class => LocalMarketShippingMethodEnabledDefinition, :optional => true
+    #  object_node :local_market_counter_offer_enabled, 'LocalMarketCounterOfferEnabled', :class => LocalMarketCounterOfferEnabledDefinition, :optional => true
+    #  object_node :local_market_seller_contact_details_enabled, 'LocalMarketSellerContactDetailsEnabled', :class => LocalMarketSellerContactDetailsEnabledDefinition, :optional => true
+    #  object_node :classified_ad_phone_count, 'ClassifiedAdPhoneCount', :class => ClassifiedAdPhoneCountDefinition, :optional => true
+    #  object_node :classified_ad_contact_by_address_enabled, 'ClassifiedAdContactByAddressEnabled', :class => ClassifiedAdContactByAddressEnabledDefinition, :optional => true
+    #  object_node :classified_ad_street_count, 'ClassifiedAdStreetCount', :class => ClassifiedAdStreetCountDefinition, :optional => true
+    #  object_node :classified_ad_company_name_enabled, 'ClassifiedAdCompanyNameEnabled', :class => ClassifiedAdCompanyNameEnabledDefinition, :optional => true
+    #  object_node :speciality_subscription, 'SpecialitySubscription', :class => SpecialitySubscriptionDefinition, :optional => true
+    #  object_node :regular_subscription, 'RegularSubscription', :class => RegularSubscriptionDefinition, :optional => true
+    #  object_node :premium_subscription, 'PremiumSubscription', :class => PremiumSubscriptionDefinition, :optional => true
+    #  object_node :non_subscription, 'NonSubscription', :class => NonSubscriptionDefinition, :optional => true
+    #  object_node :return_policy_enabled, 'ReturnPolicyEnabled', :class => ReturnPolicyEnabledDefinition, :optional => true
+    #  object_node :handling_time_enabled, 'HandlingTimeEnabled', :class => HandlingTimeEnabledDefinition, :optional => true
+    #  object_node :paypal_required_for_store_owner, 'PayPalRequiredForStoreOwner', :class => PayPalRequiredForStoreOwnerDefinition, :optional => true
+    #  object_node :revise_quantity_allowed, 'ReviseQuantityAllowed', :class => ReviseQuantityAllowedDefinition, :optional => true
+    #  object_node :revise_price_allowed, 'RevisePriceAllowed', :class => RevisePriceAllowedDefinition, :optional => true
+    #  object_node :store_owner_extended_listing_durations_enabled, 'StoreOwnerExtendedListingDurationsEnabled', :class => StoreOwnerExtendedListingDurationsEnabledDefinition, :optional => true
+    #  object_node :store_owner_extended_listing_durations, 'StoreOwnerExtendedListingDurations', :class => StoreOwnerExtendedListingDurationsDefinition, :optional => true
+    #  object_node :payment_method, 'PaymentMethod', :class => PaymentMethodDefinition, :optional => true
+    #  object_node :group1_max_flat_shipping_cost, 'Group1MaxFlatShippingCost', :class => Group1MaxFlatShippingCostDefinition, :optional => true
+    #  object_node :group2_max_flat_shipping_cost, 'Group2MaxFlatShippingCost', :class => Group2MaxFlatShippingCostDefinition, :optional => true
+    #  object_node :group3_max_flat_shipping_cost, 'Group3MaxFlatShippingCost', :class => Group3MaxFlatShippingCostDefinition, :optional => true
+    #  object_node :max_flat_shipping_cost_cbt_exempt, 'MaxFlatShippingCostCBTExempt', :class => MaxFlatShippingCostCBTExemptDefinition, :optional => true
+    #  object_node :max_flat_shipping_cost, 'MaxFlatShippingCost', :class => MaxFlatShippingCostDefinition, :optional => true
+    #  object_node :variations_enabled, 'VariationsEnabled', :class => VariationsEnabledDefinition, :optional => true
+    #  object_node :attribute_conversion_enabled, 'AttributeConversionEnabled', :class => AttributeConversionEnabledFeatureDefinition, :optional => true
+    #  object_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', :class => FreeGalleryPlusEnabledDefinition, :optional => true
+    #  object_node :free_picture_pack_enabled, 'FreePicturePackEnabled', :class => FreePicturePackEnabledDefinition, :optional => true
+    #  object_node :item_compatibility_enabled, 'ItemCompatibilityEnabled', :class => ItemCompatibilityEnabledDefinition, :optional => true
+    #  object_node :max_item_compatibility, 'MaxItemCompatibility', :class => MaxItemCompatibilityDefinition, :optional => true
+    #  object_node :min_item_compatibility, 'MinItemCompatibility', :class => MinItemCompatibilityDefinition, :optional => true
+    #  object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition, :optional => true
+    #  object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
+    #  object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
+    #  object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+    #  object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition, :optional => true
+    #  object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition, :optional => true
+    #  object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition, :optional => true
+    #  object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
+    #  object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
+    #  object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
+    #  object_node :shipping_profile_category_group, 'ShippingProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+    #  object_node :payment_profile_category_group, 'PaymentProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+    #  object_node :return_policy_profile_category_group, 'ReturnPolicyProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+    #  object_node :vin_supported, 'VINSupported', :class => VINSupportedDefinition, :optional => true
+    #  object_node :vrm_supported, 'VRMSupported', :class => VRMSupportedDefinition, :optional => true
+    #  object_node :seller_provided_title_supported, 'SellerProvidedTitleSupported', :class => SellerProvidedTitleSupportedDefinition, :optional => true
+    #  object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition, :optional => true
+    #  object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition, :optional => true
+    #  object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition, :optional => true
+    #  object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition, :optional => true
+    #  object_node :digital_good_delivery_enabled, 'DigitalGoodDeliveryEnabled', :class => DigitalGoodDeliveryEnabledDefinition, :optional => true
     class FeatureDefinitions
       include XML::Mapping
       include Initializer
       root_element_name 'FeatureDefinitions'
-      object_node :listing_durations, 'ListingDurations', :class => ListingDurationDefinitions
-      object_node :shipping_terms_required, 'ShippingTermsRequired', :class => ShippingTermRequiredDefinition
-      object_node :best_offer_enabled, 'BestOfferEnabled', :class => BestOfferEnabledDefinition
-      object_node :dutch_bin_enabled, 'DutchBINEnabled', :class => DutchBINEnabledDefinition
-      object_node :user_consent_required, 'UserConsentRequired', :class => UserConsentRequiredDefinition
-      object_node :home_page_featured_enabled, 'HomePageFeaturedEnabled', :class => HomePageFeaturedEnabledDefinition
-      object_node :pro_pack_enabled, 'ProPackEnabled', :class => ProPackEnabledDefinition
-      object_node :basic_upgrade_pack_enabled, 'BasicUpgradePackEnabled', :class => BasicUpgradePackEnabledDefinition
-      object_node :value_pack_enabled, 'ValuePackEnabled', :class => ValuePackEnabledDefinition
-      object_node :pro_pack_plus_enabled, 'ProPackPlusEnabled', :class => ProPackPlusEnabledDefinition
-      object_node :ad_format_enabled, 'AdFormatEnabled', :class => AdFormatEnabledDefinition
-      object_node :best_offer_counter_enabled, 'BestOfferCounterEnabled', :class => BestOfferCounterEnabledDefinition
-      object_node :best_offer_auto_decline_enabled, 'BestOfferAutoDeclineEnabled', :class => BestOfferAutoDeclineEnabledDefinition
-      object_node :local_market_speciality_subscription, 'LocalMarketSpecialitySubscription', :class => LocalMarketSpecialitySubscriptionDefinition
-      object_node :local_market_regular_subscription, 'LocalMarketRegularSubscription', :class => LocalMarketRegularSubscriptionDefinition
-      object_node :local_market_premium_subscription, 'LocalMarketPremiumSubscription', :class => LocalMarketPremiumSubscriptionDefinition
-      object_node :local_market_non_subscription, 'LocalMarketNonSubscription', :class => LocalMarketNonSubscriptionDefinition
-      object_node :express_enabled, 'ExpressEnabled', :class => ExpressEnabledDefinition
-      object_node :express_pictures_required, 'ExpressPicturesRequired', :class => ExpressPicturesRequiredDefinition
-      object_node :express_condition_required, 'ExpressConditionRequired', :class => ExpressConditionRequiredDefinition
-      object_node :minimum_reserve_price, 'MinimumReservePrice', :class => MinimumReservePriceDefinition
-      object_node :transaction_confirmation_request_enabled, 'TransactionConfirmationRequestEnabled', :class => TCREnabledDefinition
-      object_node :seller_contact_details_enabled, 'SellerContactDetailsEnabled', :class => SellerContactDetailsEnabledDefinition
-      object_node :store_inventory_enabled, 'StoreInventoryEnabled', :class => StoreInventoryEnabledDefinition
-      object_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', :class => SkypeMeTransactionalEnabledDefinition
-      object_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', :class => SkypeMeNonTransactionalEnabledDefinition
-      object_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :class => LocalListingDistancesRegularDefinition
-      object_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :class => LocalListingDistancesSpecialtyDefinition
-      object_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :class => LocalListingDistancesNonSubscriptionDefinition
-      object_node :classified_ad_payment_method_enabled, 'ClassifiedAdPaymentMethodEnabled', :class => ClassifiedAdPaymentMethodEnabledDefinition
-      object_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', :class => ClassifiedAdShippingMethodEnabledDefinition
-      object_node :classified_ad_best_offer_enabled, 'ClassifiedAdBestOfferEnabled', :class => ClassifiedAdBestOfferEnabledDefinition
-      object_node :classified_ad_counter_offer_enabled, 'ClassifiedAdCounterOfferEnabled', :class => ClassifiedAdCounterOfferEnabledDefinition
-      object_node :classified_ad_auto_decline_enabled, 'ClassifiedAdAutoDeclineEnabled', :class => ClassifiedAdAutoDeclineEnabledDefinition
-      object_node :classified_ad_contact_by_phone_enabled, 'ClassifiedAdContactByPhoneEnabled', :class => ClassifiedAdContactByPhoneEnabledDefinition
-      object_node :classified_ad_contact_by_email_enabled, 'ClassifiedAdContactByEmailEnabled', :class => ClassifiedAdContactByEmailEnabledDefintion
-      object_node :safe_payment_required, 'SafePaymentRequired', :class => SafePaymentRequiredDefinition
-      object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition
-      object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition
-      object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition
-      object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition
-      object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition
-      object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition
-      object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition
-      object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition
-      object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition
-      object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition
-      object_node :cross_border_trade_gb_enabled, 'CrossBorderTradeGBEnabled', :class => CrossBorderTradeGBEnabledDefinition
-      object_node :cross_border_trade_australia_enabled, 'CrossBorderTradeAustraliaEnabled', :class => CrossBorderTradeAustraliaEnabledDefinition
-      object_node :paypal_buyer_protection_enabled, 'PayPalBuyerProtectionEnabled', :class => PayPalBuyerProtectionEnabledDefinition
-      object_node :buyer_guarantee_enabled, 'BuyerGuaranteeEnabled', :class => BuyerGuaranteeEnabledDefinition
-      object_node :combined_fixed_price_treatment_enabled, 'CombinedFixedPriceTreatmentEnabled', :class => CombinedFixedPriceTreatmentEnabledDefinition
-      object_node :gallery_featured_durations, 'GalleryFeaturedDurations', :class => ListingEnhancementDurationDefinition
-      object_node :in_escrow_workflow_timeline, 'INEscrowWorkflowTimeline', :class => INEscrowWorkflowTimelineDefinition
-      object_node :paypal_required, 'PayPalRequired', :class => PayPalRequiredDefinition
-      object_node :ebay_motors_pro_ad_format_enabled, 'eBayMotorsProAdFormatEnabled', :class => EBayMotorsProAdFormatEnabledDefinition
-      object_node :ebay_motors_pro_contact_by_phone_enabled, 'eBayMotorsProContactByPhoneEnabled', :class => EBayMotorsProContactByPhoneEnabledDefinition
-      object_node :ebay_motors_pro_phone_count, 'eBayMotorsProPhoneCount', :class => EBayMotorsProPhoneCountDefinition
-      object_node :ebay_motors_pro_contact_by_address_enabled, 'eBayMotorsProContactByAddressEnabled', :class => EBayMotorsProContactByAddressEnabledDefinition
-      object_node :ebay_motors_pro_street_count, 'eBayMotorsProStreetCount', :class => EBayMotorsProStreetCountDefinition
-      object_node :ebay_motors_pro_company_name_enabled, 'eBayMotorsProCompanyNameEnabled', :class => EBayMotorsProCompanyNameEnabledDefinition
-      object_node :ebay_motors_pro_contact_by_email_enabled, 'eBayMotorsProContactByEmailEnabled', :class => EBayMotorsProContactByEmailEnabledDefinition
-      object_node :ebay_motors_pro_best_offer_enabled, 'eBayMotorsProBestOfferEnabled', :class => EBayMotorsProBestOfferEnabledDefinition
-      object_node :ebay_motors_pro_auto_accept_enabled, 'eBayMotorsProAutoAcceptEnabled', :class => EBayMotorsProAutoAcceptEnabledDefinition
-      object_node :ebay_motors_pro_auto_decline_enabled, 'eBayMotorsProAutoDeclineEnabled', :class => EBayMotorsProAutoDeclineEnabledDefinition
-      object_node :ebay_motors_pro_payment_method_check_out_enabled, 'eBayMotorsProPaymentMethodCheckOutEnabled', :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinition
-      object_node :ebay_motors_pro_shipping_method_enabled, 'eBayMotorsProShippingMethodEnabled', :class => EBayMotorsProShippingMethodEnabledDefinition
-      object_node :ebay_motors_pro_counter_offer_enabled, 'eBayMotorsProCounterOfferEnabled', :class => EBayMotorsProCounterOfferEnabledDefinition
-      object_node :ebay_motors_pro_seller_contact_details_enabled, 'eBayMotorsProSellerContactDetailsEnabled', :class => EBayMotorsProSellerContactDetailsEnabledDefinition
-      object_node :local_market_ad_format_enabled, 'LocalMarketAdFormatEnabled', :class => LocalMarketAdFormatEnabledDefinition
-      object_node :local_market_contact_by_phone_enabled, 'LocalMarketContactByPhoneEnabled', :class => LocalMarketContactByPhoneEnabledDefinition
-      object_node :local_market_phone_count, 'LocalMarketPhoneCount', :class => LocalMarketPhoneCountDefinition
-      object_node :local_market_contact_by_address_enabled, 'LocalMarketContactByAddressEnabled', :class => LocalMarketContactByAddressEnabledDefinition
-      object_node :local_market_street_count, 'LocalMarketStreetCount', :class => LocalMarketStreetCountDefinition
-      object_node :local_market_company_name_enabled, 'LocalMarketCompanyNameEnabled', :class => LocalMarketCompanyNameEnabledDefinition
-      object_node :local_market_contact_by_email_enabled, 'LocalMarketContactByEmailEnabled', :class => LocalMarketContactByEmailEnabledDefinition
-      object_node :local_market_best_offer_enabled, 'LocalMarketBestOfferEnabled', :class => LocalMarketBestOfferEnabledDefinition
-      object_node :local_market_auto_accept_enabled, 'LocalMarketAutoAcceptEnabled', :class => LocalMarketAutoAcceptEnabledDefinition
-      object_node :local_market_auto_decline_enabled, 'LocalMarketAutoDeclineEnabled', :class => LocalMarketAutoDeclineEnabledDefinition
-      object_node :local_market_payment_method_check_out_enabled, 'LocalMarketPaymentMethodCheckOutEnabled', :class => LocalMarketPaymentMethodCheckOutEnabledDefinition
-      object_node :local_market_shipping_method_enabled, 'LocalMarketShippingMethodEnabled', :class => LocalMarketShippingMethodEnabledDefinition
-      object_node :local_market_counter_offer_enabled, 'LocalMarketCounterOfferEnabled', :class => LocalMarketCounterOfferEnabledDefinition
-      object_node :local_market_seller_contact_details_enabled, 'LocalMarketSellerContactDetailsEnabled', :class => LocalMarketSellerContactDetailsEnabledDefinition
-      object_node :classified_ad_phone_count, 'ClassifiedAdPhoneCount', :class => ClassifiedAdPhoneCountDefinition
-      object_node :classified_ad_contact_by_address_enabled, 'ClassifiedAdContactByAddressEnabled', :class => ClassifiedAdContactByAddressEnabledDefinition
-      object_node :classified_ad_street_count, 'ClassifiedAdStreetCount', :class => ClassifiedAdStreetCountDefinition
-      object_node :classified_ad_company_name_enabled, 'ClassifiedAdCompanyNameEnabled', :class => ClassifiedAdCompanyNameEnabledDefinition
-      object_node :speciality_subscription, 'SpecialitySubscription', :class => SpecialitySubscriptionDefinition
-      object_node :regular_subscription, 'RegularSubscription', :class => RegularSubscriptionDefinition
-      object_node :premium_subscription, 'PremiumSubscription', :class => PremiumSubscriptionDefinition
-      object_node :non_subscription, 'NonSubscription', :class => NonSubscriptionDefinition
-      object_node :return_policy_enabled, 'ReturnPolicyEnabled', :class => ReturnPolicyEnabledDefinition
-      object_node :handling_time_enabled, 'HandlingTimeEnabled', :class => HandlingTimeEnabledDefinition
-      object_node :paypal_required_for_store_owner, 'PayPalRequiredForStoreOwner', :class => PayPalRequiredForStoreOwnerDefinition
-      object_node :revise_quantity_allowed, 'ReviseQuantityAllowed', :class => ReviseQuantityAllowedDefinition
-      object_node :revise_price_allowed, 'RevisePriceAllowed', :class => RevisePriceAllowedDefinition
-      object_node :store_owner_extended_listing_durations_enabled, 'StoreOwnerExtendedListingDurationsEnabled', :class => StoreOwnerExtendedListingDurationsEnabledDefinition
-      object_node :store_owner_extended_listing_durations, 'StoreOwnerExtendedListingDurations', :class => StoreOwnerExtendedListingDurationsDefinition
-      object_node :payment_method, 'PaymentMethod', :class => PaymentMethodDefinition
-      object_node :group1_max_flat_shipping_cost, 'Group1MaxFlatShippingCost', :class => Group1MaxFlatShippingCostDefinition
-      object_node :group2_max_flat_shipping_cost, 'Group2MaxFlatShippingCost', :class => Group2MaxFlatShippingCostDefinition
-      object_node :group3_max_flat_shipping_cost, 'Group3MaxFlatShippingCost', :class => Group3MaxFlatShippingCostDefinition
-      object_node :max_flat_shipping_cost_cbt_exempt, 'MaxFlatShippingCostCBTExempt', :class => MaxFlatShippingCostCBTExemptDefinition
-      object_node :max_flat_shipping_cost, 'MaxFlatShippingCost', :class => MaxFlatShippingCostDefinition
-      object_node :variations_enabled, 'VariationsEnabled', :class => VariationsEnabledDefinition
-      object_node :attribute_conversion_enabled, 'AttributeConversionEnabled', :class => AttributeConversionEnabledFeatureDefinition
-      object_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', :class => FreeGalleryPlusEnabledDefinition
-      object_node :free_picture_pack_enabled, 'FreePicturePackEnabled', :class => FreePicturePackEnabledDefinition
-      object_node :item_compatibility_enabled, 'ItemCompatibilityEnabled', :class => ItemCompatibilityEnabledDefinition
-      object_node :max_item_compatibility, 'MaxItemCompatibility', :class => MaxItemCompatibilityDefinition
-      object_node :min_item_compatibility, 'MinItemCompatibility', :class => MinItemCompatibilityDefinition
-      object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition
-      object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition
-      object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition
-      object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition
-      object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition
-      object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition
-      object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition
-      object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition
-      object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition
-      object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition
-      object_node :shipping_profile_category_group, 'ShippingProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-      object_node :payment_profile_category_group, 'PaymentProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-      object_node :return_policy_profile_category_group, 'ReturnPolicyProfileCategoryGroup', :class => ProfileCategoryGroupDefinition
-      object_node :vin_supported, 'VINSupported', :class => VINSupportedDefinition
-      object_node :vrm_supported, 'VRMSupported', :class => VRMSupportedDefinition
-      object_node :seller_provided_title_supported, 'SellerProvidedTitleSupported', :class => SellerProvidedTitleSupportedDefinition
-      object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition
-      object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition
-      object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition
-      object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition
-      object_node :digital_good_delivery_enabled, 'DigitalGoodDeliveryEnabled', :class => DigitalGoodDeliveryEnabledDefinition
+      object_node :listing_durations, 'ListingDurations', :class => ListingDurationDefinitions, :optional => true
+      object_node :shipping_terms_required, 'ShippingTermsRequired', :class => ShippingTermRequiredDefinition, :optional => true
+      object_node :best_offer_enabled, 'BestOfferEnabled', :class => BestOfferEnabledDefinition, :optional => true
+      object_node :dutch_bin_enabled, 'DutchBINEnabled', :class => DutchBINEnabledDefinition, :optional => true
+      object_node :user_consent_required, 'UserConsentRequired', :class => UserConsentRequiredDefinition, :optional => true
+      object_node :home_page_featured_enabled, 'HomePageFeaturedEnabled', :class => HomePageFeaturedEnabledDefinition, :optional => true
+      object_node :pro_pack_enabled, 'ProPackEnabled', :class => ProPackEnabledDefinition, :optional => true
+      object_node :basic_upgrade_pack_enabled, 'BasicUpgradePackEnabled', :class => BasicUpgradePackEnabledDefinition, :optional => true
+      object_node :value_pack_enabled, 'ValuePackEnabled', :class => ValuePackEnabledDefinition, :optional => true
+      object_node :pro_pack_plus_enabled, 'ProPackPlusEnabled', :class => ProPackPlusEnabledDefinition, :optional => true
+      object_node :ad_format_enabled, 'AdFormatEnabled', :class => AdFormatEnabledDefinition, :optional => true
+      object_node :best_offer_counter_enabled, 'BestOfferCounterEnabled', :class => BestOfferCounterEnabledDefinition, :optional => true
+      object_node :best_offer_auto_decline_enabled, 'BestOfferAutoDeclineEnabled', :class => BestOfferAutoDeclineEnabledDefinition, :optional => true
+      object_node :local_market_speciality_subscription, 'LocalMarketSpecialitySubscription', :class => LocalMarketSpecialitySubscriptionDefinition, :optional => true
+      object_node :local_market_regular_subscription, 'LocalMarketRegularSubscription', :class => LocalMarketRegularSubscriptionDefinition, :optional => true
+      object_node :local_market_premium_subscription, 'LocalMarketPremiumSubscription', :class => LocalMarketPremiumSubscriptionDefinition, :optional => true
+      object_node :local_market_non_subscription, 'LocalMarketNonSubscription', :class => LocalMarketNonSubscriptionDefinition, :optional => true
+      object_node :express_enabled, 'ExpressEnabled', :class => ExpressEnabledDefinition, :optional => true
+      object_node :express_pictures_required, 'ExpressPicturesRequired', :class => ExpressPicturesRequiredDefinition, :optional => true
+      object_node :express_condition_required, 'ExpressConditionRequired', :class => ExpressConditionRequiredDefinition, :optional => true
+      object_node :minimum_reserve_price, 'MinimumReservePrice', :class => MinimumReservePriceDefinition, :optional => true
+      object_node :transaction_confirmation_request_enabled, 'TransactionConfirmationRequestEnabled', :class => TCREnabledDefinition, :optional => true
+      object_node :seller_contact_details_enabled, 'SellerContactDetailsEnabled', :class => SellerContactDetailsEnabledDefinition, :optional => true
+      object_node :store_inventory_enabled, 'StoreInventoryEnabled', :class => StoreInventoryEnabledDefinition, :optional => true
+      object_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', :class => SkypeMeTransactionalEnabledDefinition, :optional => true
+      object_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', :class => SkypeMeNonTransactionalEnabledDefinition, :optional => true
+      object_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :class => LocalListingDistancesRegularDefinition, :optional => true
+      object_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :class => LocalListingDistancesSpecialtyDefinition, :optional => true
+      object_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :class => LocalListingDistancesNonSubscriptionDefinition, :optional => true
+      object_node :classified_ad_payment_method_enabled, 'ClassifiedAdPaymentMethodEnabled', :class => ClassifiedAdPaymentMethodEnabledDefinition, :optional => true
+      object_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', :class => ClassifiedAdShippingMethodEnabledDefinition, :optional => true
+      object_node :classified_ad_best_offer_enabled, 'ClassifiedAdBestOfferEnabled', :class => ClassifiedAdBestOfferEnabledDefinition, :optional => true
+      object_node :classified_ad_counter_offer_enabled, 'ClassifiedAdCounterOfferEnabled', :class => ClassifiedAdCounterOfferEnabledDefinition, :optional => true
+      object_node :classified_ad_auto_decline_enabled, 'ClassifiedAdAutoDeclineEnabled', :class => ClassifiedAdAutoDeclineEnabledDefinition, :optional => true
+      object_node :classified_ad_contact_by_phone_enabled, 'ClassifiedAdContactByPhoneEnabled', :class => ClassifiedAdContactByPhoneEnabledDefinition, :optional => true
+      object_node :classified_ad_contact_by_email_enabled, 'ClassifiedAdContactByEmailEnabled', :class => ClassifiedAdContactByEmailEnabledDefintion, :optional => true
+      object_node :safe_payment_required, 'SafePaymentRequired', :class => SafePaymentRequiredDefinition, :optional => true
+      object_node :classified_ad_pay_per_lead_enabled, 'ClassifiedAdPayPerLeadEnabled', :class => ClassifiedAdPayPerLeadEnabledDefinition, :optional => true
+      object_node :item_specifics_enabled, 'ItemSpecificsEnabled', :class => ItemSpecificsEnabledDefinition, :optional => true
+      object_node :paisa_pay_full_escrow_enabled, 'PaisaPayFullEscrowEnabled', :class => PaisaPayFullEscrowEnabledDefinition, :optional => true
+      object_node :isbn_identifier_enabled, 'ISBNIdentifierEnabled', :class => ISBNIdentifierEnabledDefinition, :optional => true
+      object_node :upc_identifier_enabled, 'UPCIdentifierEnabled', :class => UPCIdentifierEnabledDefinition, :optional => true
+      object_node :ean_identifier_enabled, 'EANIdentifierEnabled', :class => EANIdentifierEnabledDefinition, :optional => true
+      object_node :brand_mpn_identifier_enabled, 'BrandMPNIdentifierEnabled', :class => BrandMPNIdentifierEnabledDefinition, :optional => true
+      object_node :best_offer_auto_accept_enabled, 'BestOfferAutoAcceptEnabled', :class => BestOfferAutoAcceptEnabledDefinition, :optional => true
+      object_node :classified_ad_auto_accept_enabled, 'ClassifiedAdAutoAcceptEnabled', :class => ClassifiedAdAutoAcceptEnabledDefinition, :optional => true
+      object_node :cross_border_trade_north_america_enabled, 'CrossBorderTradeNorthAmericaEnabled', :class => CrossBorderTradeNorthAmericaEnabledDefinition, :optional => true
+      object_node :cross_border_trade_gb_enabled, 'CrossBorderTradeGBEnabled', :class => CrossBorderTradeGBEnabledDefinition, :optional => true
+      object_node :cross_border_trade_australia_enabled, 'CrossBorderTradeAustraliaEnabled', :class => CrossBorderTradeAustraliaEnabledDefinition, :optional => true
+      object_node :paypal_buyer_protection_enabled, 'PayPalBuyerProtectionEnabled', :class => PayPalBuyerProtectionEnabledDefinition, :optional => true
+      object_node :buyer_guarantee_enabled, 'BuyerGuaranteeEnabled', :class => BuyerGuaranteeEnabledDefinition, :optional => true
+      object_node :combined_fixed_price_treatment_enabled, 'CombinedFixedPriceTreatmentEnabled', :class => CombinedFixedPriceTreatmentEnabledDefinition, :optional => true
+      object_node :gallery_featured_durations, 'GalleryFeaturedDurations', :class => ListingEnhancementDurationDefinition, :optional => true
+      object_node :in_escrow_workflow_timeline, 'INEscrowWorkflowTimeline', :class => INEscrowWorkflowTimelineDefinition, :optional => true
+      object_node :paypal_required, 'PayPalRequired', :class => PayPalRequiredDefinition, :optional => true
+      object_node :ebay_motors_pro_ad_format_enabled, 'eBayMotorsProAdFormatEnabled', :class => EBayMotorsProAdFormatEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_contact_by_phone_enabled, 'eBayMotorsProContactByPhoneEnabled', :class => EBayMotorsProContactByPhoneEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_phone_count, 'eBayMotorsProPhoneCount', :class => EBayMotorsProPhoneCountDefinition, :optional => true
+      object_node :ebay_motors_pro_contact_by_address_enabled, 'eBayMotorsProContactByAddressEnabled', :class => EBayMotorsProContactByAddressEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_street_count, 'eBayMotorsProStreetCount', :class => EBayMotorsProStreetCountDefinition, :optional => true
+      object_node :ebay_motors_pro_company_name_enabled, 'eBayMotorsProCompanyNameEnabled', :class => EBayMotorsProCompanyNameEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_contact_by_email_enabled, 'eBayMotorsProContactByEmailEnabled', :class => EBayMotorsProContactByEmailEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_best_offer_enabled, 'eBayMotorsProBestOfferEnabled', :class => EBayMotorsProBestOfferEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_auto_accept_enabled, 'eBayMotorsProAutoAcceptEnabled', :class => EBayMotorsProAutoAcceptEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_auto_decline_enabled, 'eBayMotorsProAutoDeclineEnabled', :class => EBayMotorsProAutoDeclineEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_payment_method_check_out_enabled, 'eBayMotorsProPaymentMethodCheckOutEnabled', :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_shipping_method_enabled, 'eBayMotorsProShippingMethodEnabled', :class => EBayMotorsProShippingMethodEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_counter_offer_enabled, 'eBayMotorsProCounterOfferEnabled', :class => EBayMotorsProCounterOfferEnabledDefinition, :optional => true
+      object_node :ebay_motors_pro_seller_contact_details_enabled, 'eBayMotorsProSellerContactDetailsEnabled', :class => EBayMotorsProSellerContactDetailsEnabledDefinition, :optional => true
+      object_node :local_market_ad_format_enabled, 'LocalMarketAdFormatEnabled', :class => LocalMarketAdFormatEnabledDefinition, :optional => true
+      object_node :local_market_contact_by_phone_enabled, 'LocalMarketContactByPhoneEnabled', :class => LocalMarketContactByPhoneEnabledDefinition, :optional => true
+      object_node :local_market_phone_count, 'LocalMarketPhoneCount', :class => LocalMarketPhoneCountDefinition, :optional => true
+      object_node :local_market_contact_by_address_enabled, 'LocalMarketContactByAddressEnabled', :class => LocalMarketContactByAddressEnabledDefinition, :optional => true
+      object_node :local_market_street_count, 'LocalMarketStreetCount', :class => LocalMarketStreetCountDefinition, :optional => true
+      object_node :local_market_company_name_enabled, 'LocalMarketCompanyNameEnabled', :class => LocalMarketCompanyNameEnabledDefinition, :optional => true
+      object_node :local_market_contact_by_email_enabled, 'LocalMarketContactByEmailEnabled', :class => LocalMarketContactByEmailEnabledDefinition, :optional => true
+      object_node :local_market_best_offer_enabled, 'LocalMarketBestOfferEnabled', :class => LocalMarketBestOfferEnabledDefinition, :optional => true
+      object_node :local_market_auto_accept_enabled, 'LocalMarketAutoAcceptEnabled', :class => LocalMarketAutoAcceptEnabledDefinition, :optional => true
+      object_node :local_market_auto_decline_enabled, 'LocalMarketAutoDeclineEnabled', :class => LocalMarketAutoDeclineEnabledDefinition, :optional => true
+      object_node :local_market_payment_method_check_out_enabled, 'LocalMarketPaymentMethodCheckOutEnabled', :class => LocalMarketPaymentMethodCheckOutEnabledDefinition, :optional => true
+      object_node :local_market_shipping_method_enabled, 'LocalMarketShippingMethodEnabled', :class => LocalMarketShippingMethodEnabledDefinition, :optional => true
+      object_node :local_market_counter_offer_enabled, 'LocalMarketCounterOfferEnabled', :class => LocalMarketCounterOfferEnabledDefinition, :optional => true
+      object_node :local_market_seller_contact_details_enabled, 'LocalMarketSellerContactDetailsEnabled', :class => LocalMarketSellerContactDetailsEnabledDefinition, :optional => true
+      object_node :classified_ad_phone_count, 'ClassifiedAdPhoneCount', :class => ClassifiedAdPhoneCountDefinition, :optional => true
+      object_node :classified_ad_contact_by_address_enabled, 'ClassifiedAdContactByAddressEnabled', :class => ClassifiedAdContactByAddressEnabledDefinition, :optional => true
+      object_node :classified_ad_street_count, 'ClassifiedAdStreetCount', :class => ClassifiedAdStreetCountDefinition, :optional => true
+      object_node :classified_ad_company_name_enabled, 'ClassifiedAdCompanyNameEnabled', :class => ClassifiedAdCompanyNameEnabledDefinition, :optional => true
+      object_node :speciality_subscription, 'SpecialitySubscription', :class => SpecialitySubscriptionDefinition, :optional => true
+      object_node :regular_subscription, 'RegularSubscription', :class => RegularSubscriptionDefinition, :optional => true
+      object_node :premium_subscription, 'PremiumSubscription', :class => PremiumSubscriptionDefinition, :optional => true
+      object_node :non_subscription, 'NonSubscription', :class => NonSubscriptionDefinition, :optional => true
+      object_node :return_policy_enabled, 'ReturnPolicyEnabled', :class => ReturnPolicyEnabledDefinition, :optional => true
+      object_node :handling_time_enabled, 'HandlingTimeEnabled', :class => HandlingTimeEnabledDefinition, :optional => true
+      object_node :paypal_required_for_store_owner, 'PayPalRequiredForStoreOwner', :class => PayPalRequiredForStoreOwnerDefinition, :optional => true
+      object_node :revise_quantity_allowed, 'ReviseQuantityAllowed', :class => ReviseQuantityAllowedDefinition, :optional => true
+      object_node :revise_price_allowed, 'RevisePriceAllowed', :class => RevisePriceAllowedDefinition, :optional => true
+      object_node :store_owner_extended_listing_durations_enabled, 'StoreOwnerExtendedListingDurationsEnabled', :class => StoreOwnerExtendedListingDurationsEnabledDefinition, :optional => true
+      object_node :store_owner_extended_listing_durations, 'StoreOwnerExtendedListingDurations', :class => StoreOwnerExtendedListingDurationsDefinition, :optional => true
+      object_node :payment_method, 'PaymentMethod', :class => PaymentMethodDefinition, :optional => true
+      object_node :group1_max_flat_shipping_cost, 'Group1MaxFlatShippingCost', :class => Group1MaxFlatShippingCostDefinition, :optional => true
+      object_node :group2_max_flat_shipping_cost, 'Group2MaxFlatShippingCost', :class => Group2MaxFlatShippingCostDefinition, :optional => true
+      object_node :group3_max_flat_shipping_cost, 'Group3MaxFlatShippingCost', :class => Group3MaxFlatShippingCostDefinition, :optional => true
+      object_node :max_flat_shipping_cost_cbt_exempt, 'MaxFlatShippingCostCBTExempt', :class => MaxFlatShippingCostCBTExemptDefinition, :optional => true
+      object_node :max_flat_shipping_cost, 'MaxFlatShippingCost', :class => MaxFlatShippingCostDefinition, :optional => true
+      object_node :variations_enabled, 'VariationsEnabled', :class => VariationsEnabledDefinition, :optional => true
+      object_node :attribute_conversion_enabled, 'AttributeConversionEnabled', :class => AttributeConversionEnabledFeatureDefinition, :optional => true
+      object_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', :class => FreeGalleryPlusEnabledDefinition, :optional => true
+      object_node :free_picture_pack_enabled, 'FreePicturePackEnabled', :class => FreePicturePackEnabledDefinition, :optional => true
+      object_node :item_compatibility_enabled, 'ItemCompatibilityEnabled', :class => ItemCompatibilityEnabledDefinition, :optional => true
+      object_node :max_item_compatibility, 'MaxItemCompatibility', :class => MaxItemCompatibilityDefinition, :optional => true
+      object_node :min_item_compatibility, 'MinItemCompatibility', :class => MinItemCompatibilityDefinition, :optional => true
+      object_node :condition_enabled, 'ConditionEnabled', :class => ConditionEnabledDefinition, :optional => true
+      object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
+      object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
+      object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+      object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition, :optional => true
+      object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition, :optional => true
+      object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition, :optional => true
+      object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
+      object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
+      object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
+      object_node :shipping_profile_category_group, 'ShippingProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+      object_node :payment_profile_category_group, 'PaymentProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+      object_node :return_policy_profile_category_group, 'ReturnPolicyProfileCategoryGroup', :class => ProfileCategoryGroupDefinition, :optional => true
+      object_node :vin_supported, 'VINSupported', :class => VINSupportedDefinition, :optional => true
+      object_node :vrm_supported, 'VRMSupported', :class => VRMSupportedDefinition, :optional => true
+      object_node :seller_provided_title_supported, 'SellerProvidedTitleSupported', :class => SellerProvidedTitleSupportedDefinition, :optional => true
+      object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition, :optional => true
+      object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition, :optional => true
+      object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition, :optional => true
+      object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition, :optional => true
+      object_node :digital_good_delivery_enabled, 'DigitalGoodDeliveryEnabled', :class => DigitalGoodDeliveryEnabledDefinition, :optional => true
     end
   end
 end

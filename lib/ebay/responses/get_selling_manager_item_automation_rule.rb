@@ -6,18 +6,18 @@ require 'ebay/types/fees'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  object_node :automated_listing_rule, 'AutomatedListingRule', :class => SellingManagerAutoList
-    #  object_node :automated_relisting_rule, 'AutomatedRelistingRule', :class => SellingManagerAutoRelist
-    #  object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer
-    #  object_node :fees, 'Fees', :class => Fees
+    #  object_node :automated_listing_rule, 'AutomatedListingRule', :class => SellingManagerAutoList, :optional => true
+    #  object_node :automated_relisting_rule, 'AutomatedRelistingRule', :class => SellingManagerAutoRelist, :optional => true
+    #  object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer, :optional => true
+    #  object_node :fees, 'Fees', :class => Fees, :optional => true
     class GetSellingManagerItemAutomationRule < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetSellingManagerItemAutomationRuleResponse'
-      object_node :automated_listing_rule, 'AutomatedListingRule', :class => SellingManagerAutoList
-      object_node :automated_relisting_rule, 'AutomatedRelistingRule', :class => SellingManagerAutoRelist
-      object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer
-      object_node :fees, 'Fees', :class => Fees
+      object_node :automated_listing_rule, 'AutomatedListingRule', :class => SellingManagerAutoList, :optional => true
+      object_node :automated_relisting_rule, 'AutomatedRelistingRule', :class => SellingManagerAutoRelist, :optional => true
+      object_node :automated_second_chance_offer_rule, 'AutomatedSecondChanceOfferRule', :class => SellingManagerAutoSecondChanceOffer, :optional => true
+      object_node :fees, 'Fees', :class => Fees, :optional => true
     end
   end
 end

@@ -4,32 +4,32 @@ require 'ebay/types/bot_block_request'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  text_node :detail_level, 'DetailLevel'
-    #  text_node :error_language, 'ErrorLanguage'
-    #  text_node :message_id, 'MessageID'
-    #  text_node :version, 'Version'
-    #  text_node :end_user_ip, 'EndUserIP'
-    #  object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials
-    #  text_node :error_handling, 'ErrorHandling'
-    #  text_node :invocation_id, 'InvocationID'
-    #  text_node :output_selector, 'OutputSelector'
-    #  text_node :warning_level, 'WarningLevel'
-    #  object_node :bot_block, 'BotBlock', :class => BotBlockRequest
+    #  value_array_node :detail_levels, 'DetailLevel', :default_value => []
+    #  text_node :error_language, 'ErrorLanguage', :optional => true
+    #  text_node :message_id, 'MessageID', :optional => true
+    #  text_node :version, 'Version', :optional => true
+    #  text_node :end_user_ip, 'EndUserIP', :optional => true
+    #  object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :optional => true
+    #  text_node :error_handling, 'ErrorHandling', :optional => true
+    #  text_node :invocation_id, 'InvocationID', :optional => true
+    #  text_node :output_selector, 'OutputSelector', :optional => true
+    #  text_node :warning_level, 'WarningLevel', :optional => true
+    #  object_node :bot_block, 'BotBlock', :class => BotBlockRequest, :optional => true
     class Abstract < Base
       include XML::Mapping
       include Initializer
       root_element_name 'AbstractRequest'
-      text_node :detail_level, 'DetailLevel'
-      text_node :error_language, 'ErrorLanguage'
-      text_node :message_id, 'MessageID'
-      text_node :version, 'Version'
-      text_node :end_user_ip, 'EndUserIP'
-      object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials
-      text_node :error_handling, 'ErrorHandling'
-      text_node :invocation_id, 'InvocationID'
-      text_node :output_selector, 'OutputSelector'
-      text_node :warning_level, 'WarningLevel'
-      object_node :bot_block, 'BotBlock', :class => BotBlockRequest
+      value_array_node :detail_levels, 'DetailLevel', :default_value => []
+      text_node :error_language, 'ErrorLanguage', :optional => true
+      text_node :message_id, 'MessageID', :optional => true
+      text_node :version, 'Version', :optional => true
+      text_node :end_user_ip, 'EndUserIP', :optional => true
+      object_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :optional => true
+      text_node :error_handling, 'ErrorHandling', :optional => true
+      text_node :invocation_id, 'InvocationID', :optional => true
+      text_node :output_selector, 'OutputSelector', :optional => true
+      text_node :warning_level, 'WarningLevel', :optional => true
+      object_node :bot_block, 'BotBlock', :class => BotBlockRequest, :optional => true
       # eBay specifies the detail level as a collection.  The usual case is to use
       # only a single detail level, so it is more appropriate to add an accessor for 
       # the normal case.

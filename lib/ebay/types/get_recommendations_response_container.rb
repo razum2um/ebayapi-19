@@ -9,28 +9,28 @@ require 'ebay/types/product_listing_details'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  object_node :listing_analyzer_recommendations, 'ListingAnalyzerRecommendations', :class => ListingAnalyzerRecommendations
-    #  object_node :sifftas_recommendations, 'SIFFTASRecommendations', :class => SIFFTASRecommendations
-    #  object_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations
-    #  object_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations
-    #  object_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations
-    #  text_node :correlation_id, 'CorrelationID'
-    #  object_node :recommendations, 'Recommendations', :class => Recommendations
-    #  object_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails
-    #  text_node :title, 'Title'
+    #  object_node :listing_analyzer_recommendations, 'ListingAnalyzerRecommendations', :class => ListingAnalyzerRecommendations, :optional => true
+    #  object_node :sifftas_recommendations, 'SIFFTASRecommendations', :class => SIFFTASRecommendations, :optional => true
+    #  object_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations, :optional => true
+    #  object_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations, :optional => true
+    #  object_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations, :optional => true
+    #  text_node :correlation_id, 'CorrelationID', :optional => true
+    #  object_node :recommendations, 'Recommendations', :class => Recommendations, :optional => true
+    #  object_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :optional => true
+    #  text_node :title, 'Title', :optional => true
     class GetRecommendationsResponseContainer
       include XML::Mapping
       include Initializer
       root_element_name 'GetRecommendationsResponseContainer'
-      object_node :listing_analyzer_recommendations, 'ListingAnalyzerRecommendations', :class => ListingAnalyzerRecommendations
-      object_node :sifftas_recommendations, 'SIFFTASRecommendations', :class => SIFFTASRecommendations
-      object_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations
-      object_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations
-      object_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations
-      text_node :correlation_id, 'CorrelationID'
-      object_node :recommendations, 'Recommendations', :class => Recommendations
-      object_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails
-      text_node :title, 'Title'
+      object_node :listing_analyzer_recommendations, 'ListingAnalyzerRecommendations', :class => ListingAnalyzerRecommendations, :optional => true
+      object_node :sifftas_recommendations, 'SIFFTASRecommendations', :class => SIFFTASRecommendations, :optional => true
+      object_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations, :optional => true
+      object_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations, :optional => true
+      object_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations, :optional => true
+      text_node :correlation_id, 'CorrelationID', :optional => true
+      object_node :recommendations, 'Recommendations', :class => Recommendations, :optional => true
+      object_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :optional => true
+      text_node :title, 'Title', :optional => true
     end
   end
 end

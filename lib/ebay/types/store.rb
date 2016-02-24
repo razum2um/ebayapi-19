@@ -6,48 +6,48 @@ require 'ebay/types/store_custom_listing_header'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :name, 'Name'
-    #  text_node :url_path, 'URLPath'
-    #  text_node :url, 'URL'
-    #  text_node :subscription_level, 'SubscriptionLevel'
-    #  text_node :description, 'Description'
-    #  object_node :logo, 'Logo', :class => StoreLogo
-    #  object_node :theme, 'Theme', :class => StoreTheme
-    #  text_node :header_style, 'HeaderStyle'
-    #  numeric_node :home_page, 'HomePage'
-    #  text_node :item_list_layout, 'ItemListLayout'
-    #  text_node :item_list_sort_order, 'ItemListSortOrder'
-    #  text_node :custom_header_layout, 'CustomHeaderLayout'
-    #  text_node :custom_header, 'CustomHeader'
-    #  boolean_node :export_listings, 'ExportListings', 'true', 'false'
-    #  object_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray
-    #  object_node :custom_listing_header, 'CustomListingHeader', :class => StoreCustomListingHeader
-    #  text_node :merch_display, 'MerchDisplay'
-    #  date_time_node :last_opened_time, 'LastOpenedTime'
-    #  boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false'
+    #  text_node :name, 'Name', :optional => true
+    #  text_node :url_path, 'URLPath', :optional => true
+    #  text_node :url, 'URL', :optional => true
+    #  text_node :subscription_level, 'SubscriptionLevel', :optional => true
+    #  text_node :description, 'Description', :optional => true
+    #  object_node :logo, 'Logo', :class => StoreLogo, :optional => true
+    #  object_node :theme, 'Theme', :class => StoreTheme, :optional => true
+    #  text_node :header_style, 'HeaderStyle', :optional => true
+    #  numeric_node :home_page, 'HomePage', :optional => true
+    #  text_node :item_list_layout, 'ItemListLayout', :optional => true
+    #  text_node :item_list_sort_order, 'ItemListSortOrder', :optional => true
+    #  text_node :custom_header_layout, 'CustomHeaderLayout', :optional => true
+    #  text_node :custom_header, 'CustomHeader', :optional => true
+    #  boolean_node :export_listings, 'ExportListings', 'true', 'false', :optional => true
+    #  object_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray, :optional => true
+    #  object_node :custom_listing_header, 'CustomListingHeader', :class => StoreCustomListingHeader, :optional => true
+    #  text_node :merch_display, 'MerchDisplay', :optional => true
+    #  date_time_node :last_opened_time, 'LastOpenedTime', :optional => true
+    #  boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false', :optional => true
     class Store
       include XML::Mapping
       include Initializer
       root_element_name 'Store'
-      text_node :name, 'Name'
-      text_node :url_path, 'URLPath'
-      text_node :url, 'URL'
-      text_node :subscription_level, 'SubscriptionLevel'
-      text_node :description, 'Description'
-      object_node :logo, 'Logo', :class => StoreLogo
-      object_node :theme, 'Theme', :class => StoreTheme
-      text_node :header_style, 'HeaderStyle'
-      numeric_node :home_page, 'HomePage'
-      text_node :item_list_layout, 'ItemListLayout'
-      text_node :item_list_sort_order, 'ItemListSortOrder'
-      text_node :custom_header_layout, 'CustomHeaderLayout'
-      text_node :custom_header, 'CustomHeader'
-      boolean_node :export_listings, 'ExportListings', 'true', 'false'
-      object_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray
-      object_node :custom_listing_header, 'CustomListingHeader', :class => StoreCustomListingHeader
-      text_node :merch_display, 'MerchDisplay'
-      date_time_node :last_opened_time, 'LastOpenedTime'
-      boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false'
+      text_node :name, 'Name', :optional => true
+      text_node :url_path, 'URLPath', :optional => true
+      text_node :url, 'URL', :optional => true
+      text_node :subscription_level, 'SubscriptionLevel', :optional => true
+      text_node :description, 'Description', :optional => true
+      object_node :logo, 'Logo', :class => StoreLogo, :optional => true
+      object_node :theme, 'Theme', :class => StoreTheme, :optional => true
+      text_node :header_style, 'HeaderStyle', :optional => true
+      numeric_node :home_page, 'HomePage', :optional => true
+      text_node :item_list_layout, 'ItemListLayout', :optional => true
+      text_node :item_list_sort_order, 'ItemListSortOrder', :optional => true
+      text_node :custom_header_layout, 'CustomHeaderLayout', :optional => true
+      text_node :custom_header, 'CustomHeader', :optional => true
+      boolean_node :export_listings, 'ExportListings', 'true', 'false', :optional => true
+      object_node :custom_categories, 'CustomCategories', :class => StoreCustomCategoryArray, :optional => true
+      object_node :custom_listing_header, 'CustomListingHeader', :class => StoreCustomListingHeader, :optional => true
+      text_node :merch_display, 'MerchDisplay', :optional => true
+      date_time_node :last_opened_time, 'LastOpenedTime', :optional => true
+      boolean_node :title_with_compatibility, 'TitleWithCompatibility', 'true', 'false', :optional => true
     end
   end
 end

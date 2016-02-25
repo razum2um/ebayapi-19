@@ -15,8 +15,8 @@ class NotificationsTest < Test::Unit::TestCase
   end
   
   def test_notification_details
-    assert_equal 1, @body.member_messages.size
-    message = @body.member_messages.first
+    assert_equal 1, @body.member_message.member_message_exchanges.size
+    message = @body.member_message.member_message_exchanges.first
     question = message.question
     assert_equal 'General', question.question_type
     assert_equal 'Hey, cool boots!', question.body

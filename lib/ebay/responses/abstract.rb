@@ -39,6 +39,17 @@ module Ebay # :nodoc:
       text_node :hard_expiration_warning, 'HardExpirationWarning', :optional => true
       object_node :bot_block, 'BotBlock', :class => BotBlockResponse, :optional => true
       text_node :external_user_data, 'ExternalUserData', :optional => true
+      
+      ###
+      # Workaround for the issue with LOADING subclasses with no additional nodes
+      # FROM XML, such as Ebay::Responses::GeteBayOfficialTime
+      #
+      # Subclasses with no additional nodes can't be loaded from XML
+      # https://github.com/multi-io/xml-mapping/issues/4
+      ###
+      def self.inherited(base)
+        base.use_mapping :_default
+      end
     end
   end
 end

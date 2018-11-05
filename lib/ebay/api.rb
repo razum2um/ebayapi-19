@@ -48,7 +48,8 @@ module Ebay #:nodoc:
     cattr_accessor :ru_name_sandbox_url, :ru_name_production_url, :ru_name
     cattr_accessor :dev_id, :app_id, :cert, :auth_token
     cattr_accessor :username, :password, :net_read_timeout
-    attr_reader :auth_token, :site_id
+    cattr_accessor :logger, :log_all_requests, :loggable_api_methods
+    attr_reader :auth_token, :site_id, :loggable_attributes_hash
 
     self.sandbox_url = 'https://api.sandbox.ebay.com/ws/api.dll'
     self.production_url = 'https://api.ebay.com/ws/api.dll'
@@ -57,6 +58,8 @@ module Ebay #:nodoc:
     self.use_sandbox = false
     self.services = nil
     self.net_read_timeout = 2000
+    self.log_all_requests = false
+    self.loggable_api_methods = []
 
     # Make the default site US
     self.site_id = 0
@@ -144,6 +147,7 @@ module Ebay #:nodoc:
       @format = options[:format] || :object
       @auth_token = options[:auth_token] || self.class.auth_token
       @site_id = options[:site_id] || self.class.site_id
+      @loggable_attributes_hash = options[:loggable_attributes_hash] || {}
     end
 
     private
@@ -166,8 +170,23 @@ module Ebay #:nodoc:
       end
 
       request = request_class.new(params)
+
+      log_request(request) unless Ebay::Api.logger.nil?
+
       yield request if block_given?
       invoke(request, format)
+    end
+
+    def log_request(request)
+      api_method = request.class.to_s.split('::').last
+
+      return if !Ebay::Api.log_all_requests || (!Ebay::Api.loggable_api_methods.empty? && !Ebay::Api.loggable_api_methods.include?(api_method))
+
+      message = loggable_attributes_hash.merge({
+        method: api_method
+      }).merge(request.to_loggable_hash).map { |label,value| [label, value].join('=') unless value.nil? }.compact.join(' ')
+
+      Ebay::Api.logger.debug('EbayApi') { message }
     end
 
     def invoke(request, format)

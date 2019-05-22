@@ -4,7 +4,6 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'erb'
 require 'logger'
 require 'rubygems'
-require 'active_support/all'
 require 'mapper/schema'
 require 'mapper/class_template'
 require 'mapper/class_definition'

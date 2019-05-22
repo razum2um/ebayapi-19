@@ -14,8 +14,8 @@ rescue LoadError
   require 'money'
 end
 
-# Include the extra string and hash extensions particular to ebay
-require 'support/cattr_accessor'
+# Include cattr_* and class_attribute
+require 'active_support/all'
 
 # Include the additional XML::Mapping node types
 require 'support/xml_mapping'
